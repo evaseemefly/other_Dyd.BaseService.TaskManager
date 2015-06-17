@@ -1,0 +1,95 @@
+【时间】2015-06-03 10:15:36:376
+【服务器】192.168.17.180
+【数据库】192.168.17.201
+【补充信息】后台任务-Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask:在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 指定的网络名不再可用。)
+【原始信息】在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 指定的网络名不再可用。)
+【参数】
+【堆栈打印】   在 XXF.ProjectTool.SqlHelper.Visit[T](Func`2 action) 位置 e:\working\BasicService\XXFramework\project\Xiaoxiao.Framework\Xiaoxiao.Framework\ProjectTool\SqlHelper.cs:行号 233
+   在 Dyd.BaseService.TaskManager.Domain.Dal.tb_node_dal.GetAllStopNodesWithNeedCheckState(DbConn PubConn) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\Dal\tb_node_dal.cs:行号 155
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask.<>c__DisplayClass2.<Run>b__1(DbConn c) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\NodeStateCheckTask.cs:行号 21
+   在 XXF.ProjectTool.SqlHelper.ExcuteSql(String connectstring, Action`1 action) 位置 e:\working\BasicService\XXFramework\project\Xiaoxiao.Framework\Xiaoxiao.Framework\ProjectTool\SqlHelper.cs:行号 258
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask.Run() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\NodeStateCheckTask.cs:行号 19
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.BackgroundTasks.Run() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\BackgroundTasks.cs:行号 56
+******************************************************************************************************************************************************
+【时间】2015-06-03 13:25:43:748
+【服务器】192.168.17.180
+【数据库】192.168.17.201
+【补充信息】后台任务-Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask:在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 指定的网络名不再可用。)
+【原始信息】在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 指定的网络名不再可用。)
+【参数】
+【堆栈打印】   在 XXF.ProjectTool.SqlHelper.Visit[T](Func`2 action) 位置 e:\working\BasicService\XXFramework\project\Xiaoxiao.Framework\Xiaoxiao.Framework\ProjectTool\SqlHelper.cs:行号 233
+   在 Dyd.BaseService.TaskManager.Domain.Dal.tb_node_dal.GetAllStopNodesWithNeedCheckState(DbConn PubConn) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\Dal\tb_node_dal.cs:行号 155
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask.<>c__DisplayClass2.<Run>b__1(DbConn c) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\NodeStateCheckTask.cs:行号 21
+   在 XXF.ProjectTool.SqlHelper.ExcuteSql(String connectstring, Action`1 action) 位置 e:\working\BasicService\XXFramework\project\Xiaoxiao.Framework\Xiaoxiao.Framework\ProjectTool\SqlHelper.cs:行号 258
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask.Run() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\NodeStateCheckTask.cs:行号 19
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.BackgroundTasks.Run() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\BackgroundTasks.cs:行号 56
+******************************************************************************************************************************************************
+【时间】2015-06-03 13:31:35:939
+【服务器】192.168.17.180
+【数据库】
+【补充信息】后台任务-Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+【原始信息】在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+【参数】
+【堆栈打印】   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 XXF.Db.DbConn.Open() 位置 e:\working\BasicService\XXFramework\project\Xiaoxiao.Framework\Xiaoxiao.Framework\Db\DbConn.cs:行号 188
+   在 XXF.ProjectTool.SqlHelper.ExcuteSql(String connectstring, Action`1 action) 位置 e:\working\BasicService\XXFramework\project\Xiaoxiao.Framework\Xiaoxiao.Framework\ProjectTool\SqlHelper.cs:行号 257
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask.Run() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\NodeStateCheckTask.cs:行号 19
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.BackgroundTasks.Run() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\BackgroundTasks.cs:行号 56
+******************************************************************************************************************************************************
+【时间】2015-06-03 13:37:15:234
+【服务器】192.168.17.180
+【数据库】
+【补充信息】后台任务-Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+【原始信息】在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+【参数】
+【堆栈打印】   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 XXF.Db.DbConn.Open() 位置 e:\working\BasicService\XXFramework\project\Xiaoxiao.Framework\Xiaoxiao.Framework\Db\DbConn.cs:行号 188
+   在 XXF.ProjectTool.SqlHelper.ExcuteSql(String connectstring, Action`1 action) 位置 e:\working\BasicService\XXFramework\project\Xiaoxiao.Framework\Xiaoxiao.Framework\ProjectTool\SqlHelper.cs:行号 257
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask.Run() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\NodeStateCheckTask.cs:行号 19
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.BackgroundTasks.Run() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\BackgroundTasks.cs:行号 56
+******************************************************************************************************************************************************
+【时间】2015-06-03 18:55:27:543
+【服务器】192.168.17.180
+【数据库】192.168.17.201
+【补充信息】后台任务-Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask:在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 指定的网络名不再可用。)
+【原始信息】在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 指定的网络名不再可用。)
+【参数】
+【堆栈打印】   在 XXF.ProjectTool.SqlHelper.Visit[T](Func`2 action) 位置 e:\working\BasicService\XXFramework\project\Xiaoxiao.Framework\Xiaoxiao.Framework\ProjectTool\SqlHelper.cs:行号 233
+   在 Dyd.BaseService.TaskManager.Domain.Dal.tb_node_dal.GetAllStopNodesWithNeedCheckState(DbConn PubConn) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\Dal\tb_node_dal.cs:行号 155
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask.<>c__DisplayClass2.<Run>b__1(DbConn c) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\NodeStateCheckTask.cs:行号 21
+   在 XXF.ProjectTool.SqlHelper.ExcuteSql(String connectstring, Action`1 action) 位置 e:\working\BasicService\XXFramework\project\Xiaoxiao.Framework\Xiaoxiao.Framework\ProjectTool\SqlHelper.cs:行号 258
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.NodeStateCheckTask.Run() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\NodeStateCheckTask.cs:行号 19
+   在 Dyd.BaseService.TaskManager.Web.BackgroundTask.BackgroundTasks.Run() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Web\BackgroundTask\BackgroundTasks.cs:行号 56
+******************************************************************************************************************************************************

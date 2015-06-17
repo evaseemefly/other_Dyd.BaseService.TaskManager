@@ -1,0 +1,337 @@
+【时间】2015-06-02 14:43:25:108
+【服务器】192.168.17.180
+【数据库】
+【补充信息】执行节点命令失败[taskid:8]
+【原始信息】无法将透明代理强制转换为类型“XXF.BaseService.TaskManager.BaseDllTask”。
+【参数】
+【堆栈打印】   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 89
+   在 Dyd.BaseService.TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 Dyd.BaseService.TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 Dyd.BaseService.TaskManager.Node.CommandQueueProcessor.RuningCommandLoop() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\CommandQueueProcessor.cs:行号 118
+******************************************************************************************************************************************************
+【时间】2015-06-02 14:44:57:961
+【服务器】192.168.17.180
+【数据库】
+【补充信息】执行节点命令失败[taskid:8]
+【原始信息】无法将透明代理强制转换为类型“XXF.BaseService.TaskManager.BaseDllTask”。
+【参数】
+【堆栈打印】   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 89
+   在 Dyd.BaseService.TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 Dyd.BaseService.TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 Dyd.BaseService.TaskManager.Node.CommandQueueProcessor.RuningCommandLoop() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\CommandQueueProcessor.cs:行号 118
+******************************************************************************************************************************************************
+【时间】2015-06-02 14:45:45:477
+【服务器】192.168.17.180
+【数据库】
+【补充信息】执行节点命令失败[taskid:8]
+【原始信息】无法将透明代理强制转换为类型“XXF.BaseService.TaskManager.BaseDllTask”。
+【参数】
+【堆栈打印】   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 89
+   在 Dyd.BaseService.TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 Dyd.BaseService.TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 Dyd.BaseService.TaskManager.Node.CommandQueueProcessor.RuningCommandLoop() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\CommandQueueProcessor.cs:行号 118
+******************************************************************************************************************************************************
+【时间】2015-06-02 14:53:00:658
+【服务器】192.168.17.180
+【数据库】
+【补充信息】执行节点命令失败[taskid:8]
+【原始信息】Corn表达式解析失败,corn:[simplecorn,,1,,]
+【参数】
+【堆栈打印】   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 89
+   在 Dyd.BaseService.TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 Dyd.BaseService.TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 Dyd.BaseService.TaskManager.Node.CommandQueueProcessor.RuningCommandLoop() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\CommandQueueProcessor.cs:行号 118
+******************************************************************************************************************************************************
+【时间】2015-06-02 14:55:08:787
+【服务器】192.168.17.180
+【数据库】
+【补充信息】执行节点命令失败[taskid:8]
+【原始信息】Corn表达式解析失败:RepeatCount corn:[simplecorn,,1,,]
+【参数】
+【堆栈打印】   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 89
+   在 Dyd.BaseService.TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 Dyd.BaseService.TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 Dyd.BaseService.TaskManager.Node.CommandQueueProcessor.RuningCommandLoop() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\CommandQueueProcessor.cs:行号 118
+******************************************************************************************************************************************************
+【时间】2015-06-02 14:57:22:393
+【服务器】192.168.17.180
+【数据库】
+【补充信息】执行节点命令失败[taskid:8]
+【原始信息】Corn表达式解析失败:RepeatCount corn:[simplecorn,,1,,]
+【参数】
+【堆栈打印】   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 89
+   在 Dyd.BaseService.TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 Dyd.BaseService.TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 Dyd.BaseService.TaskManager.Node.CommandQueueProcessor.RuningCommandLoop() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\CommandQueueProcessor.cs:行号 118
+******************************************************************************************************************************************************
+【时间】2015-06-02 15:18:33:786
+【服务器】192.168.17.180
+【数据库】
+【补充信息】执行节点命令失败[taskid:8]
+【原始信息】Repeat Interval cannot be zero.
+【参数】
+【堆栈打印】   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 89
+   在 Dyd.BaseService.TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 Dyd.BaseService.TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 Dyd.BaseService.TaskManager.Node.CommandQueueProcessor.RuningCommandLoop() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\CommandQueueProcessor.cs:行号 118
+******************************************************************************************************************************************************
+【时间】2015-06-02 15:20:36:385
+【服务器】192.168.17.180
+【数据库】
+【补充信息】执行节点命令失败[taskid:8]
+【原始信息】Repeat Interval cannot be zero.
+【参数】
+【堆栈打印】   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 89
+   在 Dyd.BaseService.TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 Dyd.BaseService.TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 Dyd.BaseService.TaskManager.Node.CommandQueueProcessor.RuningCommandLoop() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\CommandQueueProcessor.cs:行号 118
+******************************************************************************************************************************************************
+【时间】2015-06-02 15:50:28:979
+【服务器】192.168.17.180
+【数据库】
+【补充信息】当前任务信息为空引用[taskid:8]
+【原始信息】引发类型为“System.Exception”的异常。
+【参数】
+【堆栈打印】
+******************************************************************************************************************************************************
+【时间】2015-06-02 15:50:28:985
+【服务器】192.168.17.180
+【数据库】
+【补充信息】当前任务信息为空引用[taskid:8]
+【原始信息】引发类型为“System.Exception”的异常。
+【参数】
+【堆栈打印】
+******************************************************************************************************************************************************
+【时间】2015-06-02 16:07:28:631
+【服务器】192.168.17.180
+【数据库】
+【补充信息】执行节点命令失败[taskid:8]
+【原始信息】Corn表达式解析失败:EndTime corn:[Simple,3,,2015-06-02 16:05,2015-16-08 17:25]
+【参数】
+【堆栈打印】   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 89
+   在 Dyd.BaseService.TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 Dyd.BaseService.TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 Dyd.BaseService.TaskManager.Node.CommandQueueProcessor.RuningCommandLoop() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\CommandQueueProcessor.cs:行号 118
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:04:37:508
+【服务器】192.168.17.180
+【数据库】
+【补充信息】执行节点命令失败[taskid:41]
+【原始信息】调用的目标发生了异常。
+【参数】
+【堆栈打印】   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstanceFromInternal(String assemblyFile, String typeName, Boolean ignoreCase, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, Evidence securityInfo)
+   在 System.AppDomain.CreateInstanceFrom(String assemblyFile, String typeName)
+   在 System.AppDomain.CreateInstanceFromAndUnwrap(String assemblyName, String typeName)
+   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 89
+   在 Dyd.BaseService.TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 Dyd.BaseService.TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 Dyd.BaseService.TaskManager.Node.CommandQueueProcessor.RuningCommandLoop() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\CommandQueueProcessor.cs:行号 118
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:17:31:067
+【服务器】192.168.17.180
+【数据库】
+【补充信息】任务资源运行可能异常停止了[taskid:41]
+【原始信息】任务处于运行状态，但是相应集群节点中，未发现任务在运行
+【参数】
+【堆栈打印】
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:17:31:195
+【服务器】192.168.17.180
+【数据库】
+【补充信息】任务资源运行可能异常停止了[taskid:41]
+【原始信息】任务处于运行状态，但是相应集群节点中，未发现任务在运行
+【参数】
+【堆栈打印】
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:17:48:421
+【服务器】192.168.17.180
+【数据库】
+【补充信息】任务资源运行可能异常停止了[taskid:41]
+【原始信息】任务处于运行状态，但是相应集群节点中，未发现任务在运行
+【参数】
+【堆栈打印】
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:17:48:459
+【服务器】192.168.17.180
+【数据库】
+【补充信息】任务资源运行可能异常停止了[taskid:41]
+【原始信息】任务处于运行状态，但是相应集群节点中，未发现任务在运行
+【参数】
+【堆栈打印】
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:19:55:429
+【服务器】192.168.17.180
+【数据库】
+【补充信息】任务资源运行可能异常停止了[taskid:41]
+【原始信息】任务处于运行状态，但是相应集群节点中，未发现任务在运行
+【参数】
+【堆栈打印】
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:19:55:463
+【服务器】192.168.17.180
+【数据库】
+【补充信息】任务资源运行可能异常停止了[taskid:41]
+【原始信息】任务处于运行状态，但是相应集群节点中，未发现任务在运行
+【参数】
+【堆栈打印】
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:22:02:178
+【服务器】192.168.17.180
+【数据库】
+【补充信息】任务资源运行可能异常停止了[taskid:41]
+【原始信息】任务处于运行状态，但是相应集群节点中，未发现任务在运行
+【参数】
+【堆栈打印】
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:22:02:223
+【服务器】192.168.17.180
+【数据库】
+【补充信息】任务资源运行可能异常停止了[taskid:41]
+【原始信息】任务处于运行状态，但是相应集群节点中，未发现任务在运行
+【参数】
+【堆栈打印】
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:25:55:702
+【服务器】192.168.17.180
+【数据库】
+【补充信息】任务资源运行可能异常停止了[taskid:41]
+【原始信息】任务处于运行状态，但是相应集群节点中，未发现任务在运行
+【参数】
+【堆栈打印】
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:25:55:737
+【服务器】192.168.17.180
+【数据库】
+【补充信息】任务资源运行可能异常停止了[taskid:41]
+【原始信息】任务处于运行状态，但是相应集群节点中，未发现任务在运行
+【参数】
+【堆栈打印】
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:26:26:514
+【服务器】192.168.17.180
+【数据库】
+【补充信息】强制资源释放之任务资源释放
+【原始信息】任务终止时,资源未释放超时。请检查代码是否在检测到任务处于DisposedState=Disposing时,释放任务当前资源,并终止任务继续运行业务代码,并将DisposedState=Finished
+【参数】
+【堆栈打印】
+Server stack trace: 
+   在 XXF.BaseService.TaskManager.SystemRuntime.TaskSafeDisposeOperator.WaitDisposeFinished()
+   在 XXF.BaseService.TaskManager.BaseDllTask.Dispose()
+   在 Dyd.BaseService.TaskManager.Demo.DemoDisposeTask2.Dispose() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Demo\DemoDisposeTask2.cs:行号 36
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 XXF.BaseService.TaskManager.BaseDllTask.Dispose()
+   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.DisposeTask(Int32 taskid, NodeTaskRuntimeInfo taskruntimeinfo, Boolean isforceDispose) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 144
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:26:41:723
+【服务器】192.168.17.180
+【数据库】
+【补充信息】执行节点命令失败[taskid:41]
+【原始信息】任务终止时,资源未释放超时。请检查代码是否在检测到任务处于DisposedState=Disposing时,释放任务当前资源,并终止任务继续运行业务代码,并将DisposedState=Finished
+【参数】
+【堆栈打印】
+Server stack trace: 
+   在 XXF.BaseService.TaskManager.SystemRuntime.TaskSafeDisposeOperator.WaitDisposeFinished()
+   在 XXF.BaseService.TaskManager.BaseDllTask.Dispose()
+   在 Dyd.BaseService.TaskManager.Demo.DemoDisposeTask2.Dispose() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Demo\DemoDisposeTask2.cs:行号 36
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.DisposeTask(Int32 taskid, NodeTaskRuntimeInfo taskruntimeinfo, Boolean isforceDispose) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 150
+   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.Stop(Int32 taskid) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 103
+   在 Dyd.BaseService.TaskManager.Node.Commands.StopTaskCommand.Execute() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\StopTaskCommand.cs:行号 18
+   在 Dyd.BaseService.TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 Dyd.BaseService.TaskManager.Node.CommandQueueProcessor.RuningCommandLoop() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\CommandQueueProcessor.cs:行号 118
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:27:53:815
+【服务器】192.168.17.180
+【数据库】
+【补充信息】强制资源释放之任务资源释放
+【原始信息】任务终止时,资源未释放超时。请检查代码是否在检测到任务处于DisposedState=Disposing时,释放任务当前资源,并终止任务继续运行业务代码,并将DisposedState=Finished
+【参数】
+【堆栈打印】
+Server stack trace: 
+   在 XXF.BaseService.TaskManager.SystemRuntime.TaskSafeDisposeOperator.WaitDisposeFinished()
+   在 XXF.BaseService.TaskManager.BaseDllTask.Dispose()
+   在 Dyd.BaseService.TaskManager.Demo.DemoDisposeTask2.Dispose() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Demo\DemoDisposeTask2.cs:行号 36
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 XXF.BaseService.TaskManager.BaseDllTask.Dispose()
+   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.DisposeTask(Int32 taskid, NodeTaskRuntimeInfo taskruntimeinfo, Boolean isforceDispose) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 144
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:29:02:653
+【服务器】192.168.17.180
+【数据库】
+【补充信息】强制资源释放之任务资源释放
+【原始信息】任务终止时,资源未释放超时。请检查代码是否在检测到任务处于DisposedState=Disposing时,释放任务当前资源,并终止任务继续运行业务代码,并将DisposedState=Finished
+【参数】
+【堆栈打印】
+Server stack trace: 
+   在 XXF.BaseService.TaskManager.SystemRuntime.TaskSafeDisposeOperator.WaitDisposeFinished()
+   在 XXF.BaseService.TaskManager.BaseDllTask.Dispose()
+   在 Dyd.BaseService.TaskManager.Demo.DemoDisposeTask2.Dispose() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Demo\DemoDisposeTask2.cs:行号 36
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 XXF.BaseService.TaskManager.BaseDllTask.Dispose()
+   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.DisposeTask(Int32 taskid, NodeTaskRuntimeInfo taskruntimeinfo, Boolean isforceDispose) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 144
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:29:02:722
+【服务器】192.168.17.180
+【数据库】
+【补充信息】执行节点命令失败[taskid:41]
+【原始信息】任务终止时,资源未释放超时。请检查代码是否在检测到任务处于DisposedState=Disposing时,释放任务当前资源,并终止任务继续运行业务代码,并将DisposedState=Finished
+【参数】
+【堆栈打印】
+Server stack trace: 
+   在 XXF.BaseService.TaskManager.SystemRuntime.TaskSafeDisposeOperator.WaitDisposeFinished()
+   在 XXF.BaseService.TaskManager.BaseDllTask.Dispose()
+   在 Dyd.BaseService.TaskManager.Demo.DemoDisposeTask2.Dispose() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Demo\DemoDisposeTask2.cs:行号 36
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.DisposeTask(Int32 taskid, NodeTaskRuntimeInfo taskruntimeinfo, Boolean isforceDispose) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 150
+   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.Stop(Int32 taskid) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 103
+   在 Dyd.BaseService.TaskManager.Node.Commands.StopTaskCommand.Execute() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\StopTaskCommand.cs:行号 18
+   在 Dyd.BaseService.TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 Dyd.BaseService.TaskManager.Node.CommandQueueProcessor.RuningCommandLoop() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\CommandQueueProcessor.cs:行号 118
+******************************************************************************************************************************************************
+【时间】2015-06-02 20:29:42:833
+【服务器】192.168.17.180
+【数据库】
+【补充信息】强制资源释放之任务资源释放
+【原始信息】任务终止时,资源未释放超时。请检查代码是否在检测到任务处于DisposedState=Disposing时,释放任务当前资源,并终止任务继续运行业务代码,并将DisposedState=Finished
+【参数】
+【堆栈打印】
+Server stack trace: 
+   在 XXF.BaseService.TaskManager.SystemRuntime.TaskSafeDisposeOperator.WaitDisposeFinished()
+   在 XXF.BaseService.TaskManager.BaseDllTask.Dispose()
+   在 Dyd.BaseService.TaskManager.Demo.DemoDisposeTask2.Dispose() 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Demo\DemoDisposeTask2.cs:行号 36
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 XXF.BaseService.TaskManager.BaseDllTask.Dispose()
+   在 Dyd.BaseService.TaskManager.Node.SystemRuntime.TaskProvider.DisposeTask(Int32 taskid, NodeTaskRuntimeInfo taskruntimeinfo, Boolean isforceDispose) 位置 e:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 144
+******************************************************************************************************************************************************

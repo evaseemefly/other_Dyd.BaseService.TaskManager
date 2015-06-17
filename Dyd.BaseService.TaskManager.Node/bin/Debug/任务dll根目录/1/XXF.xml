@@ -1,0 +1,3819 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XXF</name>
+    </assembly>
+    <members>
+        <member name="T:XXF.Api.AUTH_CODE_MSG">
+            <summary>
+            用户认证模块错误码（交互协议）类
+            </summary>
+        </member>
+        <member name="F:XXF.Api.AUTH_CODE_MSG.msgs">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="M:XXF.Api.AUTH_CODE_MSG.Get(System.Int32)">
+            <summary>
+            根据错误码获取详细错误信息
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Api.ClientResult">
+            <summary>
+            与客户端通信协议
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ClientResult.code">
+            <summary>请求回复状态码</summary>
+        </member>
+        <member name="P:XXF.Api.ClientResult.success">
+            <summary>请求是存成功</summary>
+        </member>
+        <member name="P:XXF.Api.ClientResult.statuscode">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ClientResult.repObject">
+            <summary>
+            请求输出的json object对象
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ClientResult.resString">
+            <summary>
+            请求输出的json字符串
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ClientResult.msg">
+            <summary>
+            请求返回的信息
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ClientResult.total">
+            <summary>
+            返回结果的列表数
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ClientResult.responseStream">
+            <summary>
+            请求输出流
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ClientResult.responseContentType">
+            <summary>
+            返回内容类型 小写格式
+            </summary>
+        </member>
+        <member name="T:XXF.Api.ListResult`1">
+            <summary>
+            返回列表类型
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XXF.Api.ListResult`1.#ctor(System.Collections.Generic.List{`0},System.Int32)">
+            <summary>
+            获取列表集合
+            </summary>
+            <param name="list"></param>
+            <param name="total"></param>
+        </member>
+        <member name="P:XXF.Api.ListResult`1.List">
+            <summary>
+            返回列表
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ListResult`1.Total">
+            <summary>
+            返回结果总数
+            </summary>
+        </member>
+        <member name="T:XXF.Api.ListResult">
+            <summary>
+            默认DictionaryResult类型 （非泛型版本）
+            </summary>
+        </member>
+        <member name="M:XXF.Api.ListResult.#ctor(System.Collections.Generic.List{XXF.ProjectTool.DictionaryResult},System.Int32)">
+            <summary>
+            获取列表集合
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ListResult.List">
+            <summary>
+            返回列表
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ListResult.Total">
+            <summary>
+            返回结果总数
+            </summary>
+        </member>
+        <member name="T:XXF.Api.ServerResult">
+            <summary>
+            返回对象
+            </summary>
+        </member>
+        <member name="F:XXF.Api.ServerResult._msg">
+            <summary>
+            消息返回
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ServerResult.code">
+            <summary>
+            返回值 1成功 -1失败 33无权限
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ServerResult.response">
+            <summary>
+            接受对象
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ServerResult.total">
+            <summary>
+            如列表，列表总数
+            </summary>
+        </member>
+        <member name="T:XXF.Assemblys.AssemblyHelper">
+            <summary>
+            程序集操作帮助类
+            </summary>
+        </member>
+        <member name="T:XXF.Assemblys.AutoModelList">
+            <summary>
+            自动生成Model类
+            主要用于dynamic类型，可以在运行时自动生成model代码文件
+            </summary>
+        </member>
+        <member name="M:XXF.Assemblys.AutoModelList.AutoCode(System.String,System.Object,System.String,System.String)">
+            <summary>
+            自动生成代码方法
+            </summary>
+            <param name="path"></param>
+            <param name="model"></param>
+            <param name="namespacestr"></param>
+            <param name="classname"></param>
+        </member>
+        <member name="T:XXF.Attributes.OpenApiAttribute">
+            <summary>
+            openapi特性 直接公开方法至controller层
+            </summary>
+        </member>
+        <member name="T:XXF.Attributes.OpenDocAttribute">
+            <summary>
+            开发接口文档描述
+            </summary>
+        </member>
+        <member name="M:XXF.Attributes.OpenDocAttribute.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.String)">
+            <summary>
+            开发接口文档描述
+            </summary>
+            <param name="methodname">接口方法名（简短）</param>
+            <param name="methoddescription">接口方法描述</param>
+            <param name="paramdescription">接口参数描述</param>
+            <param name="resultdescription">返回结果描述</param>
+            <param name="resultstatedescription">返回结果状态码描述</param>
+            <param name="author">作者</param>
+            <param name="version">版本号</param>
+            <param name="minversion">最小版本号（最低兼容版本号） 低于此版本将来会报错</param>
+            <param name="note">其他记录</param>
+        </member>
+        <member name="P:XXF.Attributes.OpenDocAttribute.MethodName">
+            <summary>
+            方法名
+            </summary>
+        </member>
+        <member name="P:XXF.Attributes.OpenDocAttribute.MethodDescription">
+            <summary>
+            方法描述
+            </summary>
+        </member>
+        <member name="P:XXF.Attributes.OpenDocAttribute.ParamDescription">
+            <summary>
+            参数描述
+            </summary>
+        </member>
+        <member name="P:XXF.Attributes.OpenDocAttribute.ResultDescription">
+            <summary>
+            结果描述
+            </summary>
+        </member>
+        <member name="P:XXF.Attributes.OpenDocAttribute.ResultStateDescription">
+            <summary>
+            结果状态描述
+            </summary>
+        </member>
+        <member name="P:XXF.Attributes.OpenDocAttribute.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:XXF.Attributes.OpenDocAttribute.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:XXF.Attributes.OpenDocAttribute.MinVersion">
+            <summary>
+            最低兼容的版本号
+            </summary>
+        </member>
+        <member name="P:XXF.Attributes.OpenDocAttribute.Note">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:XXF.Base.BaseApiController">
+            <summary>
+            基类api控制器
+            </summary>
+        </member>
+        <member name="T:XXF.Base.BaseCommonController">
+            <summary>
+            常用项目controller层公用方法封装
+            </summary>
+        </member>
+        <member name="M:XXF.Base.BaseCommonController.GetPagerResult``1(XXF.Api.ClientResult,System.Int32,System.Int32)">
+            <summary>
+            获取api分页结果(项目常用ajaxpager分页方式)
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Base.BaseCommonController.GetPagerResult(XXF.Api.ClientResult,System.Int32,System.Int32)">
+            <summary>
+            默认返回dynamic类型
+            </summary>
+            <param name="result"></param>
+            <param name="pno"></param>
+            <param name="pagesize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Base.BaseCommonController.GetPagerResult(XXF.Api.ClientResult,System.Int32,System.Int32,System.String)">
+            <summary>
+            默认返回dynamic类型，
+            但支持自动生成model类型说明文档至Models/auto/目录下,包含到项目中即可做model使用
+            </summary>
+            <param name="result"></param>
+            <param name="pno"></param>
+            <param name="pagesize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Base.BaseApiController.BeginExecute(System.Web.Routing.RequestContext,System.AsyncCallback,System.Object)">
+            <summary>
+            拦截执行前方法
+            </summary>
+            <param name="requestContext"></param>
+            <param name="callback"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Base.BaseApiController.GoToOpenApi(System.Web.Routing.RequestContext)">
+            <summary>
+            OpenApi属性自动公开api
+            </summary>
+            <param name="requestContext"></param>
+        </member>
+        <member name="M:XXF.Base.BaseApiController.Visit(System.Func{XXF.Db.DbConn,System.Object})">
+            <summary>
+            api访问回调封装
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Base.BaseApiRequestController">
+            <summary>
+            基类api请求控制器
+            用于api访问
+            </summary>
+        </member>
+        <member name="T:XXF.Base.BaseDal">
+            <summary>
+            基础Dal基类
+            </summary>
+        </member>
+        <member name="T:XXF.BasicService.CertCenter.api">
+            <summary>
+            api Data Structure.
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.api.apiid">
+            <summary>
+            权限id
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.api.apptype">
+            <summary>
+            应用类型
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.api.appgradeno">
+            <summary>
+            应用级别
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.api.categoryid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.api.apiname">
+            <summary>
+            接口名
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.api.apititle">
+            <summary>
+            接口标题
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.api.area">
+            <summary>
+            area
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.api.controller">
+            <summary>
+            controller
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.api.action">
+            <summary>
+            action
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.api.para">
+            <summary>
+            para
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.api.apidesc">
+            <summary>
+            api说明
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.api.freeze">
+            <summary>
+            是否冻结
+            </summary>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.AuthToken.Clone">
+            <summary>
+            close this obj to another instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.AuthToken.token">
+             <summary>
+            授权token
+             </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.AuthToken.id">
+            <summary>
+            唯一标识 用户时为：自增id，其它为userid
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.AuthToken.userid">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.AuthToken.username">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.AuthToken.appid">
+            <summary>
+            应用id
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.AuthToken.createtime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.AuthToken.expires">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.CertApiConfig.tokenurl">
+            <summary>
+            登录得到token 的url
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.CertApiConfig.authurl">
+            <summary>
+            权限验证的url
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.CertApiConfig.apilisturl">
+            <summary>
+            得到有权访问的api列表的url
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.CertCenter.CertApiConfig.tokeninfourl">
+            <summary>
+            token 得到 Token信息 的 url
+            </summary>
+        </member>
+        <member name="T:XXF.BasicService.CertCenter.CopyExtention">
+            <summary>
+            List特定类型的扩展。需要配合内部类型的clone方法
+            </summary>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.CopyExtention.CloneList(System.Collections.Generic.List{XXF.BasicService.CertCenter.CertCacheItem})">
+            <summary>
+            clonelist 需要配合内部类型的clone方法
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.CopyExtention.CloneList(System.Collections.Generic.List{XXF.BasicService.CertCenter.api})">
+            <summary>
+            clonelist 需要配合内部类型的clone方法
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Api.Authcomm">
+            <summary>
+            认证通用类库 
+            详情问徐品
+            </summary>
+        </member>
+        <member name="M:XXF.Api.Authcomm.ToMD5String(System.String)">
+            <summary>
+            使用GBK编码字符串转MD5
+            to use GBK to Decode default is uper
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.Authcomm.ToMD5String(System.String,System.Text.Encoding)">
+            <summary>
+            指定编码方式将字符串转MD5
+            usr enc to Decode str and md5 default is uper
+            </summary>
+            <param name="str"></param>
+            <param name="enc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.Authcomm.TestTimeSpanOk(System.String,System.Int32)">
+            <summary>
+            测试时间是否在有效期内
+            </summary>
+            <param name="timespan"></param>
+            <param name="safesecond"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.Authcomm.TestTimeSpanOk(System.Int64,System.Int32)">
+            <summary>
+            测试时间是否在有效期内
+            </summary>
+            <param name="timespan"></param>
+            <param name="safesecond"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.Authcomm.ConnUrl(System.String,System.String,System.String)">
+            <summary>
+            根据控制器信息拼接默认url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.Authcomm.GetAppConfig(System.String,System.String)">
+            <summary>
+            得到配置信息，找不到则使用默认值
+            </summary>
+            <param name="key"></param>
+            <param name="defaultvalue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.Authcomm.GetAppConfig(System.String)">
+            <summary>
+            根据key得到配置信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.Authcomm.ToSign(System.Collections.Generic.List{XXF.Api.ParmField},System.String)">
+            <summary>
+            进行认证签名
+            </summary>
+            <param name="para"></param>
+            <param name="appsecret"></param>
+        </member>
+        <member name="M:XXF.Api.Authcomm.ToSign(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            进行认证签名
+            </summary>
+            <param name="dic"></param>
+            <param name="appsecret"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.Authcomm.BaseSign(System.String,System.String,System.String)">
+            <summary>
+            获取基础的sign字段信息
+            </summary>
+            <param name="appid"></param>
+            <param name="appsecret"></param>
+            <param name="timespan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.Authcomm.GetTimeSpan(System.DateTime)">
+            <summary>
+            获取时间到1970-1-1的时间间隔（秒）
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.Authcomm.GetTimeSpan">
+            <summary>
+            获取当前时间到1970-1-1的时间间隔（秒）
+            </summary>
+        </member>
+        <member name="M:XXF.Api.Authcomm.GetRequestPara(System.Web.HttpRequestBase)">
+            <summary>
+            获取请求的参数集合
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.Authcomm.GetRequestPara``1(System.Web.HttpRequestBase)">
+            <summary>
+            获取请求的参数集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Api.SignProvider">
+            <summary>
+            提供签名方式
+            </summary>
+            <param name="aparmList"></param>
+        </member>
+        <member name="T:XXF.Api.HttpServer">
+            <summary>
+            http通信服务
+            </summary>
+        </member>
+        <member name="M:XXF.Api.HttpServer.getBody(System.Collections.Generic.List{XXF.Api.ParmField},System.String)">
+            <summary>
+            获取http body
+            </summary>
+            <param name="aparmList"></param>
+            <param name="boundary"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.HttpServer.InvokeApi(System.String,System.Collections.Generic.List{XXF.Api.ParmField},XXF.Api.SignProvider)">
+            <summary>
+            调用api方法
+            </summary>
+            <param name="url"></param>
+            <param name="aparmList"></param>
+            <param name="signpro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.HttpServer.InvokeApi(System.String,System.Collections.Generic.List{XXF.Api.ParmField})">
+            <summary>
+            调用api方法
+            </summary>
+            <param name="url"></param>
+            <param name="aparmList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Api.HttpServer.DefaultSignProvider(System.Collections.Generic.List{XXF.Api.ParmField})">
+            <summary>
+            默认签名方式
+            all StringField will be signed and will add timespan,appid,appsecret; appid、appsecret from web.config or app.config
+            </summary>
+            <param name="para"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Api.ParmField">
+            <summary>
+            基础request参数类型
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ParmField.Key">
+            <summary>
+            参数key
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ParmField.Value">
+            <summary>
+            参数value
+            </summary>
+        </member>
+        <member name="P:XXF.Api.ParmField.StreamValue">
+            <summary>
+            参数流内容
+            </summary>
+        </member>
+        <member name="T:XXF.Api.StringField">
+            <summary>
+            字符串参数类型
+            </summary>
+        </member>
+        <member name="T:XXF.Api.FileField">
+            <summary>
+            文件参数类型
+            </summary>
+        </member>
+        <member name="T:XXF.Api.StreamField">
+            <summary>
+            数据流参数类型
+            </summary>
+        </member>
+        <member name="T:XXF.BasicService.CertCenter.CertCenterProvider">
+             <summary>
+             使用api认证，请在配置文件里配置 UseLocalCert=fase （默认是false），并保证appid appsecret certcenterurl也进行了对应的配置
+             使用本地认证，请在配置文件里配置 UseLocalCert=true ，并保证 appid，appsecret ，crmdyconnectstring,Mainconnectstring,qxconnectstring 也进行了对应的配置 
+             <add key="appid" value="Customer"/>
+             <add key="appsecret" value="1234"/>
+            <add key="CertCenterUrl" value="http://192.168.17.234:3388"/>
+             <add key="UseLocalCert" value="false"/>
+             <add key ="CrmdyConnectString" value="server=192.168.17.232;Initial Catalog=dyd_new_crmdy;User ID=sa;Password=Xx~!@#;" />
+            <add key ="MainConnectString" value="server=192.168.17.232;Initial Catalog=dyd_new_main;User ID=sa;Password=Xx~!@#;" />
+            <add key="QxConnectString" value="server=192.168.17.232;database=dyd_new_qx;uid=sa;pwd=Xx~!@#;"/>
+             </summary>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.CertCenterProvider.#ctor(XXF.BasicService.CertCenter.ServiceCertType,System.Boolean,System.Boolean)">
+            <summary>
+             
+            </summary>
+            <param name="certtype">验证类型</param>
+            <param name="usetokencache">是否使用token缓存</param>
+            <param name="useapilistcache">为所有有权接口缓存，进行本地验证。当此值为true时，usertokencache自动为true.不建议使用</param>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.CertCenterProvider.Auth(System.String)">
+            <summary>
+            验证Token
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.CertCenterProvider.DeleteCacheInfo(System.String)">
+            <summary>
+            删除Token
+            </summary>
+            <param name="token"></param>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.#ctor(XXF.BasicService.CertCenter.ServiceCertType)">
+            <summary>
+            默认使用本地token验证。
+            </summary>
+            <param name="certtype"></param>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.#ctor(XXF.BasicService.CertCenter.ServiceCertType,System.Boolean,System.Boolean)">
+            <summary>
+             
+            </summary>
+            <param name="certtype">验证类型</param>
+            <param name="usetokencache">是否使用token缓存</param>
+            <param name="useapilistcache">为所有有权接口缓存，进行本地验证。当此值为true时，usertokencache自动为true.不建议使用</param>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.Login(System.String,System.String)">
+            <summary>
+            登录，从config中得到appid appsecret ，直接登录(指当前应用为非api，不调用api登录接口，直接请求权限中心登录)
+            </summary>
+            <param name="userid"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.Login(System.String,System.String,System.String,System.String)">
+            <summary>
+            登录 直接登录(指当前应用为非api，不调用api登录接口，直接请求权限中心登录)
+            </summary>
+            <param name="userid"></param>
+            <param name="pwd"></param>
+            <param name="appid"></param>
+            <param name="appsecret"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.Login(System.Web.Mvc.Controller)">
+            <summary>
+            app请求登录，直接转certcenter进行登录验证。
+            </summary>
+            <param name="controller"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.Auth(System.String)">
+            <summary>验证token是否有效或是否已登录。</summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.RefreshToken(System.String)">
+            <summary> 刷新token过期时间 返回新token信息 </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.cacheAuth(System.String,System.Int32,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            缓存验证过 初次或过期时重新得到所有有权接口列表。 配置参数名:AuthCacheExpiresMin 
+            </summary>
+            <param name="token"></param>
+            <param name="apiid"></param>
+            <param name="apiname"></param>
+            <param name="area"></param>
+            <param name="controller"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.cacheTestAuth(System.Int32,System.String,System.String,System.String,System.String,XXF.BasicService.CertCenter.CertCacheItem)">
+            <summary>
+            缓存权限验证
+            </summary>
+            <param name="apiid"></param>
+            <param name="apiname"></param>
+            <param name="area"></param>
+            <param name="controller"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.GetApiList(System.String)">
+            <summary>得到授权接口列表</summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.ReqGetTokenInfo(System.String)">
+            <summary>得到token对应信息</summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.GetTokenInfo(System.String)">
+            <summary>
+            得到Token的详细信息，包含用户名、过期时间、appid等。 无时返回null
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.GetUserName(System.String)">
+            <summary>
+            得到用户名， 空时返回空字符串 而非null
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.TestSignAndTime(System.Web.Mvc.Controller)">
+            <summary>
+            验证签名，请求是否超时，如果返回为false时，验证结果信息在result变量里。 
+            </summary>
+            <param name="controller"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.TestSign(System.Web.Mvc.Controller)">
+            <summary>
+            appid和token +appsecret md5 老接口验证
+            </summary>
+            <param name="controller"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.TestTokenExist(System.Web.Mvc.Controller)">
+            <summary>
+            检查请求是否传入了token false时返回信息在result中
+            </summary>
+            <param name="controller"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.LogOut(System.Web.Mvc.Controller)">
+            <summary>
+            退出登录
+            </summary>
+            <param name="controller"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.LogOut(System.String)">
+            <summary>
+            退出登录
+            </summary>
+            <param name="controller"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.GetTokenFromReq(System.Web.Mvc.Controller)">
+            <summary>
+            从请求中得到token 字符串
+            </summary>
+            <param name="controller"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.SuperAuth(System.Web.Mvc.Controller)">
+            <summary>
+            当前 businessapi customerapi 应采用的方法 包含 签名和登录验证 为false时 ressult.msg 里包含错误信息。
+            </summary>
+            <param name="controller"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.OnlineCert.DeleteCacheInfo(System.String)">
+            <summary>
+            删除缓存中的认证信息，当前用于修改用户名后重得到用户名，防从缓存中得到。
+            </summary>
+            <param name="token"></param>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.LocalCert.#ctor(XXF.BasicService.CertCenter.ServiceCertType,System.Boolean,System.Boolean)">
+            <summary>
+             
+            </summary>
+            <param name="certtype">验证类型</param>
+            <param name="usetokencache">是否使用token缓存</param>
+            <param name="useapilistcache">为所有有权接口缓存，进行本地验证。当此值为true时，usertokencache自动为true.不建议使用</param>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.LocalCert.getManage(XXF.Db.DbConn,System.String)">
+            <summary>根据userid得到管理员工信息</summary>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.LocalCert.getShop(XXF.Db.DbConn,System.String)">
+            <summary>根据userid得到管理员工信息</summary>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.LocalCert.getUser(XXF.Db.DbConn,System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.LocalCert.GetExpiresminutes(XXF.BasicService.CertCenter.ServiceCertType)">
+            <summary>  得到过期时间 </summary>
+            <param name="tokentype"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.CertCenter.LocalCert.Add(XXF.Db.DbConn,XXF.BasicService.CertCenter.AuthToken,XXF.BasicService.CertCenter.ServiceCertType)">
+            <summary>
+            createtime expiresetime不用传。
+            </summary>
+            <param name="PubConn"></param>
+            <param name="model"></param>
+            <param name="tokentype"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.ConfigCenter.ConfigCenterProvider.CallApiGetC(System.String,System.String)">
+            <summary>获取一个配置参数</summary>
+            <param name="xmdh"></param>
+            <param name="csmc"></param>
+            <param name="cgapp">是否修改AppSetting</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.ConfigCenter.ConfigCenterProvider.CallApiGetC(System.String)">
+            <summary>得到一个项目的参数</summary>
+            <param name="xmdh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.ConfigCenter.ConfigCenterProvider.GetAllForConfig(System.String)">
+            <summary>获取单个项目所有信息</summary>
+            <param name="xmdh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.ConfigCenter.ConfigCenterProvider.GetOneForConfig(System.String,System.String)">
+            <summary>获取指定配置信息</summary>
+            <param name="xmdh"></param>
+            <param name="csmc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.ConfigCenter.Timered.TimerHandle.init">
+            <summary>初始化</summary>
+        </member>
+        <member name="M:XXF.BasicService.ConfigCenter.Timered.TimerHandle.GetConfigModel(Newtonsoft.Json.Linq.JObject)">
+            <summary>得到ConfigModel</summary>
+            <param name="jo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.ConfigCenter.Timered.TimerHandle.TimeToChange(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>自动更新</summary>
+            <param name="source"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:XXF.BasicService.ConfigCenter.Xml.XmlHandle.GetConfigXml(System.String,System.String)">
+            <summary>得到单个值</summary>
+            <param name="csmc"></param>
+            <param name="xmdh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.ConfigCenter.Xml.XmlHandle.GetConfigModel">
+            <summary>得到Xml字符串</summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.ConfigCenter.Xml.XmlHandle.GetConfigXmlList(System.String)">
+            <summary>得到list</summary>
+            <param name="xmdh"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.BasicService.MonitorPlatform.Dal.QueueDal">
+            <summary>
+            队列处理
+            </summary>
+        </member>
+        <member name="M:XXF.BasicService.MonitorPlatform.Dal.QueueDal.AddtimeWatchInfoQueue(XXF.BasicService.MonitorPlatform.TimeWatchInfo)">
+            <summary>
+            添加耗时队列
+            </summary>
+            <param name="timeWatchInfo"></param>
+        </member>
+        <member name="M:XXF.BasicService.MonitorPlatform.Dal.QueueDal.TimerOperate">
+            <summary>
+            时间操作
+            </summary>
+        </member>
+        <member name="T:XXF.BasicService.MonitorPlatform.Model.tb_ErrorLog_model">
+            <summary>
+            tb_ErrorLog Data Structure.
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_ErrorLog_model.ID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_ErrorLog_model.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_ErrorLog_model.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_ErrorLog_model.Url">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_ErrorLog_model.Msg">
+            <summary>
+            错误日志
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_ErrorLog_model.Stack">
+            <summary>
+            错误堆栈
+            </summary>
+        </member>
+        <member name="T:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model">
+            <summary>
+            tb_TimeWatchLog Data Structure.
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.ID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.Type">
+            <summary>
+            类型：0 默认，1 sql，2 功能
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.Time">
+            <summary>
+            耗时
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.Url">
+            <summary>
+            请求url
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.Msg">
+            <summary>
+            消息日志
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.Tag">
+            <summary>
+            其他标记备注
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.Lyip">
+            <summary>
+            请求Ip
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.Dyduniquetag">
+            <summary>
+            手机唯一标识
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.Dydphoneversion">
+            <summary>
+            手机端版本号
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.Dydphonedevice">
+            <summary>
+            手机设备号
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.Dydtoken">
+            <summary>
+            用户token
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.RequseUrl">
+            <summary>
+            请求Url
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.tb_TimeWatchLog_model.ServerIp">
+            <summary>
+            服务器IP
+            </summary>
+        </member>
+        <member name="T:XXF.BasicService.MonitorPlatform.Model.ParamBinds">
+            <summary>
+            传参绑定类
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.ParamBinds.Ip">
+            <summary>
+            请求Ip
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.ParamBinds.Dyduniquetag">
+            <summary>
+            手机唯一标识
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.ParamBinds.Dydphoneversion">
+            <summary>
+            手机端版本号
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.ParamBinds.Dydphonedevice">
+            <summary>
+            手机设备号
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.ParamBinds.Dydtoken">
+            <summary>
+            用户token
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.ParamBinds.RequseUrl">
+            <summary>
+            请求Url
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.ParamBinds.Msg">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.MonitorPlatform.Model.ParamBinds.ServerIp">
+            <summary>
+            服务器IP
+            </summary>
+        </member>
+        <member name="T:XXF.BasicService.MonitorPlatform.MonitorPlatformHelper">
+            <summary>
+            平台监控帮助类
+            后续需要加入缓冲层,进行批量写，减少数据层压力
+            </summary>
+        </member>
+        <member name="M:XXF.BasicService.MonitorPlatform.MonitorPlatformHelper.AddErrorLog(XXF.BasicService.MonitorPlatform.ErrorInfo)">
+            <summary>
+            添加错误日志
+            </summary>
+            <param name="errorinfo"></param>
+        </member>
+        <member name="M:XXF.BasicService.MonitorPlatform.MonitorPlatformHelper.AddTimeWatchLog(XXF.BasicService.MonitorPlatform.TimeWatchInfo)">
+            <summary>
+            添加耗时日志
+            </summary>
+            <param name="timewatchinfo"></param>
+        </member>
+        <member name="T:XXF.BasicService.MonitorPlatform.ErrorInfo">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:XXF.BasicService.MonitorPlatform.TimeWatchInfo">
+            <summary>
+            耗时信息
+            </summary>
+        </member>
+        <member name="T:XXF.BasicService.NotifyCenter.NotifyCenterProvider">
+            <summary>
+            消息中心
+            </summary>
+        </member>
+        <member name="M:XXF.BasicService.NotifyCenter.NotifyCenterProvider.SendMessage(System.String,System.Collections.Generic.Dictionary{System.String,System.String},XXF.BasicService.NotifyCenter.NCCustomerInfo,System.String)">
+            <summary>
+            发送信息
+            </summary>
+            <param name="templateNo">模板编号</param>
+            <param name="parameters">参数</param>
+            <param name="customerInfo">客户联系信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.NotifyCenter.NotifyCenterProvider.BatchSendMessage(System.String,System.Collections.Generic.Dictionary{System.String,System.String},XXF.BasicService.NotifyCenter.NCCustomerInfo)">
+            <summary>
+            批量推送消息
+            </summary>
+            <param name="templateNo"></param>
+            <param name="parameters"></param>
+            <param name="customerInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.NotifyCenter.NotifyCenterProvider.ListNotifys(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取用户的消息列表
+            </summary>
+            <param name="yhzh"></param>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.NotifyCenter.NotifyCenterProvider.SignDelete(System.String,System.Int64)">
+            <summary>
+            标记消息为清除
+            </summary>
+            <param name="yhzh"></param>
+            <param name="queueID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.NotifyCenter.NotifyCenterProvider.SignDelete(System.String,System.String)">
+            <summary>
+            标记消息为清除 批量
+            </summary>
+            <param name="yhzh"></param>
+            <param name="queueID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.NotifyCenter.NotifyCenterProvider.SignRead(System.String,System.Int64)">
+            <summary>
+            标记消息为已读
+            </summary>
+            <param name="yhzh"></param>
+            <param name="queueID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.NotifyCenter.NotifyCenterProvider.GetParameters(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            解析消息参数
+            </summary>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.NotifyCenter.NotifyCenterProvider.GetCustomerInfo(XXF.BasicService.NotifyCenter.NCCustomerInfo)">
+            <summary>
+            解析消息发送目标
+            </summary>
+            <param name="customerInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.BasicService.NotifyCenter.NotifyCenterProvider.SendMessageAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.String},XXF.BasicService.NotifyCenter.NCCustomerInfo,System.String)">
+            <summary>
+            异步发送信息
+            </summary>
+            <param name="templateNo">模板编号</param>
+            <param name="parameters">参数</param>
+            <param name="customerInfo">客户联系信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.BasicService.NotifyCenter.NCConfig">
+            <summary>
+            消息中心配置
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.NotifyCenter.NCConfig.ApiUrl">
+            <summary>
+            访问的API地址
+            </summary>
+        </member>
+        <member name="T:XXF.BasicService.NotifyCenter.NCCustomerInfo">
+            <summary>
+            消息中心 消息发送目标信息
+            </summary>
+        </member>
+        <member name="M:XXF.BasicService.NotifyCenter.NCCustomerInfo.#ctor(System.String,System.String,XXF.BasicService.NotifyCenter.PhonePushLinkModel,System.String)">
+            <summary>
+            用户信息
+            </summary>
+            <param name="mobileLink">手机号</param>
+            <param name="emailLink">邮件地址</param>
+            <param name="phonePushLink">推送唯一设备号</param>
+            <param name="QQLink">qq号码</param>
+            <param name="yhzh">用户账号</param>
+        </member>
+        <member name="P:XXF.BasicService.NotifyCenter.NCCustomerInfo.MobileLink">
+            <summary>
+            手机联系方式
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.NotifyCenter.NCCustomerInfo.EmailLink">
+            <summary>
+            邮件地址
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.NotifyCenter.NCCustomerInfo.PhonePushLink">
+            <summary>
+            手机推送联系 int手机类型 string 手机appid
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.NotifyCenter.NCCustomerInfo.QQLink">
+            <summary>
+            QQ号
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.NotifyCenter.PhonePushLinkModel.DeviceType">
+            <summary>
+            设备类型 ios=1 andserial=2
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.NotifyCenter.PhonePushLinkModel.AppInfo">
+            <summary>
+            设备唯一标识
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.NotifyCenter.PhonePushLinkModel.CutomerType">
+            <summary>
+            用户类型 0用户 1商户 2用户网上下载
+            </summary>
+        </member>
+        <member name="T:XXF.BasicService.NotifyCenter.NCResult">
+            <summary>
+            消息中心返回结果
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.NotifyCenter.NCResult.code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.NotifyCenter.NCResult.msg">
+            <summary>
+            提示
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.NotifyCenter.NCResult.response">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:XXF.BasicService.NotifyCenter.NCResult.total">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="T:XXF.Cache.CacheFileInfo">
+            <summary>
+            文件缓存信息
+            </summary>
+        </member>
+        <member name="P:XXF.Cache.CacheFileInfo.RefreashMethod">
+            <summary>
+            缓存回调数据刷新函数
+            </summary>
+        </member>
+        <member name="P:XXF.Cache.CacheFileInfo.CacheData">
+            <summary>
+            缓存数据
+            </summary>
+        </member>
+        <member name="P:XXF.Cache.CacheFileInfo.IintervalTime">
+            <summary>
+            间隔时间 秒为单位,（系统自身刷新频率为5秒，故可能有5秒延迟）
+            </summary>
+        </member>
+        <member name="P:XXF.Cache.CacheFileInfo.LastRefreashTime">
+            <summary>
+            上一次缓存刷新时间
+            </summary>
+        </member>
+        <member name="T:XXF.Cache.CacheFileProvider">
+            <summary>
+            缓存文件提供类
+            </summary>
+        </member>
+        <member name="M:XXF.Cache.CacheFileProvider.Register(System.String,XXF.Cache.CacheFileInfo)">
+            <summary>
+            注册缓存
+            </summary>
+            <param name="cachekey"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Cache.CacheFileProvider.GetCache(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <param name="cachekey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Cache.CacheFileProvider.Run">
+            <summary>
+            刷新缓存线程回调
+            </summary>
+        </member>
+        <member name="T:XXF.Cache.CacheHelper">
+            <summary>
+            缓存帮助类
+            </summary>
+        </member>
+        <member name="M:XXF.Cache.CacheHelper.GetCache(System.String)">
+            <summary>
+            获取数据缓存
+            </summary>
+            <param name="CacheKey">键</param>
+        </member>
+        <member name="M:XXF.Cache.CacheHelper.SetCache(System.String,System.Object)">
+            <summary>
+            设置数据缓存
+            </summary>
+        </member>
+        <member name="M:XXF.Cache.CacheHelper.SetCache(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            设置数据缓存
+            </summary>
+        </member>
+        <member name="M:XXF.Cache.CacheHelper.SetCache(System.String,System.Object,System.DateTime,System.TimeSpan)">
+            <summary>
+            设置数据缓存
+            </summary>
+        </member>
+        <member name="M:XXF.Cache.CacheHelper.RemoveAllCache(System.String)">
+            <summary>
+            移除指定数据缓存
+            </summary>
+        </member>
+        <member name="M:XXF.Cache.CacheHelper.RemoveAllCache">
+            <summary>
+            移除全部缓存
+            </summary>
+        </member>
+        <member name="T:XXF.Cache.ConfigCacheModel`1">
+            <summary>
+            配置缓存Model
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:XXF.Cache.ConfigCacheModel`1.ConfigKey">
+            <summary>
+            配置Key
+            </summary>
+        </member>
+        <member name="P:XXF.Cache.ConfigCacheModel`1.RefreshMethod">
+            <summary>
+            缓存回调数据刷新函数
+            </summary>
+        </member>
+        <member name="P:XXF.Cache.ConfigCacheModel`1.RefreshDataByLocalFile">
+            <summary>
+            缓存回调函数 本地文件
+            </summary>
+        </member>
+        <member name="P:XXF.Cache.ConfigCacheModel`1.IntervalTime">
+            <summary>
+            间隔时间 秒为单位,（系统自身刷新频率为5秒，故可能有5秒延迟）
+            </summary>
+        </member>
+        <member name="P:XXF.Cache.ConfigCacheModel`1.LastRefreshTime">
+            <summary>
+            上一次缓存刷新时间
+            </summary>
+        </member>
+        <member name="T:XXF.Cache.ConfigCacheProvider`1">
+            <summary>
+            配置缓存提供操作类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XXF.Cache.ConfigCacheProvider`1.#ctor(System.String,System.Func{System.DateTime,`0},System.Action{`0},System.Int32)">
+            <summary>
+            初始化函数
+            </summary>
+            <param name="configKey">配置Key值</param>
+            <param name="refreshMethod">刷新回调函数</param>
+            <param name="refreshFullMethod">刷新回调函数 使用本地文件数据刷新</param>
+            <param name="intervalTime">间隔时间 秒</param>
+        </member>
+        <member name="M:XXF.Cache.ConfigCacheProvider`1.ReRefresh">
+            <summary>
+            刷新数据  调用注册的刷新回调函数
+            </summary>
+        </member>
+        <member name="T:XXF.Common.IOHelper">
+            <summary>
+            IO操作帮助类
+            </summary>
+        </member>
+        <member name="M:XXF.Common.IOHelper.CreateDirectory(System.String)">
+            <summary>
+            根据文件路径，创建文件对应的文件夹，若已存在则跳过
+            </summary>
+            <param name="filepath"></param>
+        </member>
+        <member name="M:XXF.Common.IOHelper.CopyDirectory(System.String,System.String)">
+            <summary>
+            目录拷贝
+            不支持父子目录拷贝，否则出现死循环递归
+            </summary>
+            <param name="srcDir"></param>
+            <param name="tgtDir"></param>
+        </member>
+        <member name="M:XXF.Common.IOHelper.DataTableToExcelFile(System.Data.DataTable,System.String)">
+            <summary>
+            datatable 导出 excel文件
+            </summary>
+            <param name="tb"></param>
+            <param name="filefullname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.IOHelper.DateTableToExcelFileBytes(System.Data.DataTable,System.String)">
+            <summary>
+            datatable 导出 excel文件
+            </summary>
+        </member>
+        <member name="M:XXF.Common.IOHelper.DataTableToCSVFile(System.Data.DataTable,System.String)">
+            <summary>
+            datatable 导出 excel csv文件
+            </summary>
+        </member>
+        <member name="T:XXF.Common.SafeEcho">
+            <summary>
+            安全的在页面中输出各种内容
+            包括过滤xss脚本
+            </summary>
+        </member>
+        <member name="M:XXF.Common.SafeEcho.Input(System.String)">
+            <summary>
+            输出input的value
+            </summary>
+            <param name="txt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.SafeEcho.Img(System.String)">
+            <summary>
+            输出img的src
+            </summary>
+            <param name="src"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.SafeEcho.TextArea(System.String)">
+            <summary>
+            在textarea中输出内容
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.SafeEcho.RemoveMoreSpace(System.String)">
+            <summary>
+            去除2个以上的空格
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.SafeEcho.Text(System.String)">
+            <summary>
+            在页面输出文本内容
+            会将\n\r转换成br,\t转换成4个nbsp
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.SafeEcho.Html(System.String)">
+            <summary>
+            输出动态html代码
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.SafeEcho.Url(System.String)">
+            <summary>
+            输出url
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.SafeEcho.Title(System.String)">
+            <summary>
+            输出Title
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.SafeEcho.Title(System.String,System.Int32)">
+            <summary>
+            输出Title
+            </summary>
+            <param name="str"></param>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.SafeEcho.Meta(System.String)">
+            <summary>
+            输出Meta
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.SafeEcho.Meta(System.String,System.Int32)">
+            <summary>
+            输出Meta
+            </summary>
+            <param name="str"></param>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.SafeEcho.Attr(System.String)">
+            <summary>
+            输出js脚本
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Common.TimeHelper">
+            <summary>
+            时间类函数
+            </summary>
+        </member>
+        <member name="M:XXF.Common.TimeHelper.IsExceedTime(System.Int32,System.String)">
+            <summary>
+            时间是否超出指定的小时数
+            </summary>
+            <param name="hours"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Common.TimeHelper.IntervalTimeSpan(System.DateTime,System.DateTime)">
+            <summary>
+            获取两段时间的间隔时间
+            </summary>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Common.XXFConfig">
+            <summary>
+            XXF配置文件
+            通过配置中心读取XXF的日志
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.WriteVisitCertCenterTimeWatchLog">
+            <summary>
+            是否记录访问认证中心的耗时（得到Token信息和验证Token）
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.IsWriteErrorLog">
+            <summary>
+            是否写错误日志
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.IsWriteVisitLog">
+            <summary>
+            是否拦截访问日志
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.IsWriteErrorLogToMonitorPlatform">
+            <summary>
+            错误日志是否写入监控平台
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.IsWriteErrorLogToLocalFile">
+            <summary>
+            错误日志是否写入本地文件
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.IsWriteTimeWatchLog">
+            <summary>
+            是否写耗时日志
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.IsWriteTimeWatchLogToMonitorPlatform">
+            <summary>
+            耗时日志是否写入监控平台
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.IsWriteTimeWatchLogToLocalFile">
+            <summary>
+            耗时日志是否写入本地文件
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.MonitorPlatformConnectionString">
+            <summary>
+            监控平台数据库连接
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.MainConnectString">
+            <summary>
+            点啊点主库数据库连接
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.ConfigConnectString">
+            <summary>
+            点啊点配置数据库连接
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.IsEnabledDepotsConnectByConfig">
+            <summary>
+            是否启用配置分库连接--默认不启用
+            </summary>
+        </member>
+        <member name="F:XXF.Common.XXFConfig.ProjectName">
+            <summary>
+            当前项目名称
+            </summary>
+        </member>
+        <member name="M:XXF.Common.XXFConfig.Get(System.String)">
+            <summary>
+            根据key获取内容
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Db.DbAreaRule">
+            <summary>
+            分区规则
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbAreaRule.ShopAreaPartitionRule(System.String,System.Int32)">
+            <summary>
+            获取商户地区分区规则
+            默认{PartitionNo}，被替换成分区编号
+            </summary>
+            <param name="dqbm">地区编码（邮政编码）</param>
+            <returns>返回连接字符串</returns>
+        </member>
+        <member name="M:XXF.Db.DbAreaRule.ShopAreaPartitionRule(System.String,System.String)">
+            <summary>
+            获取商户地区分区规则
+            默认{PartitionNo}，被替换成分区编号
+            </summary>
+            <param name="dqbm">商户账号</param>
+            <returns>返回连接字符串</returns>
+        </member>
+        <member name="M:XXF.Db.DbAreaRule.ShzhToPartitionNo(System.String)">
+            <summary>
+            商户账号取分区号
+            </summary>
+            <param name="shzh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbAreaRule.TidToPartitionNo(System.Int64)">
+            <summary>
+            根据订单id获取分区号
+            </summary>
+            <param name="tid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbAreaRule.UserAreaPartitionRule(System.String,System.Int64)">
+            <summary>
+            获取用户分区规则
+            默认{PartitionNo}，被替换成分区编号
+            </summary>
+            <param name="connectstringTemplate"></param>
+            <param name="userid">用户自增id</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbAreaRule.UserAreaPartitionRule(System.String,System.String)">
+            <summary>
+            获取用户分区规则
+            默认{PartitionNo}，被替换成分区编号
+            </summary>
+            <param name="connectstringTemplate"></param>
+            <param name="userid">用户自增id</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbAreaRule.ReplaceConnectStringTemplate(System.String,XXF.Db.DbPartitionConfig.Model.tb_dbpartition_config_model)">
+            <summary>
+            根据模板替换连接字符串
+            </summary>
+            <param name="connectstringTemplate"></param>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbAreaRule.MonthTable(System.DateTime)">
+            <summary>
+            按月分表规则
+            返回:_+yyyMM 举例:_201407
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Db.DbCatch">
+            <summary>
+            Db访问拦截 车毅
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbCatch.Catch``1(System.Boolean,System.String,System.String,System.Collections.Generic.List{XXF.Db.ProcedureParameter},System.Func{``0})">
+            <summary>
+            错误拦截
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="istimeWatch"></param>
+            <param name="sql"></param>
+            <param name="procedurePar"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Db.DbConfig">
+            <summary>
+            数据库配置
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbConfig.GetConfig(System.String)">
+            <summary>取得配置信息</summary>
+            <param name="Name">配置名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConfig.CreateConn">
+            <summary>创建数据库连接</summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConfig.CreateConn(XXF.Db.DbType,System.String)">
+            <summary>创建数据库连接</summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConfig.CreateConn(System.String)">
+            <summary>创建数据库连接</summary>
+            <returns></returns>
+        </member>
+        <member name="P:XXF.Db.DbConfig.DbType">
+            <summary>数据库类型</summary>
+        </member>
+        <member name="P:XXF.Db.DbConfig.ConnectionString">
+            <summary>连接字符串</summary>
+        </member>
+        <member name="T:XXF.Db.DbConn">
+            <summary>数据库连接类</summary>
+        </member>
+        <member name="F:XXF.Db.DbConn._conn">
+            <summary>数据库连接内部字段</summary>
+        </member>
+        <member name="F:XXF.Db.DbConn._dbtype">
+            <summary>数据库类型</summary>
+        </member>
+        <member name="M:XXF.Db.DbConn.CreateConn(System.String)">
+            <summary>创建连接</summary>
+            <param name="dbtype">数据库类型:默认sqlserver</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.CreateConn(XXF.Db.DbType)">
+            <summary>创建连接</summary>
+            <param name="dbtype">数据库类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.CreateConn(XXF.Db.DbType,System.String)">
+            <summary>创建连接</summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="connectionString">连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.CreateConn(XXF.Db.DbType,System.String,System.String,System.String,System.String)">
+            <summary>创建连接</summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="AServerName">服务器名称</param>
+            <param name="ADatabaseName">数据库名称</param>
+            <param name="ALoginName">用户</param>
+            <param name="ALoginPass">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.CreateConn(XXF.Db.DbType,System.Data.Common.DbConnection)">
+            <summary>创建连接</summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="ACn">已有的连接</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.CreateConnString(XXF.Db.DbType,System.String,System.String,System.String,System.String)">
+            <summary>取得数据库连接字符串(SQL传所有参数、ORACLE传AServerName ALoginName ALoginPass、ACCESS传ADatabaseName ALoginPass)</summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="AServerName">服务器名</param>
+            <param name="ADatabaseName">数据库名</param>
+            <param name="ALoginName">用户</param>
+            <param name="ALoginPass">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.TypeToFieldType(System.Type)">
+            <summary>将DataSet中列的类型转换为DataField类型</summary>
+            <param name="AType">原类型，一般取自DataSet.Table.Columns</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.Open">
+            <summary>打开数据库连接
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbConn.Close">
+            <summary>关闭数据库连接
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbConn.Dispose">
+            <summary>释放
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbConn.GetConnection">
+            <summary>取得数据库连接对象</summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.ExecuteSql(System.String,System.Collections.Generic.List{XXF.Db.ProcedureParameter})">
+            <summary>执行SQL语句</summary>
+            <param name="Sql">查询语句</param>
+        </member>
+        <member name="M:XXF.Db.DbConn.ExecuteScalar(System.String,System.Collections.Generic.List{XXF.Db.ProcedureParameter})">
+            <summary>执行SQL语句</summary>
+            <param name="Sql">查询语句</param>
+        </member>
+        <member name="M:XXF.Db.DbConn.SqlBulkCopy(System.Data.DataTable,System.String,System.String,System.Collections.Generic.List{XXF.Db.ProcedureParameter},System.Int32)">
+            <summary>执行SQL语句</summary>
+            <param name="Sql">查询语句</param>
+        </member>
+        <member name="M:XXF.Db.DbConn.SqlToDataTable(System.String,System.Collections.Generic.List{XXF.Db.ProcedureParameter})">
+            <summary>
+            扩展支持返回datatable 车毅
+            </summary>
+            <param name="Sql"></param>
+            <param name="ProcedurePar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.BeginTransaction">
+            <summary>启动事务</summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.Commit">
+            <summary>提交事务
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbConn.Rollback">
+            <summary>回滚事务
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbConn.GetTransaction">
+            <summary>取得事务对象</summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.SqlToDataSet(System.Data.DataSet,System.String,System.Collections.Generic.List{XXF.Db.ProcedureParameter})">
+            <summary>用SQL语句返回记录集</summary>
+            <param name="ds">记录集</param>
+            <param name="Sql">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.SqlToDataSet(System.Data.DataSet,System.String,System.Collections.Generic.List{XXF.Db.ProcedureParameter},System.String)">
+            <summary>用SQL语句返回记录集</summary>
+            <param name="ds">记录集</param>
+            <param name="Sql">SQL语句</param>
+            <param name="TableName">表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.ExecuteSql(System.String,System.Data.CommandType,System.Collections.Generic.List{XXF.Db.ProcedureParameter})">
+            <summary>执行SQL语句</summary>
+            <param name="Sql">查询语句</param>
+            <param name="CmdType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.ExecuteScalar(System.String,System.Data.CommandType,System.Collections.Generic.List{XXF.Db.ProcedureParameter})">
+            <summary>执行SQL语句</summary>
+            <param name="Sql">查询语句</param>
+            <param name="CmdType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.ExecuteProcedure(System.String,System.Collections.Generic.List{XXF.Db.ProcedureParameter})">
+            <summary>执行SQL语句</summary>
+            <param name="ProcedureName">存储过程名称</param>
+            <param name="ProcedurePar">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.SqlToDbReader(System.String,System.Collections.Generic.List{XXF.Db.ProcedureParameter})">
+            <summary>用SQL语句返回DataReader</summary>
+            <param name="Sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.GetIdentity">
+            <summary>取得刚刚插入数据库的种子序号</summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.GetServerDate">
+            <summary>取得系统时间</summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.TableIsExist(System.String)">
+            <summary>数据库中表是否存在</summary>
+            <param name="aTableName">表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.TableIsExist(System.String,System.String)">
+            <summary>数据库中表是否存在</summary>
+            <param name="aDbName">数据库名</param>
+            <param name="aTableName">表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.FieldIsExist(System.String,System.String)">
+            <summary>表中字段是否存在</summary>
+            <param name="aTableName">表名</param>
+            <param name="aFieldName">字段名</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.FieldIsExist(System.String,System.String,System.String)">
+            <summary>表中字段是否存在</summary>
+            <param name="aDbName">数据库名</param>
+            <param name="aTableName">表名</param>
+            <param name="aFieldName">字段名</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbConn.GetMcsToSql(System.String,System.String,System.Int32,System.Collections.Generic.List{XXF.Db.ProcedureParameter}@)">
+            <summary>从多选字符串MultiChoiceStr转换成Sql条件</summary>
+            <param name="AMultiChoiceStr">多选字符串</param>
+            <param name="aField">字段</param>
+            <param name="aStyle">类型 0-两边都不加  1-%左边加  2-右边加%  3-%两边加%</param>
+            <param name="aPar">返回参数</param>
+            <returns></returns>
+        </member>
+        <member name="P:XXF.Db.DbConn.IsWatchTime">
+            <summary>
+            是否监控sql耗时
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbConn.DbType">
+            <summary>数据库类型
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbConn.ConnString">
+            <summary>连接字符串
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbConnSql.ParameterTransform(XXF.Db.ProcedureParameter)">
+            <summary>参数类型转化</summary>
+            <param name="Par"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Db.DbPartitionConfig.DbPartitionConfigHelper">
+            <summary>
+            Db分区配置帮助类
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbPartitionConfig.DbPartitionConfigHelper.RefreshData(System.DateTime)">
+            <summary>
+            刷新数据从数据库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbPartitionConfig.DbPartitionConfigHelper.RefreshDataByLocalFile(System.Collections.Generic.List{XXF.Db.DbPartitionConfig.Model.tb_dbpartition_config_model})">
+            <summary>
+            刷新数据从本地文件
+            </summary>
+            <param name="dic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbPartitionConfig.DbPartitionConfigHelper.GetDicKey(System.String)">
+            <summary>
+            得到key值
+            </summary>
+            <param name="key"></param>
+            <param name="dqbm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbPartitionConfig.DbPartitionConfigHelper.GetCacheConfig">
+            <summary>
+            获取缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Db.DbPartitionConfig.Model.EnumPartitionType">
+            <summary>
+            库分区类型枚举
+            </summary>
+        </member>
+        <member name="F:XXF.Db.DbPartitionConfig.Model.EnumPartitionType.shop">
+            <summary>
+            商户库
+            </summary>
+        </member>
+        <member name="F:XXF.Db.DbPartitionConfig.Model.EnumPartitionType.user">
+            <summary>
+            用户库
+            </summary>
+        </member>
+        <member name="T:XXF.Db.DbPartitionConfig.Model.tb_dbpartition_config_model">
+            <summary>
+            tb_dbpartition_config Data Structure.
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbPartitionConfig.Model.tb_dbpartition_config_model.id">
+            <summary>
+            自增
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbPartitionConfig.Model.tb_dbpartition_config_model.partitionno">
+            <summary>
+            分区id（分区标识号）
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbPartitionConfig.Model.tb_dbpartition_config_model.partitiontype">
+            <summary>
+            分区类型(1:用户分区,2:商户表分区)
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbPartitionConfig.Model.tb_dbpartition_config_model.dbserver">
+            <summary>
+            服务器地址
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbPartitionConfig.Model.tb_dbpartition_config_model.dbname">
+            <summary>
+            数据库名
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbPartitionConfig.Model.tb_dbpartition_config_model.dbuser">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbPartitionConfig.Model.tb_dbpartition_config_model.dbpass">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbPartitionConfig.Model.tb_dbpartition_config_model.lastUpdateTime">
+            <summary>
+            最后更新时间
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbPartitionConfig.Model.tb_dbpartition_config_model.isDel">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="T:XXF.Db.DbShuntConnRule">
+            <summary>
+            数据库分流（数据库负载均衡）规则
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbShuntConnRule.UserAreaPartitionRule(System.String,System.String,System.String)">
+            <summary>
+            获取用户分区规则
+            默认{PartitionNo}，被替换成分区编号
+            </summary>
+            <param name="connectstringTemplate"></param>
+            <param name="userid">用户自增id</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbShuntConnRule.UserAreaPartitionRule(System.String,System.String,System.Int32)">
+            <summary>
+            获取用户分区规则
+            默认{PartitionNo}，被替换成分区编号
+            </summary>
+            <param name="connectstringTemplate"></param>
+            <param name="userid">用户自增id</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbShuntConnRule.ShzhToPartitionNo(System.String)">
+            <summary>
+            商户账号转分区号
+            </summary>
+            <param name="shzh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbShuntConnRule.ReplaceConnectStringTemplate(System.String,XXF.Db.DbShuntRuleConnConfig.Model.tb_shuntruleconn_config_model)">
+            <summary>
+            根据连接字符串模板替换连接字符串
+            </summary>
+            <param name="connectstringTemplate"></param>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Db.DbShuntRuleConnConfig.DbShuntRuleConnConfigHelper">
+            <summary>
+            Db分区配置帮助类
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbShuntRuleConnConfig.DbShuntRuleConnConfigHelper.RefreshData(System.DateTime)">
+            <summary>
+            刷新数据从数据库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbShuntRuleConnConfig.DbShuntRuleConnConfigHelper.RefreshDataByLocalFile(System.Collections.Generic.List{XXF.Db.DbShuntRuleConnConfig.Model.tb_shuntruleconn_config_model})">
+            <summary>
+            刷新数据从本地文件
+            </summary>
+            <param name="dic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbShuntRuleConnConfig.DbShuntRuleConnConfigHelper.GetDicKey(System.String)">
+            <summary>
+            得到key值
+            </summary>
+            <param name="key"></param>
+            <param name="dqbm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbShuntRuleConnConfig.DbShuntRuleConnConfigHelper.GetCacheConfig">
+            <summary>
+            获取缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Db.DbShuntRuleConnConfig.Model.tb_shuntruleconn_config_model">
+            <summary>
+            tb_dbshuntruleconn_config Data Structure.
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbShuntRuleConnConfig.Model.tb_shuntruleconn_config_model.id">
+            <summary>
+            自增
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbShuntRuleConnConfig.Model.tb_shuntruleconn_config_model.partitionno">
+            <summary>
+            分区id（分区标识号）
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbShuntRuleConnConfig.Model.tb_shuntruleconn_config_model.regioncode">
+            <summary>
+            地区编码
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbShuntRuleConnConfig.Model.tb_shuntruleconn_config_model.dbserver">
+            <summary>
+            服务器地址
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbShuntRuleConnConfig.Model.tb_shuntruleconn_config_model.dbname">
+            <summary>
+            数据库名
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbShuntRuleConnConfig.Model.tb_shuntruleconn_config_model.dbuser">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbShuntRuleConnConfig.Model.tb_shuntruleconn_config_model.dbpass">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbShuntRuleConnConfig.Model.tb_shuntruleconn_config_model.lastUpdateTime">
+            <summary>
+            最后更新时间
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbShuntRuleConnConfig.Model.tb_shuntruleconn_config_model.isDel">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="T:XXF.Db.DbSubscribeRule">
+            <summary>
+            数据库订阅规则
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.GetMainConnection(System.String,System.Int32)">
+            <summary>
+            获取主库订阅库连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.GetConfigConnection(System.String,System.Int32)">
+            <summary>
+            获取配置库订阅库连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.GetYzmConnection(System.String,System.Int32)">
+            <summary>
+            获取验证码订阅库连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.GetCrmdyConnection(System.String,System.Int32)">
+            <summary>
+            获取crm订阅库的订阅库连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.GetLogConnection(System.String,System.Int32)">
+            <summary>
+            获取日志库订阅库连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.ShopAreaPartitionRule(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取商户地区分区规则
+            默认{PartitionNo}，被替换成分区编号
+            </summary>
+            <param name="dqbm">地区编码（邮政编码）</param>
+            <returns>返回连接字符串</returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.ShopAreaPartitionRule(System.String,System.String,System.Int32)">
+            <summary>
+            获取商户地区分区规则
+            默认{PartitionNo}，被替换成分区编号
+            </summary>
+            <param name="dqbm">商户账号</param>
+            <returns>返回连接字符串</returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.ShzhToPartitionNo(System.String)">
+            <summary>
+            根据商户账号获取分区号
+            </summary>
+            <param name="shzh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.TidToPartitionNo(System.Int64)">
+            <summary>
+            根据订单id获取分区号
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.UserAreaPartitionRule(System.String,System.Int32)">
+            <summary>
+            获取用户分区规则 汇总库
+            </summary>
+            <param name="connectstringTemplate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.UserAreaPartitionRule(System.String,System.Int64,System.Int32)">
+            <summary>
+            获取用户分区规则
+            默认{PartitionNo}，被替换成分区编号
+            </summary>
+            <param name="connectstringTemplate"></param>
+            <param name="userid">用户自增id</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.UserAreaPartitionRule(System.String,System.String,System.Int32)">
+            <summary>
+            获取用户分区规则
+            默认{PartitionNo}，被替换成分区编号
+            </summary>
+            <param name="connectstringTemplate"></param>
+            <param name="dqbm">地区编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRule.ReplaceConnectStringTemplate(System.String,XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model)">
+            <summary>
+            根据连接字符串模板获取连接字符串
+            </summary>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRuleConfig.DbSubscribeRuleConfigHelper.RefreshData(System.DateTime)">
+            <summary>
+            刷新数据从数据库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRuleConfig.DbSubscribeRuleConfigHelper.RefreshDataByLocalFile(System.Collections.Generic.List{XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model})">
+            <summary>
+            刷新数据从本地文件
+            </summary>
+            <param name="dic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRuleConfig.DbSubscribeRuleConfigHelper.GetDicKey(System.String)">
+            <summary>
+            得到key值
+            </summary>
+            <param name="key"></param>
+            <param name="dqbm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.DbSubscribeRuleConfig.DbSubscribeRuleConfigHelper.GetCacheConfig">
+            <summary>
+            获取缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Db.DbSubscribeRuleConfig.Model.EnumSubscribeType">
+            <summary>
+            订阅库类型
+            </summary>
+        </member>
+        <member name="F:XXF.Db.DbSubscribeRuleConfig.Model.EnumSubscribeType.Stage">
+            <summary>
+            订阅库类型 Stage订阅
+            </summary>
+        </member>
+        <member name="T:XXF.Db.DbSubscribeRuleConfig.Model.EnumPartitionType">
+            <summary>
+            库类型枚举
+            </summary>
+        </member>
+        <member name="F:XXF.Db.DbSubscribeRuleConfig.Model.EnumPartitionType.shop">
+            <summary>
+            商户库
+            </summary>
+        </member>
+        <member name="F:XXF.Db.DbSubscribeRuleConfig.Model.EnumPartitionType.user">
+            <summary>
+            用户库
+            </summary>
+        </member>
+        <member name="F:XXF.Db.DbSubscribeRuleConfig.Model.EnumPartitionType.main">
+            <summary>
+            主库
+            </summary>
+        </member>
+        <member name="F:XXF.Db.DbSubscribeRuleConfig.Model.EnumPartitionType.crmdy">
+            <summary>
+            crm订阅库
+            </summary>
+        </member>
+        <member name="F:XXF.Db.DbSubscribeRuleConfig.Model.EnumPartitionType.yzm">
+             <summary>
+            验证码库 
+             </summary>
+        </member>
+        <member name="F:XXF.Db.DbSubscribeRuleConfig.Model.EnumPartitionType.log">
+            <summary>
+            日志表
+            </summary>
+        </member>
+        <member name="F:XXF.Db.DbSubscribeRuleConfig.Model.EnumPartitionType.config">
+            <summary>
+            config库
+            </summary>
+        </member>
+        <member name="T:XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model">
+            <summary>
+            tb_dbsubscribe_config Data Structure.
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model.partitionno">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model.partitiontype">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model.dbserver">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model.dbname">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model.dbuser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model.dbpass">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model.dbtype">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model.lastUpdateTime">
+            <summary>
+            最后更新时间
+            </summary>
+        </member>
+        <member name="P:XXF.Db.DbSubscribeRuleConfig.Model.tb_dbsubscribe_config_model.isDel">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="T:XXF.Db.FinaceDate">
+            <summary>账期类,其实就是YYYYMM格式的日期</summary>
+        </member>
+        <member name="M:XXF.Db.FinaceDate.#ctor(System.String)">
+            <summary>构造函数，参数必须为YYYYMM格式</summary>
+            <param name="aStr"></param>
+        </member>
+        <member name="M:XXF.Db.FinaceDate.#ctor(System.DateTime)">
+            <summary>构造函数</summary>
+            <param name="aDate"></param>
+        </member>
+        <member name="M:XXF.Db.FinaceDate.#ctor(System.Int32,System.Int32)">
+            <summary>构造函数</summary>
+            <param name="aYear">年</param>
+            <param name="aMonth">月</param>
+        </member>
+        <member name="M:XXF.Db.FinaceDate.AddMonth(System.Int32)">
+            <summary>将指定的月份加到此实例上</summary>
+            <param name="months">月份数，months参数可以是正数也可以是负数</param>
+        </member>
+        <member name="M:XXF.Db.FinaceDate.Equal(XXF.Db.FinaceDate)">
+            <summary>判断参数中的实例和当前实例是否相等</summary>
+            <param name="aDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.FinaceDate.Compare(XXF.Db.FinaceDate)">
+            <summary>将参数中值与此实例做比较，实例大返回正数，参数大返回负数</summary>
+            <param name="aDate">用来做比较的对象</param>
+            <returns>实例大返回正数，参数大返回负数</returns>
+        </member>
+        <member name="M:XXF.Db.FinaceDate.Compare(System.DateTime)">
+            <summary>将参数中值与此实例做比较，实例大返回正数，参数大返回负数</summary>
+            <param name="aDate">用来做比较的对象</param>
+            <returns>实例大返回正数，参数大返回负数</returns>
+        </member>
+        <member name="P:XXF.Db.FinaceDate.Year">
+            <summary>获取或设置此实例的年份</summary>
+        </member>
+        <member name="P:XXF.Db.FinaceDate.Month">
+            <summary>获取或设置此实例的月份</summary>
+        </member>
+        <member name="P:XXF.Db.FinaceDate.Value">
+            <summary>获取账期字符串YYYYMM格式</summary>
+        </member>
+        <member name="P:XXF.Db.FinaceDate.CnValue">
+            <summary>获取账期字符串[yyyy年MM月]格式</summary>
+        </member>
+        <member name="T:XXF.Db.LibConvert">
+            <summary>
+            类型转换类
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.IsDbNull(System.Object)">
+            <summary>返回有关指定对象是否为 System.TypeCode.DBNull 类型的指示。</summary>
+            <param name="Obj">一个对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.DateTimeToInt(System.DateTime)">
+            <summary>日期型转整型</summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.IntToDateTime(System.Int64)">
+            <summary>整型转日期型</summary>
+            <param name="Seconds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.StrToShort(System.String)">
+            <summary>【通用函数】string类型转换为short类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.StrToInt(System.String)">
+            <summary>【通用函数】string类型转换为int类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.StrToInt64(System.String)">
+            <summary>【通用函数】string类型转换为Tnt64类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.StrToDouble(System.String)">
+            <summary>【通用函数】string类型转换为double类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.StrToFloat(System.String)">
+            <summary>【通用函数】string类型转换为float类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.StrToDecimal(System.String)">
+            <summary>【通用函数】string类型转换为decimal类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.StrToDateTime(System.String)">
+            <summary>【通用函数】string类型转换为日期类型,转换失败返回DateTime.Now
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.StrToBoolean(System.String)">
+            <summary>【通用函数】string类型转换为BOOL类型,转换失败返回False
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.StrToDateTime(System.String,System.DateTime)">
+            <summary>【通用函数】string类型转换为日期类型
+            </summary>
+            <param name="aStr">要转换的字符串</param>
+            <param name="aDefault">如果转换失败的默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.IntToBool(System.Int32)">
+            <summary>【通用函数】int类型转换为bool类型(1为TRUE，其余为FALSE)
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.BoolToInt(System.Boolean)">
+            <summary>【通用函数】bool类型转换为int类型(TRUE为1，FALSE为0)
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ObjToShort(System.Object)">
+            <summary>【通用函数】object类型转换为short类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ObjToInt(System.Object)">
+            <summary>【通用函数】object类型转换为int类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ObjToInt64(System.Object)">
+            <summary>【通用函数】object类型转换为Int64类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ObjToDouble(System.Object)">
+            <summary>【通用函数】object类型转换为double类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ObjToDecimal(System.Object)">
+            <summary>【通用函数】object类型转换为decimal类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ObjToFloat(System.Object)">
+            <summary>【通用函数】object类型转换为float类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ObjToDateTime(System.Object)">
+            <summary>【通用函数】object类型转换为datetime类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ObjToBool(System.Object)">
+            <summary>【通用函数】object类型转换为bool类型，直接强制转换(bool)aObj
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.NullToStr(System.Object)">
+            <summary>【通用函数】object类型转换为string类型
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ObjToStr(System.Object)">
+            <summary>【通用函数】相当于NullToStr
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.MoneyToUpper(System.Double,System.Boolean)">
+            <summary>【通用函数】金额小写转换成大写</summary>
+            <param name="Value">数字</param>
+            <param name="AState">状态，true表示完整，false表示简写</param>
+            <returns>返回字符串，如：叁佰贰拾伍元整</returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.MoneyBitUpper(System.Double,System.Int32)">
+            <summary>【通用函数】取得金额某位的大写</summary>
+            <param name="Value">数字</param>
+            <param name="B">位置，-2分-1角0元1十2百3千4万，以此类推</param>
+            <returns>返回数字，如：贰</returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ObjToBytes(System.Object)">
+            <summary>【通用函数】对象转换成字节数组,自动判断isDbNull,返回null
+            </summary>
+            <param name="obj">对象</param>
+            <returns>失败返回null</returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.BytesToObj(System.Byte[])">
+            <summary>
+            【通用函数】字节数组转换成对象,自动判断isDbNull,返回null
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ImageToBytes(System.Drawing.Image,System.Drawing.Imaging.ImageFormat)">
+            <summary>【通用函数】图片转换为字节数组
+            </summary>
+            <param name="image">图片</param>
+            <param name="format">图片格式，一般用ImageFormat.Jpeg</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ImageToBytes(System.Drawing.Image)">
+            <summary>【通用函数】图片转换为字节数组
+            </summary>
+            <param name="image">图片</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.BytesToImage(System.Byte[])">
+            <summary>【通用函数】字节数组转换为图片
+            </summary>
+            <param name="bytes">字节数组</param>
+            <returns>失败返回null</returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ObjToBytesToImage(System.Object)">
+            <summary>【通用函数】对象转换成字节数组转换为图片,自动判断isDbNull
+            </summary>
+            <param name="obj">对象</param>
+            <returns>失败返回null</returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.StrToBytes(System.String)">
+            <summary>【通用函数】字符串转换成字节数组(采用UTF8)</summary>
+            <param name="Str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.BytesToStr(System.Byte[])">
+            <summary>【通用函数】字节数组转换成字符串(采用UTF8)（过期函数，建议采用ObjToBytesToStr）</summary>
+            <param name="bytes">字节数组，DataSet返回的数据可以直接使用,如:(byte[])Ds.Tables[0].Rows[0]["f_fromsql"]</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.ObjToBytesToStr(System.Object)">
+            <summary>【通用函数】对象转换成字节数组再转换成字符串(采用UTF8)</summary>
+            <param name="Obj">对象,如:Ds.Tables[0].Rows[0]["f_image"]</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.DatasetToXmlstr(System.Data.DataSet)">
+            <summary>【通用函数】将Dataset对象转换成Xml字符串(采用UTF8)</summary>
+            <param name="ds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.XmlstrToDataset(System.String)">
+            <summary>【通用函数】将Xml字符串转换成Dataset对象(采用UTF8)</summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibConvert.DupeString(System.String,System.Int32)">
+            <summary>【通用函数】填冲c字符n次
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.LeftStr(System.String,System.Int32)">
+            <summary>【通用函数】取字符串左边N个字符
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.RightStr(System.String,System.Int32)">
+            <summary>【通用函数】取字符串右边N个字符
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.GetLength(System.String)">
+            <summary>【通用函数】取字符串长度(按字节计算)
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibConvert.BytesToByteStr(System.Collections.Generic.IEnumerable{System.Byte})">
+            <summary>【通用函数】byte数组转16进制字符串，一个字节两个字母
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.Old_EnCrypt(System.String)">
+            <summary>MD5加密算法</summary>
+            <param name="aStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.Old_EnCrypt(System.String,System.String)">
+            <summary>MD5加密算法</summary>
+            <param name="aStr"></param>
+            <param name="aKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.Old_DeCrypt(System.String)">
+            <summary>MD5解密算法</summary>
+            <param name="aStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.Old_DeCrypt(System.String,System.String)">
+            <summary>MD5解密算法</summary>
+            <param name="aStr"></param>
+            <param name="aKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.MD5(System.String)">
+            <summary>返回md5算法32位小写</summary>
+            <param name="Text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.En32MD5(System.String)">
+            <summary>
+            MD5加密 32位小写
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.SHA1(System.String)">
+            <summary>返回sha1算法小写字符串</summary>
+            <param name="Text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.EnXor(System.String,System.Char)">
+            <summary>异或加密</summary>
+            <param name="Source"></param>
+            <param name="Key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.DeXor(System.String,System.Char)">
+            <summary>异或解密</summary>
+            <param name="Source"></param>
+            <param name="Key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.EnDES(System.String)">
+            <summary>DES加密</summary>
+            <param name="Source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.EnDES(System.String,System.String)">
+            <summary>DES加密</summary>
+            <param name="Source"></param>
+            <param name="Key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.DeDES(System.String,System.String)">
+            <summary>DES解密</summary>
+            <param name="Source"></param>
+            <param name="Key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.EnRijndael(System.String)">
+            <summary>Rijndael加密</summary>
+            <param name="Source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibCrypto.DeRijndael(System.String)">
+            <summary>Rijndael解密</summary>
+            <param name="Source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Db.Rijndael">
+            <summary>对称加密算法</summary>
+        </member>
+        <member name="M:XXF.Db.Rijndael.#ctor">
+            <summary>
+            对称加密类的构造函数
+            </summary>
+        </member>
+        <member name="M:XXF.Db.Rijndael.GetLegalKey">
+            <summary>
+            获得密钥
+            </summary>
+            <returns>密钥</returns>
+        </member>
+        <member name="M:XXF.Db.Rijndael.GetLegalIV">
+            <summary>
+            获得初始向量IV
+            </summary>
+            <returns>初试向量IV</returns>
+        </member>
+        <member name="M:XXF.Db.Rijndael.Encrypto(System.String)">
+            <summary>
+            加密方法
+            </summary>
+            <param name="Source">待加密的串</param>
+            <returns>经过加密的串</returns>
+        </member>
+        <member name="M:XXF.Db.Rijndael.Decrypto(System.String)">
+            <summary>
+            解密方法
+            </summary>
+            <param name="Source">待解密的串</param>
+            <returns>经过解密的串</returns>
+        </member>
+        <member name="M:XXF.Db.LibNumeric.GetRandomNumeric(System.Int32,System.Int32)">
+            <summary>【通用函数】取随机数字
+            </summary>
+            <param name="aMin">最小</param>
+            <param name="aMax">最大</param>
+        </member>
+        <member name="M:XXF.Db.LibString.StrAddNumber(System.String,System.Int32)">
+            <summary>字符串增加一个数字，一般用于编码递增</summary>
+            <param name="Source">原字符串</param>
+            <param name="Number">增加的数字</param>
+            <returns>返回字符串</returns>
+        </member>
+        <member name="M:XXF.Db.LibString.DupeString(System.String,System.Int32)">
+            <summary>【通用函数】填冲c字符n次
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibString.LeftStr(System.String,System.Int32)">
+            <summary>【通用函数】取字符串左边N个字符
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibString.RightStr(System.String,System.Int32)">
+            <summary>【通用函数】取字符串右边N个字符
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibString.GetLength(System.String)">
+            <summary>【通用函数】取字符串长度(按字节计算)
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibString.IsDate(System.String)">
+            <summary>【通用函数】验证日期字符串格式是否正确
+            </summary>
+        </member>
+        <member name="M:XXF.Db.LibString.GetStringToBm(System.String,System.String)">
+            <summary>【通用函数】提取字符串前的编码
+            </summary>
+            <param name="Str">原字符串</param>
+            <param name="Split">间隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibString.GetStringToMc(System.String,System.String)">
+            <summary>【通用函数】提取字符串后面的名称
+            </summary>
+            <param name="Str">原字符串</param>
+            <param name="Split">间隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Db.LibString.GetChineseSpell(System.String)">
+            <summary>获得一个字符串的汉语拼音码[南京 yyf]
+            </summary>
+            <param name="strText">字符串</param>
+            <returns>汉语拼音码,该字符串只包含大写的英文字母</returns>
+        </member>
+        <member name="M:XXF.Db.LibString.MakeRandomNumber(System.Int32)">
+            <summary>生成一个指定位数的随机数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Db.SimpleProcedureParameter">
+            <summary>
+            简易参数写法 车毅
+            简化并扩展原先的参数书写方式
+            </summary>
+        </member>
+        <member name="M:XXF.Db.SimpleProcedureParameter.ToParameters">
+            <summary>
+            转化成框架支持的参数数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Db.DbType">
+            <summary>数据库连接类型</summary>
+        </member>
+        <member name="F:XXF.Db.DbType.SQLSERVER">
+            <summary>SQL SERVER数据库</summary>
+        </member>
+        <member name="F:XXF.Db.DbType.ORACLE">
+            <summary>ORACLE数据库</summary>
+        </member>
+        <member name="F:XXF.Db.DbType.SQLITE">
+            <summary>Sqlite数据库</summary>
+        </member>
+        <member name="F:XXF.Db.DbType.Other">
+            <summary>其他数据库</summary>
+        </member>
+        <member name="T:XXF.Db.ProcParType">
+            <summary>存储过程参数类型</summary>
+        </member>
+        <member name="F:XXF.Db.ProcParType.Default">
+            <summary>
+            默认无参 车毅
+            </summary>
+        </member>
+        <member name="F:XXF.Db.ProcParType.Int16">
+            <summary>16位的有符号整数，相当于Sql中的SmallInt、Oracle中的Int16、Oledb中的SmallInt、.net中的System.Int16</summary>
+        </member>
+        <member name="F:XXF.Db.ProcParType.Int32">
+            <summary>32位的有符号整数，相当于Sql中的Int、Oracle中的Int32、Oledb中的Integer、.net中的System.Int32</summary>
+        </member>
+        <member name="F:XXF.Db.ProcParType.Int64">
+            <summary>64位的有符号整数，相当于Sql中的BigInt、Oracle中无此类型可用Number代替、Oledb中的BigInt、.net中的System.Int64</summary>
+        </member>
+        <member name="F:XXF.Db.ProcParType.Single">
+            <summary>单精度浮点值，相当于Sql中的Real、Oracle中的Float、Oledb中的Single、.net中的System.Single</summary>
+        </member>
+        <member name="F:XXF.Db.ProcParType.Double">
+            <summary>双精度浮点值，相当于Sql中的Float、Oracle中的Double、Oledb中的Double、.net中的System.Double</summary>
+        </member>
+        <member name="F:XXF.Db.ProcParType.Decimal">
+            <summary>定点精度和小数位数数值，相当于Sql中的Decimal、Oracle中的Number、Oledb中的Decimal、.net中的System.Decimal</summary>
+        </member>
+        <member name="F:XXF.Db.ProcParType.Char">
+            <summary>固定长度字符串，相当于Sql中的Char、Oracle中的Char、Oledb中的Char、.net中的System.String</summary>
+        </member>
+        <member name="F:XXF.Db.ProcParType.VarChar">
+            <summary>可变长度字符串，相当于Sql中的VarChar、Oracle中的VarChar、Oledb中的VarChar、.net中的System.String</summary>
+        </member>
+        <member name="F:XXF.Db.ProcParType.NVarchar">
+            <summary>双字节char</summary>
+        </member>
+        <member name="F:XXF.Db.ProcParType.Image">
+            <summary>二进制数据，相当于Sql中的Binary、Oracle中的Blob、Oledb中的Binary、.net中的System.Byte[]</summary>
+        </member>
+        <member name="F:XXF.Db.ProcParType.DateTime">
+            <summary>日期时间类型，相当于Sql中的DateTime、Oracle中的DateTime、Oledb中的DBDate、.net中的System.DateTime</summary>
+        </member>
+        <member name="T:XXF.Db.FieldType">
+            <summary>字段类型</summary>
+        </member>
+        <member name="F:XXF.Db.FieldType.Int16">
+            <summary>16位的有符号整数，相当于Sql中的SmallInt、Oracle中的Int16、Oledb中的SmallInt、.net中的System.Int16</summary>
+        </member>
+        <member name="F:XXF.Db.FieldType.Int32">
+            <summary>32位的有符号整数，相当于Sql中的Int、Oracle中的Int32、Oledb中的Integer、.net中的System.Int32</summary>
+        </member>
+        <member name="F:XXF.Db.FieldType.Int64">
+            <summary>64位的有符号整数，相当于Sql中的BigInt、Oracle中无此类型可用Number代替、Oledb中的BigInt、.net中的System.Int64</summary>
+        </member>
+        <member name="F:XXF.Db.FieldType.Single">
+            <summary>单精度浮点值，相当于Sql中的Real、Oracle中的Float、Oledb中的Single、.net中的System.Single</summary>
+        </member>
+        <member name="F:XXF.Db.FieldType.Double">
+            <summary>双精度浮点值，相当于Sql中的Float、Oracle中的Double、Oledb中的Double、.net中的System.Double</summary>
+        </member>
+        <member name="F:XXF.Db.FieldType.Decimal">
+            <summary>定点精度和小数位数数值，相当于Sql中的Decimal、Oracle中的Number、Oledb中的Decimal、.net中的System.Decimal</summary>
+        </member>
+        <member name="F:XXF.Db.FieldType.String">
+            <summary>可变长度字符串，相当于Sql中的VarChar、Oracle中的VarChar、Oledb中的VarChar、.net中的System.String</summary>
+        </member>
+        <member name="F:XXF.Db.FieldType.Image">
+            <summary>二进制数据，相当于Sql中的Binary、Oracle中的Blob、Oledb中的Binary、.net中的System.Byte[]</summary>
+        </member>
+        <member name="F:XXF.Db.FieldType.DateTime">
+            <summary>日期时间类型，相当于Sql中的DateTime、Oracle中的DateTime、Oledb中的DBDate、.net中的System.DateTime</summary>
+        </member>
+        <member name="F:XXF.Db.FieldType.Boolean">
+            <summary>布尔值</summary>
+        </member>
+        <member name="T:XXF.Db.ProcedureParameter">
+            <summary>存储过程参数</summary>
+        </member>
+        <member name="F:XXF.Db.ProcedureParameter.Name">
+            <summary>参数名称</summary>
+        </member>
+        <member name="F:XXF.Db.ProcedureParameter.ParType">
+            <summary>参数类型</summary>
+        </member>
+        <member name="F:XXF.Db.ProcedureParameter.Size">
+            <summary>参数大小</summary>
+        </member>
+        <member name="F:XXF.Db.ProcedureParameter.Direction">
+            <summary>参数方向</summary>
+        </member>
+        <member name="F:XXF.Db.ProcedureParameter.Value">
+            <summary>参数值</summary>
+        </member>
+        <member name="M:XXF.Db.ProcedureParameter.#ctor">
+            <summary>默认构造函数</summary>
+        </member>
+        <member name="M:XXF.Db.ProcedureParameter.#ctor(System.String,System.Byte[])">
+            <summary>image型构造函数</summary>
+            <param name="AName"></param>
+            <param name="AImage"></param>
+        </member>
+        <member name="M:XXF.Db.ProcedureParameter.#ctor(System.String,XXF.Db.ProcParType,System.Int32,System.Data.ParameterDirection,System.Object)">
+            <summary>构造函数</summary>
+            <param name="_name">参数名称</param>
+            <param name="_partype">参数类型</param>
+            <param name="_size">参数大小</param>
+            <param name="_direction">参数方向</param>
+            <param name="_value">参数值</param>
+        </member>
+        <member name="M:XXF.Db.ProcedureParameter.#ctor(System.String,XXF.Db.ProcParType,System.Int32,System.Object)">
+            <summary>构造函数</summary>
+            <param name="_name">参数名称</param>
+            <param name="_partype">参数类型</param>
+            <param name="_size">参数大小</param>
+            <param name="_direction">参数方向</param>
+            <param name="_value">参数值</param>
+        </member>
+        <member name="M:XXF.Db.ProcedureParameter.#ctor(System.String,System.Object)">
+            <summary>构造函数 车毅修改支持无类型参数</summary>
+            <param name="_name">参数名称</param>
+            <param name="_partype">参数类型</param>
+            <param name="_size">参数大小</param>
+            <param name="_direction">参数方向</param>
+            <param name="_value">参数值</param>
+        </member>
+        <member name="T:XXF.Extensions.DBObjectMethodHelper">
+            <summary>
+            DB object对象的扩展方法
+            </summary>
+        </member>
+        <member name="T:XXF.Extensions.RequestMethodHelper">
+            <summary>
+            Request(System.Web.HttpRequestBase)扩展类
+            </summary>
+        </member>
+        <member name="M:XXF.Extensions.RequestMethodHelper.RequestParams(System.Web.HttpRequestBase)">
+            <summary>
+            请求参数Get,Post
+            </summary>
+            <param name="Request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Extensions.RequestMethodHelper.RequestParams(System.Web.HttpRequest)">
+            <summary>
+            请求参数Get,Post
+            </summary>
+            <param name="Request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Extensions.RequestMethodHelper.RequestParamValue(System.Web.HttpRequestBase,System.String)">
+            <summary>
+            获取请求参数值
+            </summary>
+            <param name="Request"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Extensions.RequestMethodHelper.RequestParamValue(System.Web.HttpRequest,System.String)">
+            <summary>
+            获取请求参数值
+            </summary>
+            <param name="Request"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Extensions.StringMehtodHelper">
+            <summary>
+            字符串处理方法
+            </summary>
+        </member>
+        <member name="M:XXF.Extensions.StringMehtodHelper.SubString2(System.String,System.Int32)">
+            <summary>
+            部分字符串获取
+            </summary>
+            <param name="str"></param>
+            <param name="maxlen"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Extensions.StringMehtodHelper.NullToEmpty(System.String)">
+            <summary>
+            如果string空引用转空内容
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Extensions.StringMehtodHelper.RemoveHtml(System.String)">
+            <summary>
+            去除html标签
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Extensions.StringMehtodHelper.RemoveMoreSpace(System.String)">
+            <summary>
+            去除2个以上的空格
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Extensions.StringMehtodHelper.CutString(System.String,System.Int32)">
+            <summary>
+            剪切字符串
+            </summary>
+            <param name="strInput"></param>
+            <param name="intLen"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Extensions.StringMehtodHelper.EscapeJson(System.String)">
+            <summary>
+            json特殊字符处理
+            </summary>
+        </member>
+        <member name="T:XXF.Log.CommLog">
+            <summary>
+            一般日志记录类
+            </summary>
+        </member>
+        <member name="M:XXF.Log.CommLog.Write(System.String)">
+            <summary>
+            日常一般日志记录
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:XXF.Log.ErrorLog">
+            <summary>
+            简易错误日志 车毅
+            </summary>
+        </member>
+        <member name="M:XXF.Log.ErrorLog.Write(System.String,System.Exception)">
+            <summary>
+            错误日志记录
+            </summary>
+            <param name="errormsg"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="T:XXF.Log.ThreadLog">
+            <summary>
+            线程日志
+            </summary>
+        </member>
+        <member name="M:XXF.Log.ThreadLog.Monitor">
+            <summary>
+            开启监控
+            </summary>
+        </member>
+        <member name="T:XXF.Log.TimeWatchLog">
+            <summary>
+            简易耗时打印 车毅
+            </summary>
+        </member>
+        <member name="M:XXF.Log.TimeWatchLog.Start">
+            <summary>
+            开启
+            </summary>
+        </member>
+        <member name="M:XXF.Log.TimeWatchLog.Write(System.String)">
+            <summary>
+            写耗时日志
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:XXF.Log.TimeWatchLog.Write(XXF.BasicService.MonitorPlatform.Model.ParamBinds)">
+            <summary>
+            写耗时日志
+            </summary>
+            <param name="paramBinds"></param>
+        </member>
+        <member name="T:XXF.Log.VisitLog">
+            <summary>
+            访问日志记录
+            </summary>
+        </member>
+        <member name="M:XXF.Log.VisitLog.Start">
+            <summary>
+            开启访问日志
+            </summary>
+        </member>
+        <member name="M:XXF.Log.VisitLog.Write">
+            <summary>
+            写入访问日志
+            </summary>
+        </member>
+        <member name="T:Xiaoxiao.Framework.ProjectTool.ApiHelper">
+            <summary>
+            api帮助类
+            </summary>
+        </member>
+        <member name="M:Xiaoxiao.Framework.ProjectTool.ApiHelper.Get(System.String,System.Object)">
+            <summary>
+            获取api结果
+            </summary>
+            <param name="url"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xiaoxiao.Framework.ProjectTool.ApiHelper.Response(XXF.Api.ClientResult)">
+            <summary>
+            获取response对象
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xiaoxiao.Framework.ProjectTool.ApiHelper.GetTimeStamp(System.DateTime)">
+            <summary>
+            获取时间戳  使用协调世界时UTC减去1970年1月1日
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.ProjectTool.ControllerHelper">
+            <summary>
+            控制器帮助类
+            </summary>
+        </member>
+        <member name="M:XXF.ProjectTool.ControllerHelper.Visit``1(System.Func{XXF.Db.DbConn,``0})">
+            <summary>
+            普通网站开发时使用
+            有错误信息往外抛
+            备注：若项目有特殊需要，可根据项目需求拷贝代码到自己项目中自定义。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.ProjectTool.ControllerHelper.Visit(System.Func{XXF.Db.DbConn,System.Object})">
+            <summary>
+            Api项目接入时使用,封装api项目接入时候的错误检测及ServerResult封装
+            屏蔽错误信息以serverresult约定输出
+            备注：若项目有特殊需要，可根据项目需求拷贝代码到自己项目中自定义。
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.ProjectTool.DictionaryResult">
+            <summary>
+            默认约定的实体转字典存储结果 车毅
+            </summary>
+        </member>
+        <member name="T:XXF.ProjectTool.DataTableHelper">
+            <summary>
+            dataTable 转 json输出字典
+            用于简化api结果输出，使之不用通过自定义model的方式输出 车毅
+            </summary>
+        </member>
+        <member name="M:XXF.ProjectTool.DataTableHelper.ToDictionaryList(System.Data.DataTable)">
+            <summary>
+            字典列表
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.ProjectTool.DataTableHelper.ToDictionary(System.Data.DataTable)">
+            <summary>
+            单条字典结果
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.ProjectTool.EnumHelper`1">
+            <summary>
+            枚举操作工具类 车毅
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XXF.ProjectTool.EnumHelper`1.GetAllEnumsOfList">
+            <summary>
+            将指定枚举转为列表控件的数据源
+            </summary>
+            <returns>Text:枚举的描述，value：枚举的值</returns>
+        </member>
+        <member name="M:XXF.ProjectTool.EnumHelper`1.GetAllEnumsOfList2">
+            <summary>
+            将指定枚举转为列表控件的数据源
+            </summary>
+            <returns>Text:枚举的描述，value：枚举的值</returns>
+        </member>
+        <member name="M:XXF.ProjectTool.EnumHelper`1.GetDataTableFromEnums">
+            <summary>
+            将制定枚举转化为dataTable  
+            </summary>
+            <returns>Text:枚举的描述，Value：枚举的值</returns>
+        </member>
+        <member name="M:XXF.ProjectTool.EnumHelper`1.GetText(`0)">
+            <summary>
+            获得指定枚举的描述信息
+            </summary>
+            <param name="enumInstance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.ProjectTool.EnumHelper`1.GetValue(`0)">
+            <summary>
+            通过枚举，获得其枚举值
+            </summary>
+            <param name="enumInstance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.ProjectTool.EnumHelper`1.GetEnum(System.String)">
+            <summary>
+            将字符串转换为枚举
+            </summary>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.ProjectTool.MvcMethodFindHelper">
+            <summary>
+            mvc contoller 方法查找,并执行
+            </summary>
+        </member>
+        <member name="M:XXF.ProjectTool.MvcMethodFindHelper.Find(System.Object,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            查找当前mvc contoller方法，并执行
+            仅支持默认约定的mvc模式
+            </summary>
+            <param name="controllerobject"></param>
+            <param name="url"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.ProjectTool.MvcMethodFindHelper.Call(System.Object,System.Reflection.MethodInfo,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            模拟调用方法
+            </summary>
+            <param name="controller"></param>
+            <param name="method"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.ProjectTool.MvcMethodFindHelper.MvcMethodInfo">
+            <summary>
+            自定义mvc方法信息
+            </summary>
+        </member>
+        <member name="T:XXF.ProjectTool.SignHelper">
+            <summary>
+            sign验证辅助类
+            </summary>
+        </member>
+        <member name="F:XXF.ProjectTool.SignHelper.splitCharOne">
+            <summary>
+            第一个分隔符
+            </summary>
+        </member>
+        <member name="F:XXF.ProjectTool.SignHelper.splitCharTwo">
+            <summary>
+            第二个分隔符
+            </summary>
+        </member>
+        <member name="M:XXF.ProjectTool.SignHelper.ValidateSign(System.Web.HttpRequest,System.Int32,System.String@)">
+            <summary>
+            验证sign
+            </summary>
+            <param name="request"></param>
+            <param name="err"></param>
+             <param name="intervalTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.ProjectTool.SignHelper.GetAsc(System.String)">
+            <summary>
+            获取字符串的asc编码
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:XXF.ProjectTool.SignHelper.SignModel.key">
+            <summary>
+            key值
+            </summary>
+        </member>
+        <member name="P:XXF.ProjectTool.SignHelper.SignModel.value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="T:XXF.ProjectTool.SqlHelper">
+            <summary>
+            sql帮助类
+            用于sql的一些处理方式的封装 车毅
+            举例：sql安全检查，危险字符过滤，命令拼接，统一分页（多表，单表），where条件拼接
+            sql耗时检测等
+            </summary>
+        </member>
+        <member name="M:XXF.ProjectTool.SqlHelper.CmdIn(System.Collections.Generic.List{XXF.Db.ProcedureParameter},System.String)">
+            <summary>
+            ,分隔的in 
+            举例 name in ('a','b','c'); 
+            </summary>
+            <param name="splits"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.ProjectTool.SqlHelper.Pager1(XXF.Db.DbConn,System.String,System.String,System.String,System.String,System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            分页1 wsd_page_1： 根据唯一字段唯一值按大小排序，如ID
+            备注：数据库需要安装Sys_Page1存储过程
+            采用min,max算法分页,性能最优,可能有部分数据（相同值的排序字段处于分页时）丢失，有适用范围，详情百度
+            http://www.jiaonan.tv/html/blog/1/26473.htm
+            </summary>
+            <param name="tb">表名</param>
+            <param name="collist">要查询出的字段列表,*表示全部字段</param>
+            <param name="condition">查询条件 ,不带where</param>
+            <param name="col">排序列 例：ID</param>
+            <param name="coltype">列的类型,0-数字类型,1-字符类型</param>
+            <param name="orderby">--排序,FALSE-顺序,TRUE-倒序</param>
+            <param name="pagesize">每页记录数</param>
+            <param name="page">当前页</param>
+            <param name="records">总记录数：为0则计算总记录数</param>
+            <returns>分页记录</returns>
+        </member>
+        <member name="M:XXF.ProjectTool.SqlHelper.Pager2(XXF.Db.DbConn,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+             分页2 wsd_page_2：单表任意排序
+             备注：数据库需要安装Sys_Page2存储过程
+             采用not in的算法方式分页，性能不是最佳 http://www.jiaonan.tv/html/blog/1/26473.htm
+            </summary>
+            <param name="tb">表名  例: news</param>
+            <param name="collist">要查询出的字段列表,*表示全部字段</param>
+            <param name="where">查询条件，不带where 例：classid = 2</param>
+            <param name="orderby">排序条件 例：order by tuijian desc,id desc</param>
+            <param name="pagesize">每页条数</param>
+            <param name="page">当前页码</param>
+            <param name="records">总记录数：为0则重新计算</param>
+            <returns>分页记录</returns>
+        </member>
+        <member name="M:XXF.ProjectTool.SqlHelper.Pager3(XXF.Db.DbConn,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            分页3： 单表/多表通用分页存储过程 wsd_page_3
+            备注：数据库需要安装Sys_Page3存储过程
+            好像是颠倒算法，效率还行。http://www.jiaonan.tv/html/blog/1/26473.htm
+            </summary>
+            <param name="tb">表名 例： table1 inner join table2 on table1.xx=table2.xx </param>
+            <param name="collist">需要获取字段 例: tabl1.xx,table2.*,注意，需要把排序列都选上</param>
+            <param name="where">条件,不带where</param>
+            <param name="orderby">最内层orderby(需要带上表前缀，注意asc 必须写上) 例: order by table1.xxx desc,table2.ad asc "</param>
+            <param name="orderbyo">最外城orderby xxx.desc,ad asc</param>        
+            <param name="pagesize">每页条数</param>
+            <param name="page">页数</param>
+            <param name="records">记录条数</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.ProjectTool.SqlHelper.Visit``1(System.Func{XXF.Db.SimpleProcedureParameter,``0})">
+            <summary>
+            sql访问拦截器
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.ProjectTool.SqlHelper.Visit(System.Func{XXF.Db.SimpleProcedureParameter,System.Data.DataTable})">
+            <summary>
+            sql访问拦截器 非泛型版本
+            默认DataTable 返回 List{DictionaryResult} Model对象集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.CreateManager(System.String[],System.String[])">
+            <summary>
+            创建客户端连接池
+            </summary>
+            <param name="readWriteHosts"></param>
+            <param name="readOnlyHosts"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetPoolRedisCliient">
+            <summary>
+            获取连接池客户端
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.CreateClient(System.String,System.Int32,System.String)">
+            <summary>
+            建立redis长连接
+            </summary>
+            将此处的IP换为自己的redis实例IP，如果设有密码，第三个参数为密码，string 类型
+        </member>
+        <member name="M:XXF.Redis.RedisDb.getValueString(System.String)">
+            <summary>
+            获取key,返回string格式
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.getValueByte(System.String)">
+            <summary>
+            获取key,返回byte[]格式
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetValue``1(System.String)">
+            <summary>
+            获取Key,返回泛型T
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.SetValue(System.String,System.Byte[])">
+            <summary>
+            设置一个值 key值重复则覆盖
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.SetValue(System.String,System.Byte[],System.DateTime)">
+            <summary>
+            设置一个值 key值重复则覆盖
+            </summary>
+            <param name="key">key值</param>
+            <param name="value">value值</param>
+            <param name="expiresAt">过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.SetValue(System.String,System.Byte[],System.TimeSpan)">
+            <summary>
+            设置一个值 key值重复则覆盖
+            </summary>
+            <param name="key">key值</param>
+            <param name="value">value值</param>
+            <param name="timespan">过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.SetValue``1(System.String,``0)">
+            <summary>
+            设置一个值 Key值重复则覆盖
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.SetValue``1(System.String,``0,System.DateTime)">
+            <summary>
+            设置一个值 key值重复则覆盖
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">key值</param>
+            <param name="value">value值</param>
+            <param name="expiresAt">过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.SetValue``1(System.String,``0,System.TimeSpan)">
+            <summary>
+            设置一个值 key值重复则覆盖
+            </summary>
+            <param name="key">key值</param>
+            <param name="value">value值</param>
+            <param name="timespan">过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetHashFields(System.String)">
+            <summary>
+            获得某个hash型key下的所有字段
+            </summary>
+            <param name="hashId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetHashValues(System.String)">
+            <summary>
+            获得某个hash型key下的所有值
+            </summary>
+            <param name="hashId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetHashField(System.String,System.String)">
+            <summary>
+            获得hash型key某个字段的值
+            </summary>
+            <param name="key"></param>
+            <param name="field"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.SetHashField(System.String,System.String,System.String)">
+            <summary>
+            设置hash型key某个字段的值
+            </summary>
+            <param name="key"></param>
+            <param name="field"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.SetHashIncr(System.String,System.String,System.Int32)">
+             <summary>
+            使某个字段增加
+             </summary>
+             <param name="key"></param>
+             <param name="field"></param>
+             <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.HMSet(System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Object})">
+            <summary>
+            hash表批量增加数据
+            </summary>
+            <param name="key"></param>
+            <param name="fields"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.HMGet(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            hash表批量获取数据
+            </summary>
+            <param name="key"></param>
+            <param name="fields"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.AddItemToListRight(System.String,System.String)">
+            <summary>
+            向list类型数据添加成员，向列表底部(右侧)添加
+            </summary>
+            <param name="Item"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.AddItemToListLeft(System.String,System.String)">
+            <summary>
+            向list类型数据添加成员，向列表顶部(左侧)添加
+            </summary>
+            <param name="list"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.AddRangeToList(System.String,System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            将多个值添加至 redis  List中
+            </summary>
+            <param name="list"></param>
+            <param name="items"></param>
+            <param name="seconds"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.ReAddRangeToList(System.String,System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            将多个值添加至 redis  List中
+            </summary>
+            <param name="list"></param>
+            <param name="items"></param>
+            <param name="dateTime"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.ReAddRangeToList(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            将多个值添加至 redis  List中
+            </summary>
+            <param name="list"></param>
+            <param name="items"></param>
+            <param name="dateTime"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetAllItems(System.String)">
+            <summary>
+            从list类型数据读取所有成员
+            </summary>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetItemFromList(System.String,System.Int32)">
+            <summary>
+            从list类型数据指定索引处获取数据，支持正索引和负索引
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetRangeToList(System.String,System.Int32,System.Int32)">
+            <summary>
+            从列表中批量获取数据
+            </summary>
+            <param name="list"></param>
+            <param name="values"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.LRemove(System.String,System.Int32,System.String)">
+            <summary>
+            从列表中删除指定数量的元素
+            </summary>
+            <param name="list"></param>
+            <param name="count"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetItemToSet(System.String,System.String)">
+            <summary>
+            向集合中添加数据
+            </summary>
+            <param name="item"></param>
+            <param name="set"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetAllItemsFromSet(System.String)">
+            <summary>
+            获得集合中所有数据
+            </summary>
+            <param name="set"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetSetDiff(System.String,System.String[])">
+            <summary>
+            获取fromSet集合和其他集合不同的数据
+            </summary>
+            <param name="fromSet"></param>
+            <param name="toSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetSetUnion(System.String[])">
+            <summary>
+            获得所有集合的并集
+            </summary>
+            <param name="set"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetSetInter(System.String[])">
+            <summary>
+            获得所有集合的交集
+            </summary>
+            <param name="set"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.AddItemToSortedSet(System.String,System.String,System.Int64)">
+            <summary>
+            向有序集合中添加元素
+            </summary>
+            <param name="set"></param>
+            <param name="value"></param>
+            <param name="score"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetItemIndexInSortedSetDesc(System.String,System.String)">
+            <summary>
+            获得某个值在有序集合中的排名，按分数的降序排列
+            </summary>
+            <param name="set"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetItemIndexInSortedSet(System.String,System.String)">
+            <summary>
+            获得某个值在有序集合中的排名，按分数的升序排列
+            </summary>
+            <param name="set"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetItemScoreInSortedSet(System.String,System.String)">
+            <summary>
+            获得有序集合中某个值得分数
+            </summary>
+            <param name="set"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetRangeFromSortedSet(System.String,System.Int32,System.Int32)">
+            <summary>
+            获得有序集合中，某个排名范围的所有值
+            </summary>
+            <param name="set"></param>
+            <param name="beginRank"></param>
+            <param name="endRank"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetRangeFromSortedSet(System.String,System.Double,System.Double)">
+            <summary>
+            获得有序集合中，某个分数范围内的所有值，升序
+            </summary>
+            <param name="set"></param>
+            <param name="beginScore"></param>
+            <param name="endScore"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.GetRangeFromSortedSetDesc(System.String,System.Double,System.Double)">
+            <summary>
+            获得有序集合中，某个分数范围内的所有值，降序
+            </summary>
+            <param name="set"></param>
+            <param name="beginScore"></param>
+            <param name="endScore"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.Delete(System.String)">
+            <summary>
+            删除一个key
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.Deletes(System.String[])">
+            <summary>
+            删除一批key
+            </summary>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Redis.RedisDb.QueueCommand(System.Action{XXF.Redis.RedisDb},System.Action)">
+            <summary>
+            批量数据执行
+            </summary>
+            <param name="command"></param>
+            <param name="onSuccessCallback"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisManager.CreateManager(System.String[],System.String[])">
+            <summary>
+            创建客户端连接池
+            </summary>
+            <param name="readWriteHosts"></param>
+            <param name="readOnlyHosts"></param>
+        </member>
+        <member name="M:XXF.Redis.RedisManager.GetPoolRedisCliient">
+            <summary>
+            获取连接池客户端
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Serialization.JsonHelper">
+            <summary>
+            jason 序列化方式
+            </summary>
+        </member>
+        <member name="M:XXF.Serialization.JsonHelper.Serializer(System.Object)">
+            <summary>
+            jason序列化
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Serialization.JsonHelper.Deserialize``1(System.String)">
+            <summary>
+            jason反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Serialization.JsonHelper.Deserialize(System.String,System.Type)">
+            <summary>
+            jason反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Serialization.XmlProvider`1">
+            <summary>
+            XML序列化(gbk编码)提供类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XXF.Serialization.XmlProvider`1.Serializer(`0)">
+            <summary>
+            序列化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Serialization.XmlProvider`1.Serializer(`0,System.Boolean)">
+            <summary>
+            序列化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Serialization.XmlProvider`1.Deserialize(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Tool.Convert24Provider">
+            <summary>
+            24进制乱序
+            </summary>
+        </member>
+        <member name="M:XXF.Tool.Convert24Provider.To(System.Int64)">
+            <summary>
+            数字转24进制
+            </summary>
+            <param name="num"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XXF.Tool.Convert24Provider.From(System.String)">
+            <summary>
+            24进制转数字
+            </summary>
+            <param name="convert"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XXF.Tool.Convert34Provider">
+            <summary>
+            34位编码提供类
+            </summary>
+        </member>
+        <member name="M:XXF.Tool.Convert34Provider.ConvertDiaTo34(System.Int64)">
+            <summary>
+            调用则执行转34位编码
+            </summary>
+            <param name="i"></param>
+        </member>
+        <member name="M:XXF.Tool.Convert34Provider.ToString">
+            <summary>
+            获取34位编码字符串
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

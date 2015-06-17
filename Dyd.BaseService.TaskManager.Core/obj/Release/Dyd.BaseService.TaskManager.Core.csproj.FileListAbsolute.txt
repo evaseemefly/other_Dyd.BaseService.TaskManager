@@ -1,0 +1,6 @@
+E:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Release\Dyd.BaseService.TaskManager.Core.dll
+E:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Release\Dyd.BaseService.TaskManager.Core.pdb
+E:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Release\Microsoft.Web.Infrastructure.dll
+E:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Release\SharpCompress.dll
+E:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\obj\Release\Dyd.BaseService.TaskManager.Core.dll
+E:\working\BasicService\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\obj\Release\Dyd.BaseService.TaskManager.Core.pdb

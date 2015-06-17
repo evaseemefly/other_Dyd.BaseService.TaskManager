@@ -1,0 +1,8 @@
+E:\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\XXF.BaseService.TaskManager.dll
+E:\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\XXF.BaseService.TaskManager.pdb
+E:\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\XXF.dll
+E:\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\System.Net.Http.dll
+E:\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\System.Net.Http.xml
+E:\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\zh-Hans\System.Net.Http.resources.dll
+E:\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\obj\Debug\XXF.BaseService.TaskManager.dll
+E:\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\obj\Debug\XXF.BaseService.TaskManager.pdb
