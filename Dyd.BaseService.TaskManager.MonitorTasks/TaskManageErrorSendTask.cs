@@ -91,7 +91,7 @@ namespace Dyd.BaseService.TaskManager.MonitorTasks
             this.AppConfig = new XXF.BaseService.TaskManager.SystemRuntime.TaskAppConfigInfo();
             this.AppConfig.Add("sendmailhost", "smtp.163.com");
             this.AppConfig.Add("sendmailname", "fengyeguigui@163.com");
-            this.AppConfig.Add("password", "472790378@");
+            this.AppConfig.Add("password", "*******");
 
             base.TestRun();
         }
