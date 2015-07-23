@@ -31,3 +31,16 @@ E:\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\Syst
 E:\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\Dyd.BaseService.TaskManager.Core.pdb
 E:\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\System.Net.Http.xml
 E:\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\zh-Hans\System.Net.Http.resources.dll
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\Dyd.BaseService.TaskManager.Domain.dll
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\Dyd.BaseService.TaskManager.Domain.pdb
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\Dyd.BaseService.TaskManager.Core.dll
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\XXF.dll
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\SharpCompress.dll
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\System.Net.Http.dll
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\Dyd.BaseService.TaskManager.Core.pdb
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\System.Net.Http.xml
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\bin\Debug\zh-Hans\System.Net.Http.resources.dll
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\obj\Debug\Dyd.BaseService.TaskManager.Domain.csprojResolveAssemblyReference.cache
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\obj\Debug\Dyd.BaseService.TaskManager.Domain.dll
+F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Domain\obj\Debug\Dyd.BaseService.TaskManager.Domain.pdb

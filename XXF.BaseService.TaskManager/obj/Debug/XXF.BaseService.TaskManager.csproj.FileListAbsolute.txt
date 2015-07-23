@@ -6,3 +6,11 @@ E:\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\System.Net.
 E:\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\zh-Hans\System.Net.Http.resources.dll
 E:\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\obj\Debug\XXF.BaseService.TaskManager.dll
 E:\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\obj\Debug\XXF.BaseService.TaskManager.pdb
+F:\git\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\XXF.BaseService.TaskManager.dll
+F:\git\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\XXF.BaseService.TaskManager.pdb
+F:\git\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\XXF.dll
+F:\git\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\System.Net.Http.dll
+F:\git\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\System.Net.Http.xml
+F:\git\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\zh-Hans\System.Net.Http.resources.dll
+F:\git\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\obj\Debug\XXF.BaseService.TaskManager.dll
+F:\git\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\obj\Debug\XXF.BaseService.TaskManager.pdb
