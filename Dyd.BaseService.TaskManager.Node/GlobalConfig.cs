@@ -22,7 +22,7 @@ namespace Dyd.BaseService.TaskManager.Node
         /// <summary>
         /// 任务调度平台web url地址
         /// </summary>
-        public static string TaskManagerWebUrl { get { return System.Configuration.ConfigurationSettings.AppSettings["TaskManagerWebUrl"]; } }
+        public static string TaskManagerWebUrl { get { return System.Configuration.ConfigurationManager.AppSettings["TaskManagerWebUrl"]; } }
         /// <summary>
         /// 任务dll根目录
         /// </summary>

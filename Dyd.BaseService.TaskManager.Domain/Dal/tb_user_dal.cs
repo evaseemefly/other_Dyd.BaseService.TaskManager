@@ -10,8 +10,8 @@ using XXF.ProjectTool;
 
 namespace Dyd.BaseService.TaskManager.Domain.Dal
 {
-	/*代码自动生成工具自动生成,不要在这里写自己的代码，否则会被自动覆盖哦 - 车毅*/
-	public partial class tb_user_dal
+    /*代码自动生成工具自动生成,不要在这里写自己的代码，否则会被自动覆盖哦 - 车毅*/
+    public partial class tb_user_dal
     {
         public List<tb_user_model> GetAllUsers(DbConn PubConn)
         {
@@ -39,8 +39,8 @@ namespace Dyd.BaseService.TaskManager.Domain.Dal
             {
                 ps.Add("userstaffno", userstaffno);
                 string sql = "select id,username,userrole from tb_user where userstaffno=@userstaffno";
-                DataSet ds=new DataSet();
-                PubConn.SqlToDataSet(ds,sql,ps.ToParameters());
+                DataSet ds = new DataSet();
+                PubConn.SqlToDataSet(ds, sql, ps.ToParameters());
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     tb_user_model m = CreateModel(ds.Tables[0].Rows[0]);
@@ -50,6 +50,26 @@ namespace Dyd.BaseService.TaskManager.Domain.Dal
                     return null;
             });
         }
+
+        public tb_user_model GetUser(DbConn PubConn, string userstaffno, string userpsw)
+        {
+            return SqlHelper.Visit(ps =>
+            {
+                ps.Add("userstaffno", userstaffno);
+                ps.Add("userpsw", userpsw);
+                string sql = "select id,username,userrole from tb_user where userstaffno=@userstaffno and userpsw=@userpsw";
+                DataSet ds = new DataSet();
+                PubConn.SqlToDataSet(ds, sql, ps.ToParameters());
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    tb_user_model m = CreateModel(ds.Tables[0].Rows[0]);
+                    return m;
+                }
+                else
+                    return null;
+            });
+        }
+
 
         public bool DeleteOneNode(DbConn PubConn, int id)
         {

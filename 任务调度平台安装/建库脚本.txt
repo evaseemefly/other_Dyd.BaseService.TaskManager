@@ -49,6 +49,7 @@ CREATE TABLE [dbo].[tb_user](
 	[usercreatetime] [datetime] NOT NULL,
 	[usertel] [varchar](20) NOT NULL,
 	[useremail] [varchar](50) NOT NULL,
+	[userpsw] [nvarchar](50) NULL CONSTRAINT [DF_tb_user_userpsw]  DEFAULT ((123)),
  CONSTRAINT [PK_tb_user] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
@@ -345,7 +346,7 @@ ALTER TABLE [dbo].[tb_node] ADD  CONSTRAINT [DF_tb_node_ifcheckstate]  DEFAULT (
 GO
 /****** Object:  Default [DF_tb_performance_nodeid]    Script Date: 04/30/2015 14:52:37 ******/
 ALTER TABLE [dbo].[tb_performance] ADD  CONSTRAINT [DF_tb_performance_nodeid]  DEFAULT ((0)) FOR [nodeid]
-GO
+GO 
 /****** Object:  Default [DF_tb_performance_lastupdatetime]    Script Date: 04/30/2015 14:52:37 ******/
 ALTER TABLE [dbo].[tb_performance] ADD  CONSTRAINT [DF_tb_performance_lastupdatetime]  DEFAULT (getdate()) FOR [lastupdatetime]
 GO
@@ -366,4 +367,22 @@ ALTER TABLE [dbo].[tb_task] ADD  CONSTRAINT [DF_tb_task_taskerrorcount]  DEFAULT
 GO
 /****** Object:  Default [DF_tb_task_taskruncount]    Script Date: 04/30/2015 14:52:37 ******/
 ALTER TABLE [dbo].[tb_task] ADD  CONSTRAINT [DF_tb_task_taskruncount]  DEFAULT ((0)) FOR [taskruncount]
+GO
+
+INSERT INTO [dbo].[tb_user]
+           ([userstaffno]
+           ,[username]
+           ,[userrole]
+           ,[usercreatetime]
+           ,[usertel]
+           ,[useremail]
+           ,[userpsw])
+     VALUES
+           ('001'
+           ,'admin'
+           ,0
+           ,GETDATE()
+           ,''
+           ,''
+           ,'123')
 GO

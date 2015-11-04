@@ -46,6 +46,12 @@ namespace Dyd.BaseService.TaskManager.Domain.Model
         /// 
         /// </summary>
         public string useremail { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string userpsw { get; set; }
+        
         
     }
 }
