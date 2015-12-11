@@ -46,7 +46,18 @@ namespace Dyd.BaseService.TaskManager.Web.Models
             }
         }
 
-        public static string HelpHtml(string helpinfo="使用说明")
+        public static tb_user_model GetUser(string userstaffno, string userpsw)
+        {
+            using (DbConn PubConn = DbConfig.CreateConn(Config.TaskConnectString))
+            {
+                PubConn.Open();
+                tb_user_dal dal = new tb_user_dal();
+                return dal.GetUser(PubConn, userstaffno, userpsw);
+            }
+        }
+
+
+        public static string HelpHtml(string helpinfo = "使用说明")
         {
             return "<img src='/content/images/help.png' style='' width='20' height='20' title='" + helpinfo + "'></img>";
         }

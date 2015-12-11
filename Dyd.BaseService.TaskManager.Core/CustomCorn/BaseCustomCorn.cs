@@ -29,7 +29,7 @@ namespace Dyd.BaseService.TaskManager.Core.CustomCorn
                 }
                 return default(T);
             }
-            catch (Exception exp)
+            catch (Exception)
             {
                 throw new Exception("Corn表达式解析失败:" + name + " corn:" + Corn);
             }

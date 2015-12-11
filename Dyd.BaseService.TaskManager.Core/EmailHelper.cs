@@ -135,7 +135,7 @@ namespace Dyd.BaseService.TaskManager.Core
                 return true;
 
             }
-            catch (System.Net.Mail.SmtpException ex)
+            catch (System.Net.Mail.SmtpException)
             {
                 return false;
             }

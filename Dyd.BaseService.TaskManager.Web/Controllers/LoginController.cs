@@ -58,6 +58,21 @@ namespace Dyd.BaseService.TaskManager.Web.Controllers
         [HttpPost]
         public ActionResult Login(string appid, string sign, string returnurl, string username, string password, string validate)
         {
+
+            if (System.Configuration.ConfigurationManager.AppSettings["loginType"] == "1")
+            {
+                tb_user_model user = Common.GetUser(username, password);
+                if (null != user)
+                {                   
+                    if (user == null)
+                        throw new Exception("用户在平台中未开权限。");
+                    FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(user.id + " " + user.username + " " + username + "," + "token" + " " + user.userrole, false, (int)FormsAuthentication.Timeout.TotalMinutes);
+                    string enticket = FormsAuthentication.Encrypt(ticket);
+                    HttpCookie cookieofau = new HttpCookie(FormsAuthentication.FormsCookieName, enticket);
+                    Response.AppendCookie(cookieofau);
+                    return RedirectToAction("index", "Task", new { userid = user.id });
+                }
+            }
             try
             {
                 returnurl = returnurl ?? "";
@@ -108,7 +123,7 @@ namespace Dyd.BaseService.TaskManager.Web.Controllers
             }
             catch (Exception exp)
             {
-                ModelState.AddModelError("", "登陆出错,请咨询管理员。错误信息:"+exp.Message);
+                ModelState.AddModelError("", "登陆出错,请咨询管理员。错误信息:" + exp.Message);
                 return View();
             }
         }
@@ -131,6 +146,6 @@ namespace Dyd.BaseService.TaskManager.Web.Controllers
                 return Redirect(returnurl);
         }
 
-      
+
     }
 }

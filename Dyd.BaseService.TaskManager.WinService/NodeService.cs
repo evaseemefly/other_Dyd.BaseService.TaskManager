@@ -17,9 +17,9 @@ namespace Dyd.BaseService.TaskManager.WinService
         {
             try
             {
-                if (System.Configuration.ConfigurationSettings.AppSettings.AllKeys.Contains("NodeID"))
+                if (System.Configuration.ConfigurationManager.AppSettings.AllKeys.Contains("NodeID"))
                 {
-                    GlobalConfig.NodeID = Convert.ToInt32(System.Configuration.ConfigurationSettings.AppSettings["NodeID"]);
+                    GlobalConfig.NodeID = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["NodeID"]);
                 }
                 if (string.IsNullOrWhiteSpace(GlobalConfig.TaskDataBaseConnectString) || GlobalConfig.NodeID <= 0)
                 {

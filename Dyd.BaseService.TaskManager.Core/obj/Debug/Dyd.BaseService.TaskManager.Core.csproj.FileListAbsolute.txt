@@ -25,3 +25,16 @@ F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Debug\zh
 F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\obj\Debug\Dyd.BaseService.TaskManager.Core.csprojResolveAssemblyReference.cache
 F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\obj\Debug\Dyd.BaseService.TaskManager.Core.dll
 F:\git\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\obj\Debug\Dyd.BaseService.TaskManager.Core.pdb
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Debug\Dyd.BaseService.TaskManager.Core.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Debug\Dyd.BaseService.TaskManager.Core.pdb
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Debug\SharpCompress.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Debug\System.Web.Mvc.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Debug\System.Web.Mvc.xml
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\obj\Debug\Dyd.BaseService.TaskManager.Core.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\obj\Debug\Dyd.BaseService.TaskManager.Core.pdb
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Debug\Newtonsoft.Json.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Debug\XXF.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\bin\Debug\Newtonsoft.Json.xml
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.Core\obj\Debug\Dyd.BaseService.TaskManager.Core.csprojResolveAssemblyReference.cache

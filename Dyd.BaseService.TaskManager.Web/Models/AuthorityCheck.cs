@@ -37,7 +37,7 @@ namespace Dyd.BaseService.TaskManager.Web.Models
                     return false;
                 }
             }
-            catch (Exception exp)
+            catch
             {
                 return false;
             }

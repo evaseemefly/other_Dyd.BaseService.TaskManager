@@ -14,3 +14,12 @@ F:\git\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\System.
 F:\git\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\zh-Hans\System.Net.Http.resources.dll
 F:\git\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\obj\Debug\XXF.BaseService.TaskManager.dll
 F:\git\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\obj\Debug\XXF.BaseService.TaskManager.pdb
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\XXF.BaseService.TaskManager.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\XXF.BaseService.TaskManager.pdb
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\XXF.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\System.Web.Mvc.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\System.Web.Mvc.xml
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\obj\Debug\XXF.BaseService.TaskManager.dll
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\obj\Debug\XXF.BaseService.TaskManager.pdb
+E:\HaiL\OpenProject\Dyd.BaseService.TaskManager\XXF.BaseService.TaskManager\obj\Debug\XXF.BaseService.TaskManager.csprojResolveAssemblyReference.cache

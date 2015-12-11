@@ -52,7 +52,7 @@ namespace Dyd.BaseService.TaskManager.Test
             XXF.BaseService.TaskManager.SystemRuntime.TaskAppConfigInfo tai = new XXF.BaseService.TaskManager.SystemRuntime.TaskAppConfigInfo();
             tai.Add("ConfigConnectString", @"server=192.168.17.205;Initial Catalog=dyd_new_config;User ID=sa;Password=Xx~!@#; ");
             string o = new XXF.Serialization.JsonHelper().Serializer(tai);
-            int a = 1;
+            //int a = 1;
 
             //EmailHelper email = new EmailHelper();
             //email.mailFrom = "fengyeguigui@163.com";
