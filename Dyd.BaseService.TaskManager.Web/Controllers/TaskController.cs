@@ -73,6 +73,25 @@ namespace Dyd.BaseService.TaskManager.Web.Controllers
             });
         }
 
+        
+        public JsonResult CalcRunTime(string CronExpression,int count=5)
+        {
+            Quartz.CronTrigger trigger = new Quartz.CronTrigger();
+            trigger.CronExpressionString = CronExpression;
+            List<string> list = new List<string>();
+            //注意：这里是utc时间
+            trigger.StartTimeUtc = DateTime.UtcNow;
+            DateTime? now = trigger.StartTimeUtc;
+            for (int i = 0; i < count; i++)
+            {
+                now = trigger.GetFireTimeAfter(now);
+                //要转回本地时间
+                list.Add(TimeZone.CurrentTimeZone.ToLocalTime(now.Value).ToString("yyyy/M/d HH:mm:ss"));
+
+            }
+            return Json(list,JsonRequestBehavior.AllowGet);
+        }
+
         [HttpPost]
         public ActionResult Add(HttpPostedFileBase TaskDll, tb_task_model model, string tempdatajson)
         {
