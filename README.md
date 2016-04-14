@@ -27,6 +27,10 @@
 ## 开源相关群: .net 开源基础服务 238543768 ##
 (大家都有本职工作，也许不能及时响应和跟踪解决问题，请谅解。)
 
+## 参考文档：
+- 文档\任务调度(TaskManage)实现分析.xp.docx   徐品提供
+- 文档\任务调度部署-易懂版.docx   北京-谢江提供
+
 ## 任务demo示例 ##
 <pre class="brush:c#;toolbar: true; auto-links: false;">using System;
 using System.Collections.Generic;
