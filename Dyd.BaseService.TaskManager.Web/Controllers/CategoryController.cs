@@ -10,7 +10,7 @@ using Dyd.BaseService.TaskManager.Web.Models;
 
 namespace Dyd.BaseService.TaskManager.Web.Controllers
 {
-    [AuthorityCheck]
+    [Authorize]
     public class CategoryController : BaseWebController
     {
         //

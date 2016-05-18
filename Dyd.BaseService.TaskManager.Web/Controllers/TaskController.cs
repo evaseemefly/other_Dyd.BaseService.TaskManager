@@ -15,7 +15,7 @@ using XXF.Extensions;
 
 namespace Dyd.BaseService.TaskManager.Web.Controllers
 {
-    [AuthorityCheck]
+    [Authorize]
     public class TaskController : BaseWebController
     {
         //

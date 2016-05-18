@@ -11,7 +11,7 @@ using Webdiyer.WebControls.Mvc;
 
 namespace Dyd.BaseService.TaskManager.Web.Controllers
 {
-    [AuthorityCheck]
+    [Authorize]
     public class LogController : BaseWebController
     {
         //

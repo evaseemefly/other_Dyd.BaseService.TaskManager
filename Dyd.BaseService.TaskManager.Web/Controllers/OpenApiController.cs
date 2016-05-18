@@ -23,7 +23,7 @@ namespace Dyd.BaseService.TaskManager.Web.Controllers
         {
 
             NodeAppConfigInfo nodeinfo = new NodeAppConfigInfo();
-            nodeinfo.NodeID = Common.GetAvailableNode();
+            nodeinfo.NodeID = Dyd.BaseService.TaskManager.Web.Models.Common.GetAvailableNode();
             nodeinfo.TaskDataBaseConnectString =  StringDESHelper.EncryptDES(Config.TaskConnectString,"dyd88888888");
             return Json( new  { code = 1, msg = "", data = nodeinfo, total = 0 } , JsonRequestBehavior.AllowGet);
         }

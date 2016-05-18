@@ -13,7 +13,7 @@ using Dyd.BaseService.TaskManager.Core;
 
 namespace Dyd.BaseService.TaskManager.Web.Controllers
 {
-    [AuthorityCheck]
+    [Authorize]
     public class NodeController : BaseWebController
     {
         //

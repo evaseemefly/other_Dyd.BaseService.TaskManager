@@ -50,8 +50,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="XXF, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="XXF">
       <HintPath>..\引用\XXF.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -98,6 +97,10 @@
     <ProjectReference Include="..\Dyd.BaseService.TaskManager.Core\Dyd.BaseService.TaskManager.Core.csproj">
       <Project>{dd7f3150-002b-4ad3-9fa3-695f52d88fcc}</Project>
       <Name>Dyd.BaseService.TaskManager.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dyd.BaseService.TaskManager\Dyd.BaseService.TaskManager.csproj">
+      <Project>{5d0a19ce-e71d-48dd-8390-3f90e80db03e}</Project>
+      <Name>Dyd.BaseService.TaskManager</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
