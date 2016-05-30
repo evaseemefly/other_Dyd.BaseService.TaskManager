@@ -1,0 +1,11 @@
+USE [dyd_bs_task]
+GO
+SET IDENTITY_INSERT [dbo].[tb_user] ON 
+
+GO
+INSERT [dbo].[tb_user] ([userstaffno], [username], [userrole], [usercreatetime], [usertel], [useremail]) VALUES ( N'admin', N'系统管理员', 0, CAST(N'2016-05-23 09:41:47.877' AS DateTime), N'123456789', N'123456789@163.com')
+GO
+INSERT [dbo].[tb_node] ([nodename], [nodecreatetime], [nodeip], [nodelastupdatetime], [ifcheckstate]) VALUES ( N'测试节点', CAST(N'2016-05-23 10:02:26.197' AS DateTime), N'cjy-pc', CAST(N'2016-05-25 09:33:30.737' AS DateTime), 0)
+GO
+SET IDENTITY_INSERT [dbo].[tb_user] OFF
+GO

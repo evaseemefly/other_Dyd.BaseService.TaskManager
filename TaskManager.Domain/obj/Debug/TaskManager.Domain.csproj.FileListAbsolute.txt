@@ -1,0 +1,14 @@
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\bin\Debug\TaskManager.Domain.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\bin\Debug\TaskManager.Domain.pdb
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\bin\Debug\BSF.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\bin\Debug\TaskManager.Core.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\bin\Debug\ServiceStack.Redis.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\bin\Debug\ServiceStack.Interfaces.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\bin\Debug\SharpCompress.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\bin\Debug\ServiceStack.Text.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\bin\Debug\ServiceStack.Common.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\bin\Debug\BSF.pdb
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\bin\Debug\TaskManager.Core.pdb
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\obj\Debug\TaskManager.Domain.csprojResolveAssemblyReference.cache
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\obj\Debug\TaskManager.Domain.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Domain\obj\Debug\TaskManager.Domain.pdb

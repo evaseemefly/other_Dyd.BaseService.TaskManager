@@ -1,0 +1,6 @@
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Core\bin\Debug\TaskManager.Core.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Core\bin\Debug\TaskManager.Core.pdb
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Core\bin\Debug\SharpCompress.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Core\obj\Debug\TaskManager.Core.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Core\obj\Debug\TaskManager.Core.pdb
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Core\obj\Debug\TaskManager.Core.csprojResolveAssemblyReference.cache

@@ -1,0 +1,17 @@
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\obj\Release\TaskManager.Test.csprojResolveAssemblyReference.cache
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\obj\Release\TaskManager.Test.Form1.resources
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\obj\Release\TaskManager.Test.Properties.Resources.resources
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\obj\Release\TaskManager.Test.csproj.GenerateResource.Cache
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\bin\Release\TaskManager.Test.exe.config
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\bin\Release\TaskManager.Test.exe
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\bin\Release\TaskManager.Test.pdb
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\bin\Release\BSF.BaseService.TaskManager.dll
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\bin\Release\BSF.dll
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\bin\Release\SharpCompress.dll
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\bin\Release\TaskManager.Core.dll
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\bin\Release\TaskManager.Domain.dll
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\bin\Release\BSF.BaseService.TaskManager.pdb
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\bin\Release\TaskManager.Core.pdb
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\bin\Release\TaskManager.Domain.pdb
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\obj\Release\TaskManager.Test.exe
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Test\obj\Release\TaskManager.Test.pdb

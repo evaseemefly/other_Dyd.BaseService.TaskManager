@@ -1,0 +1,15 @@
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Core\bin\Release\TaskManager.Core.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Core\bin\Release\TaskManager.Core.pdb
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Core\bin\Release\SharpCompress.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Core\obj\Release\TaskManager.Core.dll
+D:\svn-working\RT_Cloud\trunk\源代码\BaseService\TaskManager\TaskManager.Core\obj\Release\TaskManager.Core.pdb
+D:\svn-working-local\trunk\BaseService\TaskManager\TaskManager.Core\bin\Release\TaskManager.Core.dll
+D:\svn-working-local\trunk\BaseService\TaskManager\TaskManager.Core\bin\Release\TaskManager.Core.pdb
+D:\svn-working-local\trunk\BaseService\TaskManager\TaskManager.Core\bin\Release\SharpCompress.dll
+D:\svn-working-local\trunk\BaseService\TaskManager\TaskManager.Core\obj\Release\TaskManager.Core.dll
+D:\svn-working-local\trunk\BaseService\TaskManager\TaskManager.Core\obj\Release\TaskManager.Core.pdb
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Core\bin\Release\TaskManager.Core.dll
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Core\bin\Release\TaskManager.Core.pdb
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Core\bin\Release\SharpCompress.dll
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Core\obj\Release\TaskManager.Core.dll
+D:\git-working\Dyd.BaseService.TaskManager\TaskManager.Core\obj\Release\TaskManager.Core.pdb
