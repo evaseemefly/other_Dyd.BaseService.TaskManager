@@ -3,7 +3,7 @@
 该分支是基于BSF的基础上开发的分支。<br/>
 修改内容<br/>
 1）sdk以插件的形式扩展自BSF。<br/>
-2）项目命名空间从Dyd.Base.TaskManager修改为TaskManager<br/>
+2）项目命名空间从Dyd.BaseService.TaskManager修改为TaskManager<br/>
 3) 打包安装包，可以直接被第三方安装使用。<br/>
 4）旧版本XXF.dll，则使用master分支<br/>
 <br/>
