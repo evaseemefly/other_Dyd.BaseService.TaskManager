@@ -43,9 +43,9 @@ CreateTask.prototype.DeleteInterval = function () {
     window.setTimeout(function () {
         if (!task.success) {
             window.clearInterval(task.Num);
-            alert(task.taskname+",操作失败！");
+            alert(task.taskname+",操作失败或操作执行时间过长导致超时！");
         }
-    }, 10000);
+    }, 15000);
 }
 
 CreateTask.prototype.Init = function () {

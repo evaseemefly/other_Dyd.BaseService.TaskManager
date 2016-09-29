@@ -11,7 +11,8 @@ using TaskManager.Node.Tools;
 using BSF.Log;
 using BSF.Db;
 using TaskManager.Core;
-
+using TaskManager.Core.Redis;
+using BSF.Extensions;
 
 namespace TaskManager.Node
 {
@@ -20,6 +21,8 @@ namespace TaskManager.Node
     /// </summary>
     public class CommandQueueProcessor
     {
+        private static object _lockRunLoop = new object();
+
         private static System.Threading.Thread thread;
         /// <summary>
         /// 上一次日志扫描的最大id
@@ -41,7 +44,40 @@ namespace TaskManager.Node
         {
             //lastMaxID = 0;//仅测试
             RecoveryStartTasks();
+
+            RedisHelper.RedisListner((channel, msg) => {
+                try
+                {
+                    RedisCommondInfo redisCommondInfo = null;
+                    try { redisCommondInfo = new BSF.Serialization.JsonProvider().Deserialize<RedisCommondInfo>(msg); } catch { }
+                    if (redisCommondInfo != null)
+                    {
+                        if (redisCommondInfo.CommondType == EnumCommondType.TaskCommand && redisCommondInfo.NodeId == GlobalConfig.NodeID)
+                        {
+                            RunCommond();
+                        }
+                        if (redisCommondInfo.CommondType == EnumCommondType.ConfigUpdate)
+                        {
+                            RedisHelper.RefreashRedisServerIP();
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception("redis命令无法识别");
+                    }
+                }
+                catch (Exception exp)
+                {
+                    LogHelper.AddNodeError("Redis命令处理出错,msg:"+msg.NullToEmpty(), exp);
+                }
+            }, (info) => {
+                if (info != null)
+                { LogHelper.AddNodeError("Redis订阅出错," + info.Message.NullToEmpty(), info.Exception); }
+            });
+
             RuningCommandLoop();
+
+            
         }
         /// <summary>
         /// 恢复已开启的任务
@@ -94,6 +130,15 @@ namespace TaskManager.Node
             while (true)
             {
                 System.Threading.Thread.Sleep(1000);
+                RunCommond();
+                System.Threading.Thread.Sleep(5000);
+            }
+        }
+
+        static void RunCommond()
+        {
+            lock (_lockRunLoop)
+            {
                 try
                 {
                     List<tb_command_model> commands = new List<tb_command_model>();
@@ -111,8 +156,8 @@ namespace TaskManager.Node
                     {
                         LogHelper.AddNodeError("获取当前节点命令集错误", exp2);
                     }
-                    if(commands.Count>0)
-                        LogHelper.AddNodeLog("当前节点扫描到"+commands.Count+"条命令,并执行中....");
+                    if (commands.Count > 0)
+                        LogHelper.AddNodeLog("当前节点扫描到" + commands.Count + "条命令,并执行中....");
                     foreach (var c in commands)
                     {
                         try
@@ -143,7 +188,6 @@ namespace TaskManager.Node
                 {
                     LogHelper.AddNodeError("系统级不可恢复严重错误", exp);
                 }
-                System.Threading.Thread.Sleep(3000);
             }
         }
     }

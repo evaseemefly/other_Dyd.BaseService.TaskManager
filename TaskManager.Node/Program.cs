@@ -28,8 +28,8 @@ namespace TaskManager.Node
 
             if (testing)
             {
-                GlobalConfig.TaskDataBaseConnectString = "server=192.168.17.201;Initial Catalog=dyd_bs_task;User ID=sa;Password=Xx~!@#;";
-                GlobalConfig.NodeID = 361;
+                GlobalConfig.TaskDataBaseConnectString = "server=192.168.1.209;Initial Catalog=dyd_bs_task;User ID=sa;Password=111;";
+                GlobalConfig.NodeID = 2;
                 BSF.Tool.IOHelper.CreateDirectory(GlobalConfig.TaskSharedDllsDir + @"\");
                 //CommandQueueProcessor.lastMaxID = 1;
                 CommandQueueProcessor.Run();

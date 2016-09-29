@@ -1,0 +1,216 @@
+【时间】2016-09-20 10:50:25:590
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:RegisterReceiveMQListener,msg:消费者注册MQ监听出错
+【原始信息】当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass15_0.<RegisterConsumerInfo>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterConsumerInfo()
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterReceiveMQListener[T](Action`1 action)
+【InnerExp堆栈】→当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:50:25:809
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:Dispose,msg:消费者资源释放出错
+【原始信息】未将对象引用设置到对象的实例。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass16_0.<Dispose>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.Dispose()
+【InnerExp堆栈】→未将对象引用设置到对象的实例。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:52:04:034
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:RegisterReceiveMQListener,msg:消费者注册MQ监听出错
+【原始信息】当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass15_0.<RegisterConsumerInfo>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterConsumerInfo()
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterReceiveMQListener[T](Action`1 action)
+【InnerExp堆栈】→当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:52:04:142
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:Dispose,msg:消费者资源释放出错
+【原始信息】未将对象引用设置到对象的实例。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass16_0.<Dispose>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.Dispose()
+【InnerExp堆栈】→未将对象引用设置到对象的实例。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:52:54:975
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:RegisterReceiveMQListener,msg:消费者注册MQ监听出错
+【原始信息】当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass15_0.<RegisterConsumerInfo>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterConsumerInfo()
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterReceiveMQListener[T](Action`1 action)
+【InnerExp堆栈】→当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:52:55:086
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:Dispose,msg:消费者资源释放出错
+【原始信息】未将对象引用设置到对象的实例。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass16_0.<Dispose>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.Dispose()
+【InnerExp堆栈】→未将对象引用设置到对象的实例。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:54:09:598
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:RegisterReceiveMQListener,msg:消费者注册MQ监听出错
+【原始信息】当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass15_0.<RegisterConsumerInfo>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterConsumerInfo()
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterReceiveMQListener[T](Action`1 action)
+【InnerExp堆栈】→当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:54:09:718
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:Dispose,msg:消费者资源释放出错
+【原始信息】未将对象引用设置到对象的实例。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass16_0.<Dispose>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.Dispose()
+【InnerExp堆栈】→未将对象引用设置到对象的实例。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:55:47:561
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:RegisterReceiveMQListener,msg:消费者注册MQ监听出错
+【原始信息】当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass15_0.<RegisterConsumerInfo>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterConsumerInfo()
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterReceiveMQListener[T](Action`1 action)
+【InnerExp堆栈】→当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:55:47:661
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:Dispose,msg:消费者资源释放出错
+【原始信息】未将对象引用设置到对象的实例。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass16_0.<Dispose>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.Dispose()
+【InnerExp堆栈】→未将对象引用设置到对象的实例。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:58:39:518
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:RegisterReceiveMQListener,msg:消费者注册MQ监听出错
+【原始信息】当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass15_0.<RegisterConsumerInfo>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterConsumerInfo()
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterReceiveMQListener[T](Action`1 action)
+【InnerExp堆栈】→当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:58:39:628
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:Dispose,msg:消费者资源释放出错
+【原始信息】未将对象引用设置到对象的实例。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass16_0.<Dispose>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.Dispose()
+【InnerExp堆栈】→未将对象引用设置到对象的实例。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 11:00:40:503
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:RegisterReceiveMQListener,msg:消费者注册MQ监听出错
+【原始信息】当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass15_0.<RegisterConsumerInfo>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterConsumerInfo()
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterReceiveMQListener[T](Action`1 action)
+【InnerExp堆栈】→当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 11:00:40:703
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:Dispose,msg:消费者资源释放出错
+【原始信息】未将对象引用设置到对象的实例。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass16_0.<Dispose>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.Dispose()
+【InnerExp堆栈】→未将对象引用设置到对象的实例。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 11:05:16:028
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:RegisterReceiveMQListener,msg:消费者注册MQ监听出错
+【原始信息】当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass15_0.<RegisterConsumerInfo>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterConsumerInfo()
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterReceiveMQListener[T](Action`1 action)
+【InnerExp堆栈】→当前分区序号已经被注册使用中,冲突分区序号为:1,2,3,4,5,6,7,8,可能是上次消费者异常终止导致消费者依然在注册中,请尝试在10秒系统超时后重试。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 11:05:16:140
+【服务器】172.27.35.1
+【数据库】
+【补充信息】BusinessMQ错误,mqpathid:-1,mqpath:,methodname:Dispose,msg:消费者资源释放出错
+【原始信息】未将对象引用设置到对象的实例。
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.<>c__DisplayClass16_0.<Dispose>b__0(DbConn c)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action)
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action)
+   在 BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.Dispose()
+【InnerExp堆栈】→未将对象引用设置到对象的实例。
+
+******************************************************************************************************************************************************

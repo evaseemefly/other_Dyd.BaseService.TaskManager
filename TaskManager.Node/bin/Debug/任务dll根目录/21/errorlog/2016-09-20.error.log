@@ -1,0 +1,11 @@
+【时间】2016-09-20 10:23:48:461
+【服务器】172.27.35.1
+【数据库】
+【补充信息】MQ消费者端消息循环出错,clientid:6,partitionid:10102
+【原始信息】检测到消费者端拉去消息时出现消息乱序问题,partitionid:10102,maxmqid:1010216092000002660,缓存maxmqid:1010216092000002657
+【request参数】
+【堆栈打印】   在 BSF.BaseService.BusinessMQ.Consumer.ReceiveMessageQuque.ConsumeMessages(List`1 messages, tb_consumer_partition_model partition, MQIDInfo mqidinfo)
+   在 BSF.BaseService.BusinessMQ.Consumer.ReceiveMessageQuque.GetMessagesFromPartitions()
+【InnerExp堆栈】→检测到消费者端拉去消息时出现消息乱序问题,partitionid:10102,maxmqid:1010216092000002660,缓存maxmqid:1010216092000002657
+
+******************************************************************************************************************************************************

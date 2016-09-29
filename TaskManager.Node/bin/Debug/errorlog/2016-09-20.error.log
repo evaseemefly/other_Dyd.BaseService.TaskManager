@@ -1,0 +1,228 @@
+【时间】2016-09-20 09:32:43:654
+【服务器】172.27.35.1
+【数据库】
+【补充信息】执行节点命令失败[taskid:21]
+【原始信息】未能加载文件或程序集“BSF.BaseService.TaskManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+【request参数】
+【堆栈打印】   在 System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   在 System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   在 System.Activator.CreateInstanceFromInternal(String assemblyFile, String typeName, Boolean ignoreCase, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, Evidence securityInfo)
+   在 System.AppDomain.CreateInstanceFrom(String assemblyFile, String typeName)
+   在 System.AppDomain.CreateInstanceFromAndUnwrap(String assemblyName, String typeName)
+   在 TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 102
+   在 TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 TaskManager.Node.CommandQueueProcessor.RunCommond() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\CommandQueueProcessor.cs:行号 165
+【InnerExp堆栈】→未能加载文件或程序集“BSF.BaseService.TaskManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 09:32:50:807
+【服务器】172.27.35.1
+【数据库】
+【补充信息】执行节点命令失败[taskid:21]
+【原始信息】未能加载文件或程序集“BSF.BaseService.TaskManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+【request参数】
+【堆栈打印】   在 System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   在 System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   在 System.Activator.CreateInstanceFromInternal(String assemblyFile, String typeName, Boolean ignoreCase, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, Evidence securityInfo)
+   在 System.AppDomain.CreateInstanceFrom(String assemblyFile, String typeName)
+   在 System.AppDomain.CreateInstanceFromAndUnwrap(String assemblyName, String typeName)
+   在 TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 102
+   在 TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 TaskManager.Node.CommandQueueProcessor.RunCommond() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\CommandQueueProcessor.cs:行号 165
+【InnerExp堆栈】→未能加载文件或程序集“BSF.BaseService.TaskManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 09:33:12:001
+【服务器】172.27.35.1
+【数据库】
+【补充信息】执行节点命令失败[taskid:21]
+【原始信息】未能加载文件或程序集“BSF.BaseService.TaskManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+【request参数】
+【堆栈打印】   在 System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   在 System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   在 System.Activator.CreateInstanceFromInternal(String assemblyFile, String typeName, Boolean ignoreCase, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, Evidence securityInfo)
+   在 System.AppDomain.CreateInstanceFrom(String assemblyFile, String typeName)
+   在 System.AppDomain.CreateInstanceFromAndUnwrap(String assemblyName, String typeName)
+   在 TaskManager.Node.SystemRuntime.TaskProvider.Start(Int32 taskid) 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemRuntime\TaskProvider.cs:行号 102
+   在 TaskManager.Node.Commands.StartTaskCommand.Execute() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\Commands\StartTaskCommand.cs:行号 18
+   在 TaskManager.Node.Commands.CommandFactory.Execute(tb_command_model commandInfo) 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\Commands\CommandFactory.cs:行号 28
+   在 TaskManager.Node.CommandQueueProcessor.RunCommond() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\CommandQueueProcessor.cs:行号 165
+【InnerExp堆栈】→未能加载文件或程序集“BSF.BaseService.TaskManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:15:02:825
+【服务器】172.27.35.1
+【数据库】
+【补充信息】任务21TaskJob回调时执行失败[taskid:21]
+【原始信息】未能加载文件或程序集“BSF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+【request参数】
+【堆栈打印】
+Server stack trace: 
+   在 BSF.BaseService.TaskManager.SystemRuntime.TaskSystemRuntimeOperator.UpdateTaskError(DateTime time)
+   在 BSF.BaseService.TaskManager.BaseDllTask.TryRun()
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 BSF.BaseService.TaskManager.BaseDllTask.TryRun()
+   在 TaskManager.Node.SystemRuntime.TaskJob.<>c__DisplayClass0_0.<Execute>b__0() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemRuntime\TaskJob.cs:行号 32
+【InnerExp堆栈】→未能加载文件或程序集“BSF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:15:02:825
+【服务器】172.27.35.1
+【数据库】192.168.1.209
+【补充信息】TaskRecoverMonitor监控严重错误
+【原始信息】已成功与服务器建立连接，但是在登录前的握手期间发生错误。 (provider: TCP Provider, error: 0 - 远程主机强迫关闭了一个现有的连接。)
+【request参数】
+【堆栈打印】   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 BSF.Db.DbConn.Open() 位置 D:\net-working\NLCloud\src\BSF\BSF\BSF\Db\DbConn.cs:行号 199
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action) 位置 D:\net-working\NLCloud\src\BSF\BSF\BSF\Db\SqlHelper.cs:行号 21
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action) 位置 D:\net-working\NLCloud\src\BSF\BSF\BSF\Db\SqlHelper.cs:行号 14
+   在 TaskManager.Node.SystemMonitor.TaskRecoverMonitor.Run() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemMonitor\TaskRecoverMonitor.cs:行号 37
+   在 TaskManager.Node.SystemMonitor.BaseMonitor.TryRun() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemMonitor\BaseMonitor.cs:行号 34
+【InnerExp堆栈】→已成功与服务器建立连接，但是在登录前的握手期间发生错误。 (provider: TCP Provider, error: 0 - 远程主机强迫关闭了一个现有的连接。)
+→远程主机强迫关闭了一个现有的连接。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:17:17:553
+【服务器】172.27.35.1
+【数据库】
+【补充信息】任务21TaskJob回调时执行失败[taskid:21]
+【原始信息】未能加载文件或程序集“BSF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+【request参数】
+【堆栈打印】
+Server stack trace: 
+   在 BSF.BaseService.TaskManager.SystemRuntime.TaskSystemRuntimeOperator.UpdateTaskError(DateTime time)
+   在 BSF.BaseService.TaskManager.BaseDllTask.TryRun()
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 BSF.BaseService.TaskManager.BaseDllTask.TryRun()
+   在 TaskManager.Node.SystemRuntime.TaskJob.<>c__DisplayClass0_0.<Execute>b__0() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemRuntime\TaskJob.cs:行号 32
+【InnerExp堆栈】→未能加载文件或程序集“BSF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:19:01:211
+【服务器】172.27.35.1
+【数据库】
+【补充信息】任务21TaskJob回调时执行失败[taskid:21]
+【原始信息】未能加载文件或程序集“BSF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+【request参数】
+【堆栈打印】
+Server stack trace: 
+   在 BSF.BaseService.TaskManager.SystemRuntime.TaskSystemRuntimeOperator.UpdateTaskError(DateTime time)
+   在 BSF.BaseService.TaskManager.BaseDllTask.TryRun()
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 BSF.BaseService.TaskManager.BaseDllTask.TryRun()
+   在 TaskManager.Node.SystemRuntime.TaskJob.<>c__DisplayClass0_0.<Execute>b__0() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemRuntime\TaskJob.cs:行号 32
+【InnerExp堆栈】→未能加载文件或程序集“BSF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:19:43:569
+【服务器】172.27.35.1
+【数据库】
+【补充信息】任务21TaskJob回调时执行失败[taskid:21]
+【原始信息】未能加载文件或程序集“BSF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+【request参数】
+【堆栈打印】
+Server stack trace: 
+   在 BSF.BaseService.TaskManager.SystemRuntime.TaskSystemRuntimeOperator.UpdateTaskError(DateTime time)
+   在 BSF.BaseService.TaskManager.BaseDllTask.TryRun()
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 BSF.BaseService.TaskManager.BaseDllTask.TryRun()
+   在 TaskManager.Node.SystemRuntime.TaskJob.<>c__DisplayClass0_0.<Execute>b__0() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemRuntime\TaskJob.cs:行号 32
+【InnerExp堆栈】→未能加载文件或程序集“BSF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:20:31:069
+【服务器】172.27.35.1
+【数据库】
+【补充信息】任务21TaskJob回调时执行失败[taskid:21]
+【原始信息】未能加载文件或程序集“BSF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+【request参数】
+【堆栈打印】
+Server stack trace: 
+   在 BSF.BaseService.TaskManager.SystemRuntime.TaskSystemRuntimeOperator.UpdateTaskError(DateTime time)
+   在 BSF.BaseService.TaskManager.BaseDllTask.TryRun()
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 BSF.BaseService.TaskManager.BaseDllTask.TryRun()
+   在 TaskManager.Node.SystemRuntime.TaskJob.<>c__DisplayClass0_0.<Execute>b__0() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemRuntime\TaskJob.cs:行号 32
+【InnerExp堆栈】→未能加载文件或程序集“BSF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:23:51:021
+【服务器】172.27.35.1
+【数据库】
+【补充信息】任务性能监控时出错[taskid:21]
+【原始信息】尝试访问已卸载的 AppDomain。
+【request参数】
+【堆栈打印】   在 System.AppDomain.get_MonitoringTotalProcessorTime()
+   在 TaskManager.Node.SystemMonitor.TaskPerformanceMonitor.<>c__DisplayClass2_1.<Run>b__0(DbConn c) 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemMonitor\TaskPerformanceMonitor.cs:行号 51
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action) 位置 D:\net-working\NLCloud\src\BSF\BSF\BSF\Db\SqlHelper.cs:行号 23
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action) 位置 D:\net-working\NLCloud\src\BSF\BSF\BSF\Db\SqlHelper.cs:行号 14
+   在 TaskManager.Node.SystemMonitor.TaskPerformanceMonitor.Run() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemMonitor\TaskPerformanceMonitor.cs:行号 48
+【InnerExp堆栈】→尝试访问已卸载的 AppDomain。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:36:40:885
+【服务器】172.27.35.1
+【数据库】
+【补充信息】任务性能监控时出错[taskid:20]
+【原始信息】尝试访问已卸载的 AppDomain。
+【request参数】
+【堆栈打印】   在 System.AppDomain.get_MonitoringTotalProcessorTime()
+   在 TaskManager.Node.SystemMonitor.TaskPerformanceMonitor.<>c__DisplayClass2_1.<Run>b__0(DbConn c) 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemMonitor\TaskPerformanceMonitor.cs:行号 51
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action) 位置 D:\net-working\NLCloud\src\BSF\BSF\BSF\Db\SqlHelper.cs:行号 23
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action) 位置 D:\net-working\NLCloud\src\BSF\BSF\BSF\Db\SqlHelper.cs:行号 14
+   在 TaskManager.Node.SystemMonitor.TaskPerformanceMonitor.Run() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemMonitor\TaskPerformanceMonitor.cs:行号 48
+【InnerExp堆栈】→尝试访问已卸载的 AppDomain。
+
+******************************************************************************************************************************************************
+【时间】2016-09-20 10:36:45:947
+【服务器】172.27.35.1
+【数据库】
+【补充信息】任务性能监控时出错[taskid:20]
+【原始信息】尝试访问已卸载的 AppDomain。
+【request参数】
+【堆栈打印】   在 System.AppDomain.get_MonitoringTotalProcessorTime()
+   在 TaskManager.Node.SystemMonitor.TaskPerformanceMonitor.<>c__DisplayClass2_1.<Run>b__0(DbConn c) 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemMonitor\TaskPerformanceMonitor.cs:行号 51
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Boolean iswatchtimelog, Action`1 action) 位置 D:\net-working\NLCloud\src\BSF\BSF\BSF\Db\SqlHelper.cs:行号 23
+   在 BSF.Db.SqlHelper.ExcuteSql(String connectstring, Action`1 action) 位置 D:\net-working\NLCloud\src\BSF\BSF\BSF\Db\SqlHelper.cs:行号 14
+   在 TaskManager.Node.SystemMonitor.TaskPerformanceMonitor.Run() 位置 D:\net-working\NLCloud\src\BSF\TaskManager\TaskManager.Node\SystemMonitor\TaskPerformanceMonitor.cs:行号 48
+【InnerExp堆栈】→尝试访问已卸载的 AppDomain。
+
+******************************************************************************************************************************************************

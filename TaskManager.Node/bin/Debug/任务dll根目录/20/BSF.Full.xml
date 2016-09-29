@@ -1,0 +1,5296 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>BSF.Full</name>
+  </assembly>
+  <members>
+    <member name="M:System.ExceptionMethodHelper.DetailMessage(System.Exception)">
+      <summary>
+            获取详细错误堆栈信息
+            </summary>
+      <param name="str">
+      </param>
+      <param name="maxlen">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Tool.DataTableHelper.ConvertToModel``1(System.Data.DataTable)">
+      <summary>
+            List转datatable (未测)
+            反射实现,性能不高
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="dt">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Tool.DataTableHelper.ConvertToDataTable``1(System.Collections.Generic.List{``0})">
+      <summary>
+            List转datatable (未测)
+            反射实现,性能不高
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="items">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Tool.DataTableHelper.IsNullable(System.Type)">
+      <summary>
+            Determine of specified type is nullable
+            </summary>
+      <param name="t">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Tool.DataTableHelper.GetCoreType(System.Type)">
+      <summary>
+            Return underlying type if type is Nullable otherwise return the type.
+            </summary>
+      <param name="t">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.Tool.IOHelper">
+      <summary>
+            IO操作帮助类
+            </summary>
+    </member>
+    <member name="M:BSF.Tool.IOHelper.CreateDirectory(System.String)">
+      <summary>
+            根据文件路径，创建文件对应的文件夹，若已存在则跳过
+            </summary>
+      <param name="filepath">
+      </param>
+    </member>
+    <member name="M:BSF.Tool.IOHelper.CopyDirectory(System.String,System.String,System.Boolean)">
+      <summary>
+            目录拷贝
+            不支持父子目录拷贝，否则出现死循环递归
+            </summary>
+      <param name="srcDir">
+      </param>
+      <param name="tgtDir">
+      </param>
+    </member>
+    <member name="M:BSF.Tool.IOHelper.isValidFileContent(System.String,System.String)">
+      <summary>
+            判断文件内容是否相同
+            哈市
+            </summary>
+      <param name="filePath1">
+      </param>
+      <param name="filePath2">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Tool.MD5Helper.En32MD5(System.String)">
+      <summary>
+            MD5加密 32位小写
+            </summary>
+      <param name="text">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.Serialization.JsonProvider">
+      <summary>
+            jason 序列化方式
+            </summary>
+    </member>
+    <member name="M:BSF.Serialization.JsonProvider.Serializer(System.Object)">
+      <summary>
+            jason序列化
+            </summary>
+      <param name="o">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Serialization.JsonProvider.Deserialize``1(System.String)">
+      <summary>
+            jason反序列化
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="s">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Serialization.JsonProvider.Deserialize(System.String,System.Type)">
+      <summary>
+            jason反序列化
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="s">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Serialization.XmlProvider`1.Serializer(`0)">
+      <summary>
+            序列化
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Serialization.XmlProvider`1.Serializer(`0,System.Boolean)">
+      <summary>
+            序列化
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Serialization.XmlProvider`1.Deserialize(System.String)">
+      <summary>
+            反序列化
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.Serialization.JsonAdapter.JavaScriptBussinessJsonProvider">
+      <summary>
+            JavaScriptSerializer 业务方式Json序列化
+            System.Web.Script.Serialization
+            备注:解决常规业务中对json序列化的要求，形成序列化标准，比如datetime格式要求
+            </summary>
+    </member>
+    <member name="T:BSF.Serialization.JsonAdapter.BaseJsonProvider">
+      <summary>
+            Json 序列化基础类库
+            </summary>
+    </member>
+    <member name="M:BSF.Serialization.JsonAdapter.BaseJsonProvider.Serializer(System.Object)">
+      <summary>
+            jason序列化
+            </summary>
+      <param name="o">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Serialization.JsonAdapter.BaseJsonProvider.Deserialize(System.String,System.Type)">
+      <summary>
+            jason反序列化
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="s">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.Serialization.JsonAdapter.EnumJsonMode">
+      <summary>
+            Json序列化方式枚举
+            </summary>
+    </member>
+    <member name="F:BSF.Serialization.JsonAdapter.EnumJsonMode.JavaScript">
+      <summary>
+            System.Web.Script.Serialization （推荐使用）
+            </summary>
+    </member>
+    <member name="F:BSF.Serialization.JsonAdapter.EnumJsonMode.JavaScriptBussiness">
+      <summary>
+            System.Web.Script.Serialization (常规业务json,解决问题如datetime序列化格式问题等)
+            </summary>
+    </member>
+    <member name="F:BSF.Serialization.JsonAdapter.EnumJsonMode.DataContract">
+      <summary>
+            System.Runtime.Serialization.Json
+            </summary>
+    </member>
+    <member name="F:BSF.Serialization.JsonAdapter.EnumJsonMode.Newtonsoft">
+      <summary>
+            Newtonsoft.Json.dll
+            </summary>
+    </member>
+    <member name="F:BSF.Serialization.JsonAdapter.DataContractJsonProvider.EncodingFormat">
+      <summary>
+            默认格式 UTF8
+            </summary>
+    </member>
+    <member name="M:BSF.Serialization.JsonAdapter.DataContractJsonProvider.Serializer(System.Object)">
+      <summary>
+            json序列化
+            </summary>
+      <param name="o">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Serialization.JsonAdapter.DataContractJsonProvider.Deserialize(System.String,System.Type)">
+      <summary>
+            json反序列化
+            </summary>
+      <typeparam name="s">
+      </typeparam>
+      <param name="type">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.Serialization.JsonAdapter.JavaScriptJsonProvider">
+      <summary>
+            JavaScriptSerializer 方式Json序列化
+            System.Web.Script.Serialization
+            </summary>
+    </member>
+    <member name="M:BSF.Serialization.JsonAdapter.JavaScriptJsonProvider.Serializer(System.Object)">
+      <summary>
+            json序列化
+            </summary>
+      <param name="o">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Serialization.JsonAdapter.JavaScriptJsonProvider.Deserialize(System.String,System.Type)">
+      <summary>
+            json反序列化
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="s">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Serialization.JsonAdapter.NewtonsoftJsonProvider.Serializer(System.Object)">
+      <summary>
+            json序列化
+            </summary>
+      <param name="o">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Serialization.JsonAdapter.NewtonsoftJsonProvider.Deserialize(System.String,System.Type)">
+      <summary>
+            json反序列化
+            </summary>
+      <typeparam name="s">
+      </typeparam>
+      <param name="type">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.getValueString(System.String)">
+      <summary>
+            获取key,返回string格式
+            </summary>
+      <param name="key">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.getValueByte(System.String)">
+      <summary>
+            获取key,返回byte[]格式
+            </summary>
+      <param name="key">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetValue``1(System.String)">
+      <summary>
+            获取Key,返回泛型T
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="key">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.SetValue(System.String,System.Byte[])">
+      <summary>
+            设置一个值 key值重复则覆盖
+            </summary>
+      <param name="key">
+      </param>
+      <param name="value">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.SetValue(System.String,System.Byte[],System.DateTime)">
+      <summary>
+            设置一个值 key值重复则覆盖
+            </summary>
+      <param name="key">key值</param>
+      <param name="value">value值</param>
+      <param name="expiresAt">过期时间</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.SetValue(System.String,System.Byte[],System.TimeSpan)">
+      <summary>
+            设置一个值 key值重复则覆盖
+            </summary>
+      <param name="key">key值</param>
+      <param name="value">value值</param>
+      <param name="timespan">过期时间</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.SetValue``1(System.String,``0)">
+      <summary>
+            设置一个值 Key值重复则覆盖
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="key">
+      </param>
+      <param name="value">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.SetValue``1(System.String,``0,System.DateTime)">
+      <summary>
+            设置一个值 key值重复则覆盖
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="key">key值</param>
+      <param name="value">value值</param>
+      <param name="expiresAt">过期时间</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.SetValue``1(System.String,``0,System.TimeSpan)">
+      <summary>
+            设置一个值 key值重复则覆盖
+            </summary>
+      <param name="key">key值</param>
+      <param name="value">value值</param>
+      <param name="timespan">过期时间</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetHashFields(System.String)">
+      <summary>
+            获得某个hash型key下的所有字段
+            </summary>
+      <param name="hashId">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetHashValues(System.String)">
+      <summary>
+            获得某个hash型key下的所有值
+            </summary>
+      <param name="hashId">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetHashField(System.String,System.String)">
+      <summary>
+            获得hash型key某个字段的值
+            </summary>
+      <param name="key">
+      </param>
+      <param name="field">
+      </param>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.SetHashField(System.String,System.String,System.String)">
+      <summary>
+            设置hash型key某个字段的值
+            </summary>
+      <param name="key">
+      </param>
+      <param name="field">
+      </param>
+      <param name="value">
+      </param>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.SetHashIncr(System.String,System.String,System.Int32)">
+      <summary>
+            使某个字段增加
+             </summary>
+      <param name="key">
+      </param>
+      <param name="field">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.HMSet(System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Object})">
+      <summary>
+            hash表批量增加数据
+            </summary>
+      <param name="key">
+      </param>
+      <param name="fields">
+      </param>
+      <param name="values">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.HMGet(System.String,System.Collections.Generic.List{System.String})">
+      <summary>
+            hash表批量获取数据
+            </summary>
+      <param name="key">
+      </param>
+      <param name="fields">
+      </param>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.AddItemToListRight(System.String,System.String)">
+      <summary>
+            向list类型数据添加成员，向列表底部(右侧)添加
+            </summary>
+      <param name="Item">
+      </param>
+      <param name="list">
+      </param>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.AddItemToListLeft(System.String,System.String)">
+      <summary>
+            向list类型数据添加成员，向列表顶部(左侧)添加
+            </summary>
+      <param name="list">
+      </param>
+      <param name="item">
+      </param>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.AddRangeToList(System.String,System.Collections.Generic.List{System.String},System.Int32)">
+      <summary>
+            将多个值添加至 redis  List中
+            </summary>
+      <param name="list">
+      </param>
+      <param name="items">
+      </param>
+      <param name="seconds">
+      </param>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.ReAddRangeToList(System.String,System.Collections.Generic.List{System.String},System.Int32)">
+      <summary>
+            将多个值添加至 redis  List中
+            </summary>
+      <param name="list">
+      </param>
+      <param name="items">
+      </param>
+      <param name="dateTime">
+      </param>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.ReAddRangeToList(System.String,System.Collections.Generic.List{System.String})">
+      <summary>
+            将多个值添加至 redis  List中
+            </summary>
+      <param name="list">
+      </param>
+      <param name="items">
+      </param>
+      <param name="dateTime">
+      </param>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetAllItems(System.String)">
+      <summary>
+            从list类型数据读取所有成员
+            </summary>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetItemFromList(System.String,System.Int32)">
+      <summary>
+            从list类型数据指定索引处获取数据，支持正索引和负索引
+            </summary>
+      <param name="list">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetRangeToList(System.String,System.Int32,System.Int32)">
+      <summary>
+            从列表中批量获取数据
+            </summary>
+      <param name="list">
+      </param>
+      <param name="values">
+      </param>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.LRemove(System.String,System.Int32,System.String)">
+      <summary>
+            从列表中删除指定数量的元素
+            </summary>
+      <param name="list">
+      </param>
+      <param name="count">
+      </param>
+      <param name="value">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetItemToSet(System.String,System.String)">
+      <summary>
+            向集合中添加数据
+            </summary>
+      <param name="item">
+      </param>
+      <param name="set">
+      </param>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetAllItemsFromSet(System.String)">
+      <summary>
+            获得集合中所有数据
+            </summary>
+      <param name="set">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetSetDiff(System.String,System.String[])">
+      <summary>
+            获取fromSet集合和其他集合不同的数据
+            </summary>
+      <param name="fromSet">
+      </param>
+      <param name="toSet">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetSetUnion(System.String[])">
+      <summary>
+            获得所有集合的并集
+            </summary>
+      <param name="set">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetSetInter(System.String[])">
+      <summary>
+            获得所有集合的交集
+            </summary>
+      <param name="set">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.AddItemToSortedSet(System.String,System.String,System.Int64)">
+      <summary>
+            向有序集合中添加元素
+            </summary>
+      <param name="set">
+      </param>
+      <param name="value">
+      </param>
+      <param name="score">
+      </param>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetItemIndexInSortedSetDesc(System.String,System.String)">
+      <summary>
+            获得某个值在有序集合中的排名，按分数的降序排列
+            </summary>
+      <param name="set">
+      </param>
+      <param name="value">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetItemIndexInSortedSet(System.String,System.String)">
+      <summary>
+            获得某个值在有序集合中的排名，按分数的升序排列
+            </summary>
+      <param name="set">
+      </param>
+      <param name="value">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetItemScoreInSortedSet(System.String,System.String)">
+      <summary>
+            获得有序集合中某个值得分数
+            </summary>
+      <param name="set">
+      </param>
+      <param name="value">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetRangeFromSortedSet(System.String,System.Int32,System.Int32)">
+      <summary>
+            获得有序集合中，某个排名范围的所有值
+            </summary>
+      <param name="set">
+      </param>
+      <param name="beginRank">
+      </param>
+      <param name="endRank">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetRangeFromSortedSet(System.String,System.Double,System.Double)">
+      <summary>
+            获得有序集合中，某个分数范围内的所有值，升序
+            </summary>
+      <param name="set">
+      </param>
+      <param name="beginScore">
+      </param>
+      <param name="endScore">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.GetRangeFromSortedSetDesc(System.String,System.Double,System.Double)">
+      <summary>
+            获得有序集合中，某个分数范围内的所有值，降序
+            </summary>
+      <param name="set">
+      </param>
+      <param name="beginScore">
+      </param>
+      <param name="endScore">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.Delete(System.String)">
+      <summary>
+            删除一个key
+            </summary>
+      <param name="key">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.Deletes(System.String[])">
+      <summary>
+            删除一批key
+            </summary>
+      <param name="keys">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisDb.QueueCommand(System.Action{BSF.Redis.RedisDb},System.Action)">
+      <summary>
+            批量数据执行
+            </summary>
+      <param name="command">
+      </param>
+      <param name="onSuccessCallback">
+      </param>
+    </member>
+    <member name="T:BSF.Redis.RedisManager">
+      <summary>
+            Redis管理类
+            </summary>
+    </member>
+    <member name="M:BSF.Redis.RedisManager.GetPoolClient(System.String)">
+      <summary>
+            获取连接池客户端
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisManager.GetPoolClient(System.String,System.Int32,System.Int32)">
+      <summary>
+            获取连接池客户端
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Redis.RedisManager.CreateClient(System.String,System.Int32,System.String)">
+      <summary>
+            独立创建一个客户端
+            </summary>
+      <param name="hostip">
+      </param>
+      <param name="port">
+      </param>
+      <param name="password">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:BSF.Log.CommonLogInfo.logtype">
+      <summary>
+            日志类型:一般非正常错误,系统级严重错误,一般业务日志,系统日志
+            </summary>
+    </member>
+    <member name="P:BSF.Log.CommonLogInfo.logtag">
+      <summary>
+            日志唯一标示(简短的方法名或者url,便于归类)
+            </summary>
+    </member>
+    <member name="T:BSF.Log.CommLog">
+      <summary>
+            一般日志记录类
+            </summary>
+    </member>
+    <member name="M:BSF.Log.CommLog.Write(System.String)">
+      <summary>
+            日常一般日志记录
+            </summary>
+      <param name="msg">
+      </param>
+    </member>
+    <member name="M:BSF.Log.CommLog.Write(BSF.Log.CommonLogInfo)">
+      <summary>
+            日常一般日志记录
+            </summary>
+      <param name="msg">
+      </param>
+    </member>
+    <member name="P:BSF.Log.ErrorLogInfo.logtype">
+      <summary>
+            日志类型:一般非正常错误,系统级严重错误
+            </summary>
+    </member>
+    <member name="P:BSF.Log.ErrorLogInfo.logtag">
+      <summary>
+            日志唯一标示(简短的方法名或者url,便于归类)
+            </summary>
+    </member>
+    <member name="P:BSF.Log.ErrorLogInfo.developer">
+      <summary>
+            相关开发人员
+            </summary>
+    </member>
+    <member name="T:BSF.Log.ErrorLog">
+      <summary>
+            简易错误日志 车毅
+            </summary>
+    </member>
+    <member name="M:BSF.Log.ErrorLog.Write(System.String,System.Exception)">
+      <summary>
+            错误日志记录
+            </summary>
+      <param name="errormsg">
+      </param>
+      <param name="msg">
+      </param>
+    </member>
+    <member name="P:BSF.Log.TimeWatchLogInfo.logtype">
+      <summary>
+            耗时日志类型：普通日志=0，api接口日志=1，sql日志=2
+            </summary>
+    </member>
+    <member name="P:BSF.Log.TimeWatchLogInfo.logtag">
+      <summary>
+            日志标识,sql类型则为sql哈希 string.hash(),api类型则为url,普通日志则为方法名
+            </summary>
+    </member>
+    <member name="P:BSF.Log.TimeWatchLogInfo.url">
+      <summary>
+            当前url
+            </summary>
+    </member>
+    <member name="P:BSF.Log.TimeWatchLogInfo.msg">
+      <summary>
+            当前信息
+            </summary>
+    </member>
+    <member name="P:BSF.Log.TimeWatchLogInfo.fromip">
+      <summary>
+            来源ip(代码执行ip)
+            </summary>
+    </member>
+    <member name="P:BSF.Log.TimeWatchLogInfo.sqlip">
+      <summary>
+            sqlip地址
+            </summary>
+    </member>
+    <member name="P:BSF.Log.TimeWatchLogInfo.remark">
+      <summary>
+            其他记录标记信息
+            </summary>
+    </member>
+    <member name="T:BSF.Log.TimeWatchLog">
+      <summary>
+            简易耗时打印 车毅
+            </summary>
+    </member>
+    <member name="M:BSF.Log.TimeWatchLog.Start">
+      <summary>
+            开启
+            </summary>
+    </member>
+    <member name="M:BSF.Log.TimeWatchLog.Write(System.String)">
+      <summary>
+            写普通耗时日志(url哈希为logtag)
+            </summary>
+      <param name="msg">
+      </param>
+    </member>
+    <member name="M:BSF.Log.TimeWatchLog.Write(System.String,System.String)">
+      <summary>
+            写普通耗时日志(方法名哈希为logtag)
+            </summary>
+      <param name="msg">
+      </param>
+    </member>
+    <member name="T:BSF.Extensions.DBObjectMethodHelper">
+      <summary>
+            DB object对象的扩展方法
+            </summary>
+    </member>
+    <member name="T:BSF.Extensions.RequestMethodHelper">
+      <summary>
+            Request(System.Web.HttpRequestBase)扩展类
+            </summary>
+    </member>
+    <member name="M:BSF.Extensions.RequestMethodHelper.RequestParams(System.Web.HttpRequestBase)">
+      <summary>
+            请求参数Get,Post
+            </summary>
+      <param name="Request">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Extensions.RequestMethodHelper.RequestParams(System.Web.HttpRequest)">
+      <summary>
+            请求参数Get,Post
+            </summary>
+      <param name="Request">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Extensions.RequestMethodHelper.RequestParamValue(System.Web.HttpRequestBase,System.String)">
+      <summary>
+            获取请求参数值
+            </summary>
+      <param name="Request">
+      </param>
+      <param name="key">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Extensions.RequestMethodHelper.RequestParamValue(System.Web.HttpRequest,System.String)">
+      <summary>
+            获取请求参数值
+            </summary>
+      <param name="Request">
+      </param>
+      <param name="key">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.Extensions.StringMehtodHelper">
+      <summary>
+            字符串处理方法
+            </summary>
+    </member>
+    <member name="M:BSF.Extensions.StringMehtodHelper.SubString3(System.String,System.Int32)">
+      <summary>
+            部分字符串获取
+            </summary>
+      <param name="str">
+      </param>
+      <param name="maxlen">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Extensions.StringMehtodHelper.SubString2(System.String,System.Int32)">
+      <summary>
+            部分字符串获取
+            </summary>
+      <param name="str">
+      </param>
+      <param name="maxlen">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Extensions.StringMehtodHelper.NullToEmpty(System.String)">
+      <summary>
+            如果string空引用转空内容
+            </summary>
+      <param name="str">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Extensions.StringMehtodHelper.RemoveHtml(System.String)">
+      <summary>
+            去除html标签
+            </summary>
+      <param name="str">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Extensions.StringMehtodHelper.RemoveMoreSpace(System.String)">
+      <summary>
+            去除2个以上的空格
+            </summary>
+      <param name="content">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Extensions.StringMehtodHelper.CutString(System.String,System.Int32)">
+      <summary>
+            剪切字符串
+            </summary>
+      <param name="strInput">
+      </param>
+      <param name="intLen">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Extensions.StringMehtodHelper.EscapeJson(System.String)">
+      <summary>
+            json特殊字符处理
+            </summary>
+    </member>
+    <member name="M:BSF.Extensions.StringMehtodHelper.StartWithIgnoreCase(System.String,System.String)">
+      <summary>
+            StartWith忽略大小写
+            </summary>
+    </member>
+    <member name="M:BSF.Extensions.StringMehtodHelper.RemoveStart(System.String,System.Int32)">
+      <summary>
+            移除字符串
+            </summary>
+    </member>
+    <member name="T:BSF.Db.DbCatch">
+      <summary>
+            Db访问拦截 车毅
+            </summary>
+    </member>
+    <member name="M:BSF.Db.DbCatch.Catch``1(System.Boolean,System.String,System.String,System.Collections.Generic.List{BSF.Db.ProcedureParameter},System.Func{``0})">
+      <summary>
+            错误拦截
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="istimeWatch">
+      </param>
+      <param name="sql">
+      </param>
+      <param name="procedurePar">
+      </param>
+      <param name="action">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.Db.DbConn">
+      <summary>数据库连接类</summary>
+    </member>
+    <member name="F:BSF.Db.DbConn._conn">
+      <summary>数据库连接内部字段</summary>
+    </member>
+    <member name="F:BSF.Db.DbConn._dbtype">
+      <summary>数据库类型</summary>
+    </member>
+    <member name="M:BSF.Db.DbConn.CreateConn(BSF.Db.DbType,System.String)">
+      <summary>创建连接</summary>
+      <param name="dbtype">数据库类型</param>
+      <param name="connectionString">连接字符串</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.CreateConn(BSF.Db.DbType,System.String,System.String,System.String,System.String)">
+      <summary>创建连接</summary>
+      <param name="dbtype">数据库类型</param>
+      <param name="AServerName">服务器名称</param>
+      <param name="ADatabaseName">数据库名称</param>
+      <param name="ALoginName">用户</param>
+      <param name="ALoginPass">密码</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.CreateConn(BSF.Db.DbType,System.Data.Common.DbConnection)">
+      <summary>创建连接</summary>
+      <param name="dbtype">数据库类型</param>
+      <param name="ACn">已有的连接</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.CreateConnString(BSF.Db.DbType,System.String,System.String,System.String,System.String)">
+      <summary>取得数据库连接字符串(SQL传所有参数、ORACLE传AServerName ALoginName ALoginPass、ACCESS传ADatabaseName ALoginPass)</summary>
+      <param name="dbtype">数据库类型</param>
+      <param name="AServerName">服务器名</param>
+      <param name="ADatabaseName">数据库名</param>
+      <param name="ALoginName">用户</param>
+      <param name="ALoginPass">密码</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.TypeToFieldType(System.Type)">
+      <summary>将DataSet中列的类型转换为DataField类型</summary>
+      <param name="AType">原类型，一般取自DataSet.Table.Columns</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.Open">
+      <summary>打开数据库连接
+            </summary>
+    </member>
+    <member name="M:BSF.Db.DbConn.Close">
+      <summary>关闭数据库连接
+            </summary>
+    </member>
+    <member name="M:BSF.Db.DbConn.Dispose">
+      <summary>释放
+            </summary>
+    </member>
+    <member name="M:BSF.Db.DbConn.GetConnection">
+      <summary>取得数据库连接对象</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.ExecuteSql(System.String,System.Collections.Generic.List{BSF.Db.ProcedureParameter})">
+      <summary>执行SQL语句</summary>
+      <param name="Sql">查询语句</param>
+    </member>
+    <member name="M:BSF.Db.DbConn.ExecuteScalar(System.String,System.Collections.Generic.List{BSF.Db.ProcedureParameter})">
+      <summary>执行SQL语句</summary>
+      <param name="Sql">查询语句</param>
+    </member>
+    <member name="M:BSF.Db.DbConn.SqlBulkCopy(System.Data.DataTable,System.String,System.String,System.Collections.Generic.List{BSF.Db.ProcedureParameter},System.Int32)">
+      <summary>执行SQL语句</summary>
+      <param name="Sql">查询语句</param>
+    </member>
+    <member name="M:BSF.Db.DbConn.SqlToDataTable(System.String,System.Collections.Generic.List{BSF.Db.ProcedureParameter})">
+      <summary>
+            扩展支持返回datatable 车毅
+            </summary>
+      <param name="Sql">
+      </param>
+      <param name="ProcedurePar">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.BeginTransaction(System.Data.IsolationLevel)">
+      <summary>启动事务</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.Commit">
+      <summary>提交事务
+            </summary>
+    </member>
+    <member name="M:BSF.Db.DbConn.Rollback">
+      <summary>回滚事务
+            </summary>
+    </member>
+    <member name="M:BSF.Db.DbConn.GetTransaction">
+      <summary>取得事务对象</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.SqlToDataSet(System.Data.DataSet,System.String,System.Collections.Generic.List{BSF.Db.ProcedureParameter})">
+      <summary>用SQL语句返回记录集</summary>
+      <param name="ds">记录集</param>
+      <param name="Sql">SQL语句</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.SqlToDataSet(System.Data.DataSet,System.String,System.Collections.Generic.List{BSF.Db.ProcedureParameter},System.String)">
+      <summary>用SQL语句返回记录集</summary>
+      <param name="ds">记录集</param>
+      <param name="Sql">SQL语句</param>
+      <param name="TableName">表名</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.ExecuteSql(System.String,System.Data.CommandType,System.Collections.Generic.List{BSF.Db.ProcedureParameter})">
+      <summary>执行SQL语句</summary>
+      <param name="Sql">查询语句</param>
+      <param name="CmdType">命令类型</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.ExecuteScalar(System.String,System.Data.CommandType,System.Collections.Generic.List{BSF.Db.ProcedureParameter})">
+      <summary>执行SQL语句</summary>
+      <param name="Sql">查询语句</param>
+      <param name="CmdType">命令类型</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.ExecuteProcedure(System.String,System.Collections.Generic.List{BSF.Db.ProcedureParameter})">
+      <summary>执行SQL语句</summary>
+      <param name="ProcedureName">存储过程名称</param>
+      <param name="ProcedurePar">参数</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.SqlToDbReader(System.String,System.Collections.Generic.List{BSF.Db.ProcedureParameter})">
+      <summary>用SQL语句返回DataReader</summary>
+      <param name="Sql">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.GetIdentity">
+      <summary>取得刚刚插入数据库的种子序号</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.GetServerDate">
+      <summary>取得系统时间</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.TableIsExist(System.String)">
+      <summary>数据库中表是否存在</summary>
+      <param name="aTableName">表名</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.TableIsExist(System.String,System.String)">
+      <summary>数据库中表是否存在</summary>
+      <param name="aDbName">数据库名</param>
+      <param name="aTableName">表名</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.FieldIsExist(System.String,System.String)">
+      <summary>表中字段是否存在</summary>
+      <param name="aTableName">表名</param>
+      <param name="aFieldName">字段名</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.FieldIsExist(System.String,System.String,System.String)">
+      <summary>表中字段是否存在</summary>
+      <param name="aDbName">数据库名</param>
+      <param name="aTableName">表名</param>
+      <param name="aFieldName">字段名</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.DbConn.GetMcsToSql(System.String,System.String,System.Int32,System.Collections.Generic.List{BSF.Db.ProcedureParameter}@)">
+      <summary>从多选字符串MultiChoiceStr转换成Sql条件</summary>
+      <param name="AMultiChoiceStr">多选字符串</param>
+      <param name="aField">字段</param>
+      <param name="aStyle">类型 0-两边都不加  1-%左边加  2-右边加%  3-%两边加%</param>
+      <param name="aPar">返回参数</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:BSF.Db.DbConn.IsWatchTime">
+      <summary>
+            是否监控sql耗时HH:ss:mm.fff
+            </summary>
+    </member>
+    <member name="P:BSF.Db.DbConn.DbType">
+      <summary>数据库类型
+            </summary>
+    </member>
+    <member name="P:BSF.Db.DbConn.ConnString">
+      <summary>连接字符串
+            </summary>
+    </member>
+    <member name="T:BSF.Db.DbType">
+      <summary>数据库连接类型</summary>
+    </member>
+    <member name="F:BSF.Db.DbType.SQLSERVER">
+      <summary>SQL SERVER数据库</summary>
+    </member>
+    <member name="F:BSF.Db.DbType.ORACLE">
+      <summary>ORACLE数据库</summary>
+    </member>
+    <member name="F:BSF.Db.DbType.ORACLE_NEW">
+      <summary>ORACLE数据库</summary>
+    </member>
+    <member name="F:BSF.Db.DbType.SQLITE">
+      <summary>Sqlite数据库</summary>
+    </member>
+    <member name="F:BSF.Db.DbType.Other">
+      <summary>其他数据库</summary>
+    </member>
+    <member name="F:BSF.Db.DbType.MYSQL">
+      <summary>MYSQL</summary>
+    </member>
+    <member name="T:BSF.Db.ProcParType">
+      <summary>存储过程参数类型</summary>
+    </member>
+    <member name="F:BSF.Db.ProcParType.Default">
+      <summary>
+            默认无参 车毅
+            </summary>
+    </member>
+    <member name="F:BSF.Db.ProcParType.Int16">
+      <summary>16位的有符号整数，相当于Sql中的SmallInt、Oracle中的Int16、Oledb中的SmallInt、.net中的System.Int16</summary>
+    </member>
+    <member name="F:BSF.Db.ProcParType.Int32">
+      <summary>32位的有符号整数，相当于Sql中的Int、Oracle中的Int32、Oledb中的Integer、.net中的System.Int32</summary>
+    </member>
+    <member name="F:BSF.Db.ProcParType.Int64">
+      <summary>64位的有符号整数，相当于Sql中的BigInt、Oracle中无此类型可用Number代替、Oledb中的BigInt、.net中的System.Int64</summary>
+    </member>
+    <member name="F:BSF.Db.ProcParType.Single">
+      <summary>单精度浮点值，相当于Sql中的Real、Oracle中的Float、Oledb中的Single、.net中的System.Single</summary>
+    </member>
+    <member name="F:BSF.Db.ProcParType.Double">
+      <summary>双精度浮点值，相当于Sql中的Float、Oracle中的Double、Oledb中的Double、.net中的System.Double</summary>
+    </member>
+    <member name="F:BSF.Db.ProcParType.Decimal">
+      <summary>定点精度和小数位数数值，相当于Sql中的Decimal、Oracle中的Number、Oledb中的Decimal、.net中的System.Decimal</summary>
+    </member>
+    <member name="F:BSF.Db.ProcParType.Char">
+      <summary>固定长度字符串，相当于Sql中的Char、Oracle中的Char、Oledb中的Char、.net中的System.String</summary>
+    </member>
+    <member name="F:BSF.Db.ProcParType.VarChar">
+      <summary>可变长度字符串，相当于Sql中的VarChar、Oracle中的VarChar、Oledb中的VarChar、.net中的System.String</summary>
+    </member>
+    <member name="F:BSF.Db.ProcParType.NVarchar">
+      <summary>双字节char</summary>
+    </member>
+    <member name="F:BSF.Db.ProcParType.Image">
+      <summary>二进制数据，相当于Sql中的Binary、Oracle中的Blob、Oledb中的Binary、.net中的System.Byte[]</summary>
+    </member>
+    <member name="F:BSF.Db.ProcParType.DateTime">
+      <summary>日期时间类型，相当于Sql中的DateTime、Oracle中的DateTime、Oledb中的DBDate、.net中的System.DateTime</summary>
+    </member>
+    <member name="T:BSF.Db.FieldType">
+      <summary>字段类型</summary>
+    </member>
+    <member name="F:BSF.Db.FieldType.Int16">
+      <summary>16位的有符号整数，相当于Sql中的SmallInt、Oracle中的Int16、Oledb中的SmallInt、.net中的System.Int16</summary>
+    </member>
+    <member name="F:BSF.Db.FieldType.Int32">
+      <summary>32位的有符号整数，相当于Sql中的Int、Oracle中的Int32、Oledb中的Integer、.net中的System.Int32</summary>
+    </member>
+    <member name="F:BSF.Db.FieldType.Int64">
+      <summary>64位的有符号整数，相当于Sql中的BigInt、Oracle中无此类型可用Number代替、Oledb中的BigInt、.net中的System.Int64</summary>
+    </member>
+    <member name="F:BSF.Db.FieldType.Single">
+      <summary>单精度浮点值，相当于Sql中的Real、Oracle中的Float、Oledb中的Single、.net中的System.Single</summary>
+    </member>
+    <member name="F:BSF.Db.FieldType.Double">
+      <summary>双精度浮点值，相当于Sql中的Float、Oracle中的Double、Oledb中的Double、.net中的System.Double</summary>
+    </member>
+    <member name="F:BSF.Db.FieldType.Decimal">
+      <summary>定点精度和小数位数数值，相当于Sql中的Decimal、Oracle中的Number、Oledb中的Decimal、.net中的System.Decimal</summary>
+    </member>
+    <member name="F:BSF.Db.FieldType.String">
+      <summary>可变长度字符串，相当于Sql中的VarChar、Oracle中的VarChar、Oledb中的VarChar、.net中的System.String</summary>
+    </member>
+    <member name="F:BSF.Db.FieldType.Image">
+      <summary>二进制数据，相当于Sql中的Binary、Oracle中的Blob、Oledb中的Binary、.net中的System.Byte[]</summary>
+    </member>
+    <member name="F:BSF.Db.FieldType.DateTime">
+      <summary>日期时间类型，相当于Sql中的DateTime、Oracle中的DateTime、Oledb中的DBDate、.net中的System.DateTime</summary>
+    </member>
+    <member name="F:BSF.Db.FieldType.Boolean">
+      <summary>布尔值</summary>
+    </member>
+    <member name="T:BSF.Db.ProcedureParameter">
+      <summary>存储过程参数</summary>
+    </member>
+    <member name="F:BSF.Db.ProcedureParameter.Name">
+      <summary>参数名称</summary>
+    </member>
+    <member name="F:BSF.Db.ProcedureParameter.ParType">
+      <summary>参数类型</summary>
+    </member>
+    <member name="F:BSF.Db.ProcedureParameter.Size">
+      <summary>参数大小</summary>
+    </member>
+    <member name="F:BSF.Db.ProcedureParameter.Direction">
+      <summary>参数方向</summary>
+    </member>
+    <member name="F:BSF.Db.ProcedureParameter.Value">
+      <summary>参数值</summary>
+    </member>
+    <member name="M:BSF.Db.ProcedureParameter.#ctor">
+      <summary>默认构造函数</summary>
+    </member>
+    <member name="M:BSF.Db.ProcedureParameter.#ctor(System.String,System.Byte[])">
+      <summary>image型构造函数</summary>
+      <param name="AName">
+      </param>
+      <param name="AImage">
+      </param>
+    </member>
+    <member name="M:BSF.Db.ProcedureParameter.#ctor(System.String,BSF.Db.ProcParType,System.Int32,System.Data.ParameterDirection,System.Object)">
+      <summary>构造函数</summary>
+      <param name="_name">参数名称</param>
+      <param name="_partype">参数类型</param>
+      <param name="_size">参数大小</param>
+      <param name="_direction">参数方向</param>
+      <param name="_value">参数值</param>
+    </member>
+    <member name="M:BSF.Db.ProcedureParameter.#ctor(System.String,BSF.Db.ProcParType,System.Int32,System.Object)">
+      <summary>构造函数</summary>
+      <param name="_name">参数名称</param>
+      <param name="_partype">参数类型</param>
+      <param name="_size">参数大小</param>
+      <param name="_direction">参数方向</param>
+      <param name="_value">参数值</param>
+    </member>
+    <member name="M:BSF.Db.ProcedureParameter.#ctor(System.String,System.Object)">
+      <summary>构造函数 车毅修改支持无类型参数</summary>
+      <param name="_name">参数名称</param>
+      <param name="_partype">参数类型</param>
+      <param name="_size">参数大小</param>
+      <param name="_direction">参数方向</param>
+      <param name="_value">参数值</param>
+    </member>
+    <member name="T:BSF.Db.LibConvert">
+      <summary>
+            类型转换类
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.IsDbNull(System.Object)">
+      <summary>返回有关指定对象是否为 System.TypeCode.DBNull 类型的指示。</summary>
+      <param name="Obj">一个对象</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.DateTimeToInt(System.DateTime)">
+      <summary>日期型转整型</summary>
+      <param name="time">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.IntToDateTime(System.Int64)">
+      <summary>整型转日期型</summary>
+      <param name="Seconds">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.StrToShort(System.String)">
+      <summary>【通用函数】string类型转换为short类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.StrToInt(System.String)">
+      <summary>【通用函数】string类型转换为int类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.StrToInt64(System.String)">
+      <summary>【通用函数】string类型转换为Tnt64类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.StrToDouble(System.String)">
+      <summary>【通用函数】string类型转换为double类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.StrToFloat(System.String)">
+      <summary>【通用函数】string类型转换为float类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.StrToDecimal(System.String)">
+      <summary>【通用函数】string类型转换为decimal类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.StrToDateTime(System.String)">
+      <summary>【通用函数】string类型转换为日期类型,转换失败返回DateTime.Now
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.StrToBoolean(System.String)">
+      <summary>【通用函数】string类型转换为BOOL类型,转换失败返回False
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.StrToDateTime(System.String,System.DateTime)">
+      <summary>【通用函数】string类型转换为日期类型
+            </summary>
+      <param name="aStr">要转换的字符串</param>
+      <param name="aDefault">如果转换失败的默认值</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.IntToBool(System.Int32)">
+      <summary>【通用函数】int类型转换为bool类型(1为TRUE，其余为FALSE)
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.BoolToInt(System.Boolean)">
+      <summary>【通用函数】bool类型转换为int类型(TRUE为1，FALSE为0)
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ObjToShort(System.Object)">
+      <summary>【通用函数】object类型转换为short类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ObjToInt(System.Object)">
+      <summary>【通用函数】object类型转换为int类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ObjToInt64(System.Object)">
+      <summary>【通用函数】object类型转换为Int64类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ObjToDouble(System.Object)">
+      <summary>【通用函数】object类型转换为double类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ObjToDecimal(System.Object)">
+      <summary>【通用函数】object类型转换为decimal类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ObjToFloat(System.Object)">
+      <summary>【通用函数】object类型转换为float类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ObjToDateTime(System.Object)">
+      <summary>【通用函数】object类型转换为datetime类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ObjToBool(System.Object)">
+      <summary>【通用函数】object类型转换为bool类型，直接强制转换(bool)aObj
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.NullToStr(System.Object)">
+      <summary>【通用函数】object类型转换为string类型
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ObjToStr(System.Object)">
+      <summary>【通用函数】相当于NullToStr
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.MoneyToUpper(System.Double,System.Boolean)">
+      <summary>【通用函数】金额小写转换成大写</summary>
+      <param name="Value">数字</param>
+      <param name="AState">状态，true表示完整，false表示简写</param>
+      <returns>返回字符串，如：叁佰贰拾伍元整</returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.MoneyBitUpper(System.Double,System.Int32)">
+      <summary>【通用函数】取得金额某位的大写</summary>
+      <param name="Value">数字</param>
+      <param name="B">位置，-2分-1角0元1十2百3千4万，以此类推</param>
+      <returns>返回数字，如：贰</returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ObjToBytes(System.Object)">
+      <summary>【通用函数】对象转换成字节数组,自动判断isDbNull,返回null
+            </summary>
+      <param name="obj">对象</param>
+      <returns>失败返回null</returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ObjToByte(System.Object)">
+      <summary>【通用函数】对象转换成字节,自动判断isDbNull,返回null
+            </summary>
+      <param name="obj">对象</param>
+      <returns>失败返回null</returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.BytesToObj(System.Byte[])">
+      <summary>
+            【通用函数】字节数组转换成对象,自动判断isDbNull,返回null
+            </summary>
+      <param name="data">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.StrToBytes(System.String)">
+      <summary>【通用函数】字符串转换成字节数组(采用UTF8)</summary>
+      <param name="Str">字符串</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.BytesToStr(System.Byte[])">
+      <summary>【通用函数】字节数组转换成字符串(采用UTF8)（过期函数，建议采用ObjToBytesToStr）</summary>
+      <param name="bytes">字节数组，DataSet返回的数据可以直接使用,如:(byte[])Ds.Tables[0].Rows[0]["f_fromsql"]</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ObjToBytesToStr(System.Object)">
+      <summary>【通用函数】对象转换成字节数组再转换成字符串(采用UTF8)</summary>
+      <param name="Obj">对象,如:Ds.Tables[0].Rows[0]["f_image"]</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.DatasetToXmlstr(System.Data.DataSet)">
+      <summary>【通用函数】将Dataset对象转换成Xml字符串(采用UTF8)</summary>
+      <param name="ds">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.XmlstrToDataset(System.String)">
+      <summary>【通用函数】将Xml字符串转换成Dataset对象(采用UTF8)</summary>
+      <param name="xml">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.DupeString(System.String,System.Int32)">
+      <summary>【通用函数】填冲c字符n次
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.LeftStr(System.String,System.Int32)">
+      <summary>【通用函数】取字符串左边N个字符
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.RightStr(System.String,System.Int32)">
+      <summary>【通用函数】取字符串右边N个字符
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.GetLength(System.String)">
+      <summary>【通用函数】取字符串长度(按字节计算)
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.BytesToByteStr(System.Collections.Generic.IEnumerable{System.Byte})">
+      <summary>【通用函数】byte数组转16进制字符串，一个字节两个字母
+            </summary>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ToLongList(System.String[])">
+      <summary>
+            字符串数组转换为Long数组
+            </summary>
+      <param name="stringList">转换字符串数组</param>
+      <returns>List{long}</returns>
+    </member>
+    <member name="M:BSF.Db.LibConvert.ToLongList(System.Collections.Generic.List{System.String})">
+      <summary>
+            字符串转int类型
+            </summary>
+      <param name="source">源数据</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.Db.SimpleProcedureParameter">
+      <summary>
+            简易参数写法 车毅
+            简化并扩展原先的参数书写方式
+            </summary>
+    </member>
+    <member name="M:BSF.Db.SimpleProcedureParameter.ToParameters">
+      <summary>
+            转化成框架支持的参数数组
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.SqlHelper.Visit``1(System.Func{BSF.Db.SimpleProcedureParameter,``0})">
+      <summary>
+            sql访问拦截器
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="action">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.SqlHelper.CmdInFromListForSimplePar``1(BSF.Db.SimpleProcedureParameter,System.Collections.Generic.List{``0},System.String)">
+      <summary>
+      </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="par">
+      </param>
+      <param name="splits">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.SqlHelper.CmdIn(System.Collections.Generic.List{BSF.Db.ProcedureParameter},System.String)">
+      <summary>
+            ,分隔的in 
+            举例 name in ('a','b','c'); 
+            </summary>
+      <param name="splits">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.SqlHelper.CmdIn``1(System.Collections.Generic.List{BSF.Db.ProcedureParameter},System.Collections.Generic.List{``0})">
+      <summary>
+            ,分隔的in 
+            举例 name in ('a','b','c'); 
+            </summary>
+      <param name="splits">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Db.ConnAdapter.DbConnSqlServer.ParameterTransform(BSF.Db.ProcedureParameter)">
+      <summary>参数类型转化</summary>
+      <param name="Par">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.Config.BSFConfig">
+      <summary>
+            项目全局配置
+            </summary>
+    </member>
+    <member name="F:BSF.Config.BSFConfig.ConfigManagerConnectString">
+      <summary>
+            统一配置中心数据库连接
+            </summary>
+    </member>
+    <member name="F:BSF.Config.BSFConfig.ProjectName">
+      <summary>
+            当前项目名称
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.IsWriteErrorLog">
+      <summary>
+            是否写错误日志
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.IsWriteVisitLog">
+      <summary>
+            是否拦截访问日志
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.IsWriteErrorLogToMonitorPlatform">
+      <summary>
+            错误日志是否写入监控平台
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.IsWriteErrorLogToLocalFile">
+      <summary>
+            错误日志是否写入本地文件
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.IsWriteCommonLog">
+      <summary>
+            是否写常用日志
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.IsWriteCommonLogToMonitorPlatform">
+      <summary>
+            常用日志是否写入监控平台
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.IsWriteCommonLogToLocalFile">
+      <summary>
+            常用日志是否写入本地文件
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.IsWriteTimeWatchLog">
+      <summary>
+            是否写耗时日志
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.IsWriteTimeWatchLogToMonitorPlatform">
+      <summary>
+            耗时日志是否写入监控平台
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.IsWriteTimeWatchLogToLocalFile">
+      <summary>
+            耗时日志是否写入本地文件
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.TimeWatchConnectionString">
+      <summary>
+            耗时监控数据库连接
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.MonitorPlatformConnectionString">
+      <summary>
+            监控平台数据库连接
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.ProjectDeveloper">
+      <summary>
+            当前项目默认开发人员
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.ClusterConnectString">
+      <summary>
+            集群性能监控库连接
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.PlatformManageConnectString">
+      <summary>
+            集群性能监控库连接
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.TimeWatchConnectString">
+      <summary>
+            耗时库连接
+            </summary>
+    </member>
+    <member name="P:BSF.Config.BSFConfig.UnityLogConnectString">
+      <summary>
+            集群性能监控库连接
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BaseServiceContext">
+      <summary>
+            基础服务上下文
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BaseServiceContext.ConfigManagerProvider">
+      <summary>
+            注册配置中心接口
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BaseServiceContext.MonitorProvider">
+      <summary>
+            注册监控平台接口
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.CommonLogInfo.sqlservercreatetime">
+      <summary>
+            数据库创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.CommonLogInfo.logcreatetime">
+      <summary>
+            日志项目中创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.CommonLogInfo.logtype">
+      <summary>
+            日志类型:一般非正常错误,系统级严重错误,一般业务日志,系统日志
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.CommonLogInfo.projectname">
+      <summary>
+            项目名称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.CommonLogInfo.logtag">
+      <summary>
+            日志唯一标示(简短的方法名或者url,便于归类)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.CommonLogInfo.msg">
+      <summary>
+            日志信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.ErrorLogInfo.sqlservercreatetime">
+      <summary>
+            数据库创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.ErrorLogInfo.logcreatetime">
+      <summary>
+            日志项目中创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.ErrorLogInfo.logtype">
+      <summary>
+            日志类型:一般非正常错误,系统级严重错误
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.ErrorLogInfo.projectname">
+      <summary>
+            项目名称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.ErrorLogInfo.logtag">
+      <summary>
+            日志唯一标示(简短的方法名或者url,便于归类)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.ErrorLogInfo.msg">
+      <summary>
+            错误信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.ErrorLogInfo.tracestack">
+      <summary>
+            堆栈跟踪
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.ErrorLogInfo.remark">
+      <summary>
+            其他备注信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.ErrorLogInfo.developer">
+      <summary>
+            相关开发人员
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogApiInfo.sqlservercreatetime">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogApiInfo.logcreatetime">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogApiInfo.time">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogApiInfo.projectname">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogApiInfo.url">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogApiInfo.msg">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogApiInfo.fromip">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogApiInfo.tag">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogInfo.sqlservercreatetime">
+      <summary>
+            数据库本地创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogInfo.logcreatetime">
+      <summary>
+            日志创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogInfo.time">
+      <summary>
+            耗时
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogInfo.projectname">
+      <summary>
+            项目名称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogInfo.logtype">
+      <summary>
+            耗时日志类型：普通日志=0，api接口日志=1，sql日志=2
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogInfo.logtag">
+      <summary>
+            日志标识,sql类型则为sql哈希,api类型则为url
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogInfo.url">
+      <summary>
+            当前url
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogInfo.msg">
+      <summary>
+            当前信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogInfo.fromip">
+      <summary>
+            来源ip(代码执行ip)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogInfo.sqlip">
+      <summary>
+            sqlip地址
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Base.Entity.TimeWatchLogInfo.remark">
+      <summary>
+            其他记录标记信息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.IConfigManagerProvider">
+      <summary>
+            定义配置中心操作接口
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.ConfigManager.IConfigManagerProvider.Get``1(System.String)">
+      <summary>
+            获取配置
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="configkey">配置的key（配置项）</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.ConfigManager.IConfigManagerProvider.TryGet``1(System.String,System.String@)">
+      <summary>
+            判断配置是否存在配置
+            </summary>
+      <param name="configkey">配置的key（配置项）</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.Api.ApiHelper">
+      <summary>
+            api帮助类
+            </summary>
+    </member>
+    <member name="M:BSF.Api.ApiHelper.Post``1(System.String,System.Object)">
+      <summary>
+            获取api结果
+            </summary>
+      <param name="url">
+      </param>
+      <param name="param">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.Api.ClientResult`1">
+      <summary>
+            与客户端通信协议
+            </summary>
+    </member>
+    <member name="P:BSF.Api.ClientResult`1.code">
+      <summary>请求回复状态码</summary>
+    </member>
+    <member name="P:BSF.Api.ClientResult`1.success">
+      <summary>请求是存成功</summary>
+    </member>
+    <member name="P:BSF.Api.ClientResult`1.msg">
+      <summary>
+            请求返回的信息
+            </summary>
+    </member>
+    <member name="P:BSF.Api.ClientResult`1.total">
+      <summary>
+            返回结果的列表数
+            </summary>
+    </member>
+    <member name="P:BSF.Api.ClientResult`1.servertime">
+      <summary>
+            服务器时间 （UTCNow - 1970-01-01）
+            </summary>
+    </member>
+    <member name="P:BSF.Api.ClientResult`1.responsetext">
+      <summary>
+            客户端返回的文本内容
+            </summary>
+    </member>
+    <member name="T:BSF.Api.HttpProvider">
+      <summary>
+            Http操作类库
+            包含Http的socket连接池，优化性能
+            </summary>
+    </member>
+    <member name="T:BSF.Api.HttpFileInfo">
+      <summary>
+            Http 文件传输参数
+            </summary>
+    </member>
+    <member name="P:BSF.Api.HttpFileInfo.UploadFileBytes">
+      <summary>
+            文件字节数组
+            </summary>
+    </member>
+    <member name="P:BSF.Api.HttpFileInfo.UploadFileName">
+      <summary>
+            文件名
+            </summary>
+    </member>
+    <member name="T:BSF.Api.ServiceResult">
+      <summary>
+            服务器端返回通信协议
+            </summary>
+    </member>
+    <member name="F:BSF.Api.ServiceResult._msg">
+      <summary>
+            消息返回
+            </summary>
+    </member>
+    <member name="P:BSF.Api.ServiceResult.data">
+      <summary>
+            接受对象
+            </summary>
+    </member>
+    <member name="P:BSF.Api.ServiceResult.total">
+      <summary>
+            如列表，列表总数
+            </summary>
+    </member>
+    <member name="P:BSF.Api.ServiceResult.servertime">
+      <summary>
+            服务器时间 （UTCNow - 1970-01-01）
+            </summary>
+    </member>
+    <member name="T:BSF.Api.SignProvider">
+      <summary>
+            签名算法
+            </summary>
+    </member>
+    <member name="F:BSF.Api.SignProvider.splitCharOne">
+      <summary>
+            第一个分隔符
+            </summary>
+    </member>
+    <member name="F:BSF.Api.SignProvider.splitCharTwo">
+      <summary>
+            第二个分隔符
+            </summary>
+    </member>
+    <member name="F:BSF.Api.SignProvider.signKey">
+      <summary>
+            签名字段
+            </summary>
+    </member>
+    <member name="M:BSF.Api.SignProvider.ValidateSign(System.Web.HttpRequest,System.String,System.String@)">
+      <summary>
+            验证sign
+            </summary>
+      <param name="request">
+      </param>
+      <param name="err">
+      </param>
+      <param name="intervalTime">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Api.SignProvider.CreateSign(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+      <summary>
+            生成签名
+            </summary>
+      <param name="parms">参数列表</param>
+      <param name="appsecret">密钥</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.Api.TimeProvider">
+      <summary>
+            用于获取标准时间
+            未来需要解决重放攻击，需要加入网络标准时间
+            </summary>
+    </member>
+    <member name="M:BSF.Api.TimeProvider.GetTimeStamp">
+      <summary>
+            获取时间戳
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.ActiveMQ.ActiveMQManager">
+      <summary>
+            ActiveMQ连接管理
+            </summary>
+    </member>
+    <member name="M:BSF.ActiveMQ.ActiveMQManager.GetPool(BSF.ActiveMQ.ActiveMQConnConfig)">
+      <summary>
+            内部连接池获取
+            </summary>
+      <param name="config">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.ActiveMQ.ActiveMQManager.GetPoolConnection(System.String)">
+      <summary>
+            从连接池中获取一个连接
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.ActiveMQ.ActiveMQManager.CreateConnection(System.String)">
+      <summary>
+            创建一个连接
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.ActiveMQ.ActiveMQManager.CreateSession(Apache.NMS.IConnection)">
+      <summary>
+            创建一个会话
+            </summary>
+      <param name="conn">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.ActiveMQ.SimplePoolConnManager">
+      <summary>
+            简易MQ连接池管理
+            备注：未管理连接池的回收工作，未来需要优化
+            </summary>
+    </member>
+    <member name="M:BSF.ActiveMQ.SimplePoolConnManager.GetPoolConnection">
+      <summary>
+            从池用获取可用连接
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.ActiveMQ.SimplePoolConnManager.Random(System.Int32)">
+      <summary>
+            随机数
+            </summary>
+      <param name="maxvalue">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.ActiveMQ.SimplePoolConnManager.ConnectionCheck(BSF.ActiveMQ.ActiveMQPoolConnection)">
+      <summary>
+            连接可用性检查
+            </summary>
+      <param name="c">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.ActiveMQ.SimplePoolConnManager.Dispose">
+      <summary>
+            连接池资源释放
+            </summary>
+    </member>
+    <member name="T:BSF.ActiveMQ.ActiveMQConnConfig">
+      <summary>
+            ActiveMQ配置
+            </summary>
+    </member>
+    <member name="P:BSF.ActiveMQ.ActiveMQConnConfig.ActiveMQHost">
+      <summary>
+            ActiveMQ连接Host，就是连接字符串
+            </summary>
+    </member>
+    <member name="P:BSF.ActiveMQ.ActiveMQConnConfig.MaxConnectCount">
+      <summary>
+            最大连接数
+            </summary>
+    </member>
+    <member name="T:BSF.ActiveMQ.ActiveMQConnection">
+      <summary>
+            连接资源定义类
+            </summary>
+    </member>
+    <member name="T:BSF.ActiveMQ.ActiveMQPoolConnection">
+      <summary>
+            连接池连接外围二次封装
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_config_model">
+      <summary>
+            tb_config Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_config_model.key">
+      <summary>
+            配置Key
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_config_model.value">
+      <summary>
+            配置Value
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_config_model.remark">
+      <summary>
+            配置备注信息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_consumer_client_model">
+      <summary>
+            tb_consumer_client Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_client_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_client_model.client">
+      <summary>
+            客户端（消费者client，相同业务消费者注册必须一致）
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_client_model.createtime">
+      <summary>
+            当前消费者创建时间(以当前库时间为准)
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_consumer_model">
+      <summary>
+            tb_consumer Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_model.tempid">
+      <summary>
+            消费者临时id(消费者启动后唯一,Guid转long)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_model.consumerclientid">
+      <summary>
+            消费者clinet的id
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_model.partitionindexs">
+      <summary>
+            支持的分区顺序号(支持多个顺序号)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_model.clientname">
+      <summary>
+            客户端名称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_model.lastheartbeat">
+      <summary>
+            最后心跳时间(以当前库时间为准)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_model.lastupdatetime">
+      <summary>
+            上一次更新时间(以当前库时间为准)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_model.createtime">
+      <summary>
+            客户端创建时间(以当前库时间为准)
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_consumer_partition_model">
+      <summary>
+            tb_consumer_partition Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_partition_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_partition_model.consumerclientid">
+      <summary>
+            消费者客户端ID
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_partition_model.partitionindex">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_partition_model.partitionid">
+      <summary>
+            分区表ID
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_partition_model.lastconsumertempid">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_partition_model.lastmqid">
+      <summary>
+            最后消费的MQID
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_partition_model.lastupdatetime">
+      <summary>
+            消费者最后执行时间(以当前库时间为准)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_consumer_partition_model.createtime">
+      <summary>
+            消费者分区创建时间(以当前库时间为准)
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_datanode_model">
+      <summary>
+            tb_datanode Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_datanode_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_datanode_model.datanodepartition">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_datanode_model.serverip">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_datanode_model.username">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_datanode_model.password">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_debuglog_model">
+      <summary>
+            tb_debuglog Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_debuglog_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_debuglog_model.mqpathid">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_debuglog_model.mqpath">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_debuglog_model.methodname">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_debuglog_model.info">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_debuglog_model.createtime">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_error_model">
+      <summary>
+            tb_error Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_error_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_error_model.mqpathid">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_error_model.mqpath">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_error_model.methodname">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_error_model.info">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_error_model.createtime">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_log_model">
+      <summary>
+            tb_log Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_log_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_log_model.mqpathid">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_log_model.mqpath">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_log_model.methodname">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_log_model.info">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_log_model.createtime">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_messagequeue_model">
+      <summary>
+            tb_messagequeue Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_messagequeue_model.id">
+      <summary>
+            消息id号,规则1+数据节点编号+表分区编号+时间分区号+自增id
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_messagequeue_model.mqcreatetime">
+      <summary>
+            mq在生产者端的创建时间（生产者端时间可能跟服务器时间不一致）
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_messagequeue_model.sqlcreatetime">
+      <summary>
+            sql数据节点处的创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_messagequeue_model.state">
+      <summary>
+            消息类型,0=可读消息，1=已迁移消息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_messagequeue_model.source">
+      <summary>
+            来源类型:0 表示 正常发送,1 表示 迁移消息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_messagequeue_model.message">
+      <summary>
+            消息体（消息内容,以json形式存储，为了阅读考虑）
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_mqerror_model">
+      <summary>
+            tb_mqerror Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqerror_model.ID">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqerror_model.TryCount">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqerror_model.MQType">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqerror_model.MQPath">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqerror_model.MQMsgJson">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_mqpath_model">
+      <summary>
+            tb_mqpath Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqpath_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqpath_model.mqpath">
+      <summary>
+            mq路径
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqpath_model.lastupdatetime">
+      <summary>
+            该路径下mq,配置最后更新时间(以当前库时间为准)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqpath_model.createtime">
+      <summary>
+            mq创建时间(以当前库时间为准)
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_mqpath_partition_model">
+      <summary>
+            tb_mqpath_partition Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqpath_partition_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqpath_partition_model.mqpathid">
+      <summary>
+            某路径下的mq的id
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqpath_partition_model.partitionid">
+      <summary>
+            分区id编号
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqpath_partition_model.partitionindex">
+      <summary>
+            分区顺序号(某个路径下mq的顺序号)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqpath_partition_model.state">
+      <summary>
+            某路径下mq的状态,1 运行中，0 待数据迁移或停止，-1 待删除
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_mqpath_partition_model.createtime">
+      <summary>
+            创建时间(以当前库时间为准)
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.DB.Model.tb_producter_model">
+      <summary>
+            tb_producter Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_producter_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_producter_model.tempid">
+      <summary>
+            生产者临时id(消费者启动后唯一,Guid转long)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_producter_model.productername">
+      <summary>
+            生产者名称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_producter_model.ip">
+      <summary>
+            ip地址
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_producter_model.mqpathid">
+      <summary>
+            队列id
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_producter_model.lastheartbeat">
+      <summary>
+            生产者最后心跳时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DB.Model.tb_producter_model.createtime">
+      <summary>
+            生产者创建时间
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.MQHelper">
+      <summary>
+            常用MQ使用帮助类库
+            一般用于业务上的消息处理
+            包含消息可靠性机制和重发机制
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.MQHelper.SendMessage``1(BSF.BaseService.BusinessMQ.MQConfig,System.String,``0)">
+      <summary>
+            MQ消息发送
+            支持多种级别的可靠性消息推送,因一般性业务场景限制目前仅支持发布/订阅。
+            topicmqpath 路径采用a.b.c格式,以.分隔
+            ActiveMQ创建发送消息TCPConnectString不应包含failover,因为接收消息是不检测消息重连,ActiveMQ崩溃重发机制,请启动MQErrorConnectString配置
+            备注:调用本接口的消息默认持久化,队列类型为Topic类型,保证消息持久化投递完毕才返回
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.MQHelper.ReceiveMessage``1(BSF.BaseService.BusinessMQ.MQConfig,System.String,System.String,System.Action{BSF.BaseService.BusinessMQ.MQResponse{``0}})">
+      <summary>
+            注册MQ消息接收
+            消息接收到后，会异步进入回调,并返回注册后的MQ连接信息,MQ连接请在程序卸载，终止时关闭连接。
+            </summary>
+      <typeparam name="T">消息实体类型</typeparam>
+      <param name="config">消息配置</param>
+      <param name="topicmqpath">消息路径 路径采用a.b.c格式,以.分隔</param>
+      <param name="clientid">消息接收对象（消费者）的唯一标示,唯一标示采用 路径采用a.b.c格式,以.分隔(如当前任务的类名命名空间),注册到消息后不得修改，否则会导致消息堆积，若修改或者删除或者废弃应用要告知运维删除</param>
+      <param name="action">消息接收到实体后的回调</param>
+            备注:调用本接口的消费者默认持久化订阅,队列类型为Topic类型
+            <returns></returns></member>
+    <member name="T:BSF.BaseService.BusinessMQ.MQConfig">
+      <summary>
+            MQ配置信息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.MQConnInfo">
+      <summary>
+            MQ连接信息,请在关闭程序或者程序异常终止时,主动关闭连接
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.MQResponse`1">
+      <summary>
+            MQ消息响应
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.MQResponse`1.MarkFinished">
+      <summary>
+            标记消息已处理,请在消息处理成功后调用,否则消息在下次重启或消息循环传递终止
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.MQResponse`1.ObjMsg">
+      <summary>
+            消息响应实体
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.MQResponse`1.MQType">
+      <summary>
+            消息中间件类型
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.MQResponse`1.InnerObject">
+      <summary>
+            消息内部响应
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.ActiveMQConfig">
+      <summary>
+            ActiveMQ的配置
+            ActiveMQ 支持一般可靠性的消息(ActiveMQ奔溃时,消息可能丢失,重复,无法寻回)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.ActiveMQConfig.TCPConnectString">
+      <summary>
+            TCP连接字符串
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SendMessageActiveMQConfig">
+      <summary>
+            ActiveMQ的配置
+            ActiveMQ 支持一般可靠性的消息(ActiveMQ奔溃时,消息可能丢失,重复,无法寻回)
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.ReceiveMessageActiveMQConfig">
+      <summary>
+            ActiveMQ的配置
+            ActiveMQ 支持一般可靠性的消息(ActiveMQ奔溃时,消息可能丢失,重复,无法寻回)
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.ActiveMQConnInfo">
+      <summary>
+            ActiveMQ连接信息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.ActiveMQInnerResponse">
+      <summary>
+            ActiveMQ消息内部响应
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.BaseBusinessMQConfig">
+      <summary>
+            BusinessMQ的配置
+            BusinessMQ 高可靠性业务消息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.BaseBusinessMQConfig.ManageConnectString">
+      <summary>
+            Manage管理中心连接字符串
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SendMessageBusinessMQConfig">
+      <summary>
+            BusinessMQ的配置
+            BusinessMQ 高可靠性业务消息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.ReceiveMessageBusinessMQConfig">
+      <summary>
+            BusinessMQ的配置
+            BusinessMQ 高可靠性业务消息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.BusinessMQConnInfo">
+      <summary>
+            ActiveMQ连接信息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.SendMessageLock">
+      <summary>
+            发送消息锁
+            发送消息合并,合并n时间内的请求
+            发送消息不允许阻塞
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.BusinessMQException">
+      <summary>
+            BusinessMQ 错误信息封装
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.BusinessMQNetCommand">
+      <summary>
+            网络命令
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.EnumCommandType">
+      <summary>
+            网络命令类型
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.EnumCommandReceiver">
+      <summary>
+            网络命令接收者类型
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.BusinessMQSendMessageParams">
+      <summary>
+            消息发送参数封装
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.CommonHelper">
+      <summary>
+            一般类库
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.CommonHelper.GenerateIntID">
+      <summary>
+            生成相对唯一的guidid long类型
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.CommonHelper.GetSubscribeChannelPath(System.String)">
+      <summary>
+            获取订阅路径
+            </summary>
+      <param name="mqpath">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.CommonHelper.GetDefaultIP">
+      <summary>
+            获取当前服务器默认ip信息
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.ConfigHelper">
+      <summary>
+            配置帮助类
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.ConfigHelper.RedisServer">
+      <summary>
+            RedisServer
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.ConfigHelper.DebugMqpath">
+      <summary>
+            DebugMqpath
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.ConfigHelper.LogDBConnectString">
+      <summary>
+            LogDBConnectString
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.ConfigHelper.LoadConfig(System.String)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="manageconnectstring">
+      </param>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.EnumMessageState">
+      <summary>
+            枚举消息状态
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.EnumMessageState.Moved">
+      <summary>
+            1=
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.EnumMessageState.Deleted">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.EnumMessageSource">
+      <summary>
+            枚举消息的来源
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.EnumMessageSource.Common">
+            0=
+        </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.EnumMessageSource.Moved">
+            1=
+        </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.EnumSystemConfigKey">
+      <summary>
+            系统配置的key枚举
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.EnumMqPathPartitionState">
+      <summary>
+            MQPath分区类型枚举
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.MQReSendInfo">
+      <summary>
+            MQ重发消息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.MQType">
+      <summary>
+            MQ类型
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.MQMessage">
+      <summary>
+            MQ消息封装
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.MQMessage.MessageObj``1">
+      <summary>
+            转消息为T实体类型
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.MQMessage.MarkFinished">
+      <summary>
+            标记消息为已消费
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.SystemRuntime.MQMessage.Model">
+      <summary>
+            基础消息信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.SystemRuntime.MQMessage.Context">
+      <summary>
+            当前消费者上下文
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.SystemRuntime.MQMessage.IsMarkFinished">
+      <summary>
+            是否已经消费
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.PartitionRuleHelper">
+      <summary>
+            分区规则帮助类
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.PartitionRuleHelper.PartitionNameRule(System.Int32)">
+      <summary>
+            分区命名规则
+            </summary>
+      <param name="partitionid">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.PartitionRuleHelper.GetTableName(System.Int32,System.DateTime)">
+      <summary>
+            获取消息表名
+            </summary>
+      <param name="tablepartition">
+      </param>
+      <param name="day">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.PartitionRuleHelper.GetTableInfo(System.String)">
+      <summary>
+            根据消息表名获取隐藏的规则信息
+            </summary>
+      <param name="tablename">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.PartitionRuleHelper.GetDataNodeName(System.Int32)">
+      <summary>
+            获取数据节点名
+            </summary>
+      <param name="datanodepartition">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.PartitionRuleHelper.GetMQID(BSF.BaseService.BusinessMQ.SystemRuntime.MQIDInfo)">
+      <summary>
+            获取MQ消息ID 消息id号,规则1+数据节点编号+表分区编号+时间分区号+自增id
+            </summary>
+      <param name="info">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.PartitionRuleHelper.GetMQIDInfo(System.Int64)">
+      <summary>
+            获取MQID隐藏的信息
+            </summary>
+      <param name="id">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.PartitionRuleHelper.GetPartitionID(BSF.BaseService.BusinessMQ.SystemRuntime.PartitionIDInfo)">
+      <summary>
+            获取分区id号  分区id号,规则1+数据节点编号+表分区编号
+            </summary>
+      <param name="info">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.SystemRuntime.PartitionRuleHelper.GetPartitionIDInfo(System.Int32)">
+      <summary>
+            获取分区id号隐藏的信息
+            </summary>
+      <param name="id">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.MQIDInfo">
+      <summary>
+            MQID号隐藏的规则信息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.PartitionIDInfo">
+      <summary>
+            分区ID号隐藏的规则信息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.SystemRuntime.TableInfo">
+      <summary>
+            获取消息表隐藏的规则信息
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Consumer_ReceiveMessageQuque_EVERY_PULL_COUNT">
+      <summary>
+            消费者接收消息队列每次拉取的消息量
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Consumer_ReceiveMessageQuque_Every_Sleep_Time">
+      <summary>
+            消费者接收消息队列消息小于每次拉取的消息量时,睡眠时间 单位:s
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Consumer_ConsumerHeartbeat_MAX_TIME_OUT">
+      <summary>
+            消费者端的心跳超时时间
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Consumer_ReadMessage_WithNolock">
+      <summary>
+            是否开启消费者端的不加锁读取消息（withnolock）
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Consumer_TrySetMessageRead_FailCount">
+      <summary>
+            尝试设置消息已读失败重试次数
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Consumer_TrySetMessageRead_ErrorSleepTime">
+      <summary>
+            尝试设置消息已读失败重试睡眠时间 s
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Consumer_DataNode_ConnectString_Template">
+      <summary>
+            消费者数据节点数据库连接字符串模板
+            (消费者端不设置超时，使用默认，当数据节点故障，连接超时会有10秒多的停顿，但是不会影响整体性能，这种情况是合理的)
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.DataNode_DataBaseName_Prefix">
+      <summary>
+            数据节点数据库名前缀
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Consumer_HeatBeat_Every_Time">
+      <summary>
+            消费者心跳时间 单位:s
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Redis_MaxConnectPoolSize">
+      <summary>
+            内部Redis发布订阅通讯最大连接池
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Redis_Channel">
+      <summary>
+            内部Redis发布订阅通讯通道名
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Redis_Channel_Quque">
+      <summary>
+            队列更新Redis发布订阅通道名
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Redis_Subscribe_FailConnect_ReConnect_Every_Time">
+      <summary>
+            Redis发布订阅通讯通道注册失败间隔重试时间
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Producter_HeatBeat_Every_Time">
+      <summary>
+            生产者心跳时间 单位:s
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Producter_Heartbeat_MAX_TIME_OUT">
+      <summary>
+            生产者端的心跳超时时间 s (用于清理超时的生产者)
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Producter_SendError_Clear_Time">
+      <summary>
+            生产者发送消息错误后,自动重启解决错误的处理间隔时间，便于清理错误，重置状态
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Producter_SendMessageError_TryAgainCount">
+      <summary>
+            生产者发送消息错误后,消息重试发送次数
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.SystemRuntime.SystemParamConfig.Producter_DataNode_ConnectString_Template_ToSendMessage">
+      <summary>
+            生产者数据节点数据库连接字符串模板(超过1秒未连接节点，视为节点异常,进行故障转移),仅发送消息时使用
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Redis.ReceiveMessageLock">
+      <summary>
+            接收消息合并
+            接收消息处理允许阻塞
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Redis.RedisNetCommandListener">
+      <summary>
+            Redis 网络命令监听器
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Redis.MessageLock.BaseMessageLock">
+      <summary>
+            消息合并，消息锁定
+            主要为是了减少redis的消息通信和消息处理.(目前机制尚不能完全解决和消息合并，但是可以达到较好效果)
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Producter.LoadBalanceNodeInfo">
+      <summary>
+            生产者负载均衡信息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Producter.ProducterContext">
+      <summary>
+            生产者上下文信息
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.Producter.ProducterContext.Disposeing">
+      <summary>
+            当前上下文是否已经释放
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Producter.ProducterContext.Dispose">
+      <summary>
+            上下文释放
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Producter.ProducterContext.ProducterProvider">
+      <summary>
+            生产者提供者信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Producter.ProducterContext.ProducterInfo">
+      <summary>
+            生产者信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Producter.ProducterContext.IsNeedReload">
+      <summary>
+            整个上下文信息是否需要重新获取启动
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Producter.ProducterContext.SendMessageErrorTime">
+      <summary>
+            上次生成者错误时间(本地程序时间)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Producter.ProducterContext.LastMQPathUpdateTime">
+      <summary>
+            上一次MQPath的更新时间缓存
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Producter.ProducterContext.ManageServerTime">
+      <summary>
+            服务器标准时间(管理中心时间)
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Producter.ProducterHeartbeatProtect">
+      <summary>
+            生产者心跳守护
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.Producter.ProducterHeartbeatProtect.Contexts">
+      <summary>
+            上下文集合,多线程安全集合
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Producter.ProducterHeartbeatProtect.Instance(BSF.BaseService.BusinessMQ.Producter.ProducterContext)">
+      <summary>
+            单例实例
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Producter.ProducterInfo.GetLoadBalanceNodeInfo">
+      <summary>
+            //顺序轮询节点获取节点及分区,从而达到负载均衡的目的
+            </summary>
+      <param name="sendmessagecount">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Producter.ProducterInfo.Update(BSF.BaseService.BusinessMQ.Producter.ProducterInfo)">
+      <summary>
+            更新生产者缓存信息
+            </summary>
+      <param name="productinfo">
+      </param>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Producter.ProducterInfo.RemoveMQPathPartition(System.Int32)">
+      <summary>
+            移除生产者某个节点相关的分区信息
+            </summary>
+      <param name="datanodepartition">
+      </param>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Producter.ProducterPoolHelper">
+      <summary>
+            简单Producter连接池
+            单个mqpath只用一个连接
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Producter.ProducterPoolHelper.GetPool(BSF.BaseService.BusinessMQ.Common.BusinessMQConfig,System.String)">
+      <summary>
+            从连接池中获取生产者
+            </summary>
+      <param name="config">
+      </param>
+      <param name="mqpath">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Producter.ProducterProvider">
+      <summary>
+            生产者提供者
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Producter.ProducterProvider.SendMessage``1(``0)">
+      <summary>
+            发送消息
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="objmsg">
+      </param>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Producter.ProducterProvider.Dispose">
+      <summary>
+            资源释放
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Producter.SynchronousContextList">
+      <summary>
+            线程安全上下文集合
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Producter.SynchronousContextList.CopyToList">
+      <summary>
+            拷贝快照
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Producter.RedisNetCommand">
+      <summary>
+            redis网络命令发送
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Producter.RedisNetCommand.SendMessage(System.String)">
+      <summary>
+            可丢消息发送,当前消息并发情况下丢弃
+            </summary>
+      <param name="mqpath">
+      </param>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.Producter.LoadBalance.BaseLoadBalance.allErrorHistoryPartitionInfos">
+      <summary>
+            所有历史出错的分区信息（程序启动后所有的出错分区信息）
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.Producter.LoadBalance.BaseLoadBalance.currentErrorPartitionInfos">
+      <summary>
+            当前出错的分区信息（生产者心跳后,错误的分区将被清空，重新尝试使用，以便故障恢复）
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Producter.LoadBalance.BaseLoadBalance.MQPathParitionModels">
+      <summary>
+            当前可用的分区信息（故障转移的分区，将被移除）
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.MQ.SimpleActiveMQ">
+      <summary>
+            简单ActiveMQ基础服务使用类
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.MQ.SimpleActiveMQ.GetMessage``1(Apache.NMS.IMessage)">
+      <summary>
+            消息转换成对象（仅支持json/普通文本）
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="msg">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.MQ.SimpleActiveMQ.SendMessage``1(``0,System.String,System.Collections.Generic.Dictionary{System.String,System.String},BSF.BaseService.BusinessMQ.MQ.ActiveMQMsgDeliveryMode)">
+      <summary>
+            发送消息
+            支持json可序列化,byte[],string类型
+            mqpath:"queue://FOO.BAR",topic://FOO.BAR 示例
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.MQ.SimpleActiveMQ.SendMessage(BSF.BaseService.BusinessMQ.MQ.ActiveMQSendMessageParams)">
+      <summary>
+            发送消息
+            支持json可序列化,byte[],string类型
+            mqpath:"queue://FOO.BAR",topic://FOO.BAR 示例
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.MQ.SimpleActiveMQ.RegisterReceiveMessageListener(System.Action{Apache.NMS.IMessage},System.String,System.String,System.String,BSF.BaseService.BusinessMQ.MQ.ActiveMQMsgDeliveryMode)">
+      <summary>
+            订阅事件
+            </summary>
+      <param name="action">
+      </param>
+      <param name="clientid">
+      </param>
+      <param name="mqpath">
+      </param>
+      <param name="propertyselect">
+      </param>
+      <param name="mode">
+      </param>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.MQ.SimpleActiveMQ.Close">
+      <summary>
+            手工资源释放关闭
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.MQ.SimpleActiveMQ.Dispose">
+      <summary>
+            资源释放
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.MQ.ActiveMQMsgDeliveryMode">
+      <summary>
+            actviemq持久化类型
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.MQ.ActiveMQMsgDeliveryMode.Persistent">
+      <summary>
+            持久化
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.MQ.ActiveMQMsgDeliveryMode.NonPersistent">
+      <summary>
+            非持久化
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.MQ.ActiveMQSendMessageParams">
+      <summary>
+            ActiveMQ发送消息参数
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.MQ.SimpleRedisMQ">
+      <summary>
+            简单Redis消息队列使用类
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.MQ.SimpleRedisMQ.SendMessage``1(System.String,``0)">
+      <summary>
+            发送消息
+            支持json可序列化,byte[],string类型
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="queuename">
+      </param>
+      <param name="obj">
+      </param>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.MQ.SimpleRedisMQ.ReceiveMessages``1(System.String)">
+      <summary>
+            非阻塞接收消息
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="queuename">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.MQ.SimpleRedisMQ.ReceiveMessageWait``1(System.String,System.Int32)">
+      <summary>
+            阻塞形式接收消息
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="queuename">
+      </param>
+      <param name="timeoutsecs">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Consumer.ConsumerContext">
+      <summary>
+            消费者上下文
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerContext.ConsumerProvider">
+      <summary>
+            消费者提供者
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerContext.ConsumerInfo">
+      <summary>
+            消费者信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerContext.Listener">
+      <summary>
+            消费者监听器
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerContext.Quque">
+      <summary>
+            消费者内部消息队列
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerContext.ActionInfo">
+      <summary>
+            消费者回调信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerContext.ManageServerTime">
+      <summary>
+            服务器标准时间(管理中心时间)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerContext.IsNeedReload">
+      <summary>
+            整个上下文信息是否需要重新获取启动
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Consumer.ConsumerHeartbeatProtect">
+      <summary>
+            消费者心跳守护
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Consumer.ConsumerInfo">
+      <summary>
+            消费者信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerInfo.ConsumerClientModel">
+      <summary>
+            消费者客户端Client相关信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerInfo.ConsumerModel">
+      <summary>
+            消费者信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerInfo.ConsumerPartitionModels">
+      <summary>
+            消费者当前使用的可用分区信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerInfo.DataNodeModelDic">
+      <summary>
+            消费者相关分区节点信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerInfo.MQPathModel">
+      <summary>
+            消费者订阅队列信息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Consumer.ConsumerActionInfo">
+      <summary>
+            消费者注册回调相关信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerActionInfo.Action">
+      <summary>
+            注册的回调地址Aciton
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerActionInfo.ReturnType">
+      <summary>
+            消费者注册的消息实体类型
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerActionInfo.InnerAction">
+      <summary>
+            内部的消息回调Action
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider">
+      <summary>
+            消费者使用提供类
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.ClientName">
+      <summary>
+            客户端名称,仅用于显示区分
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.MaxReceiveMQThread">
+      <summary>
+            消费者处理线程数量（默认自动设置为当前可用分区数量，为性能最佳，过多或者过少，将被系统重置,调试时可以设置为1）
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.RegisterReceiveMQListener``1(System.Action{BSF.BaseService.BusinessMQ.Common.BusinessMQResponse{``0}})">
+      <summary>
+            注册消息循环
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Consumer.ConsumerProvider.Client">
+      <summary>
+            当前客户端业务的唯一标识
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Consumer.PartitionQueue`1">
+      <summary>
+            消息分区队列 多线程安全
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Consumer.PartitionQueue`1.MaxCountOfPartition">
+      <summary>
+            获取所有分区中最大的队列数量（不安全方式）
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Consumer.ReceiveMessageListener">
+      <summary>
+            消费者监听器
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Consumer.ReceiveMessageListener.Register(System.Action{BSF.BaseService.BusinessMQ.SystemRuntime.MQMessage},BSF.BaseService.BusinessMQ.Consumer.ConsumerContext)">
+      <summary>
+            注册监听器
+            </summary>
+      <param name="action">
+      </param>
+      <param name="maxReceiveMQThread">
+      </param>
+      <param name="context">
+      </param>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Consumer.ReceiveMessageQuque">
+      <summary>
+            消费者内部消息队列（消息缓存）
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Consumer.ReceiveMessageQuque.TiggerMessagesTask">
+      <summary>
+            触发消息队列消息拉取任务
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Common.BusinessMQConfig">
+      <summary>
+            业务消息相关配置
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Common.BusinessMQConfig.ManageConnectString">
+      <summary>
+            管理数据库连接字符串
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.BusinessMQ.Common.BusinessMQResponse`1">
+      <summary>
+            业务消息响应
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+    </member>
+    <member name="M:BSF.BaseService.BusinessMQ.Common.BusinessMQResponse`1.MarkFinished">
+      <summary>
+            标记消息已处理,请在消息处理成功后调用,否则消息在下次重启或消息循环传递终止
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Common.BusinessMQResponse`1.ObjMsg">
+      <summary>
+            消息响应实体
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.BusinessMQ.Common.BusinessMQResponse`1.InnerObject">
+      <summary>
+            消息内部响应
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.ConfigManagerHelper">
+      <summary>
+            配置中心使用帮助类
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.ConfigManager.ConfigManagerHelper.GetInstance(System.String)">
+      <summary>
+            获取当前配置中心唯一实例
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.ConfigManager.ConfigManagerHelper.Get``1(System.String)">
+      <summary>
+            获取配置
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="configkey">配置的key（配置项）</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.ConfigManager.ConfigManagerHelper.TryGet``1(System.String,System.String@)">
+      <summary>
+            判断配置是否存在配置
+            </summary>
+      <param name="configkey">配置的key（配置项）</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.ConfigManager.ConfigManagerProvider.Get``1(System.String)">
+      <summary>
+            获取配置
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="configkey">配置的key（配置项）</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.ConfigManager.ConfigManagerProvider.TryGet``1(System.String,System.String@)">
+      <summary>
+            判断配置是否存在配置
+            </summary>
+      <param name="configkey">配置的key（配置项）</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.ConfigManager.SystemRuntime.CommonHelper.GetDefaultIP">
+      <summary>
+            获取当前服务器默认ip信息
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.SystemRuntime.ConfigContext">
+      <summary>
+            配置文件上下文
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.SystemRuntime.ConfigContext.ConfigParams">
+      <summary>
+            配置参数信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.SystemRuntime.ConfigContext.ProjectModel">
+      <summary>
+            项目信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.SystemRuntime.ConfigContext.CategoryModels">
+      <summary>
+            分类信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.SystemRuntime.ConfigContext.ConfigInfoOfKeyDic">
+      <summary>
+            配置信息字典
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.SystemRuntime.ConfigContext.LastUpdateTime">
+      <summary>
+            配置最后更新时间（以配置数据库服务器时间为标准时间）
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.SystemRuntime.AppDomainContext">
+      <summary>
+            当前应用域上下文
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.SystemRuntime.ConfigHeartbeatProtect">
+      <summary>
+            配置心跳守护
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.ConfigManager.SystemRuntime.ConfigHeartbeatProtect.Instance">
+      <summary>
+            单例实例
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.SystemRuntime.ConfigInfoOfKeyDic">
+      <summary>
+            配置信息字典结构
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.SystemRuntime.ConfigNetCommand">
+      <summary>
+            网络命令
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.SystemRuntime.EnumCommandType">
+      <summary>
+            网络命令类型
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.ConfigManager.SystemRuntime.EnumCommandType.ConfigUpdate">
+      <summary>
+            配置更新
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.ConfigManager.SystemRuntime.EnumCommandType.ConfigReload">
+      <summary>
+            配置重新加载
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.SystemRuntime.DeadLoopCheck">
+      <summary>
+            配置死循环检测
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.SystemRuntime.RedisNetCommandListener">
+      <summary>
+            Redis 网络命令监听器
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.ConfigManager.SystemRuntime.SystemParamConfig.Redis_Channel">
+      <summary>
+            内部Redis发布订阅通讯通道名
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.ConfigManager.SystemRuntime.SystemParamConfig.Redis_Subscribe_FailConnect_ReConnect_Every_Time">
+      <summary>
+            Redis发布订阅通讯通道注册失败间隔重试时间
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.ConfigManager.SystemRuntime.SystemParamConfig.Config_HeatBeat_Every_Time">
+      <summary>
+            sdk心跳到统一配置中心
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.Model.tb_category_model">
+      <summary>
+            tb_category Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_category_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_category_model.name">
+      <summary>
+            分类名
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_category_model.remark">
+      <summary>
+            分类备注
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_category_model.createtime">
+      <summary>
+            创建时间
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.Model.tb_config_model">
+      <summary>
+            tb_config Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_config_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_config_model.categoryid">
+      <summary>
+            分类id
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_config_model.configkey">
+      <summary>
+            配置Key
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_config_model.configvalue">
+      <summary>
+            配置值
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_config_model.remark">
+      <summary>
+            配置备注
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_config_model.lastupdatetime">
+      <summary>
+            上一次修改时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_config_model.createtime">
+      <summary>
+            创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_config_model.loadbalancealgorithmenum">
+      <summary>
+            负载均衡算法类型: -1 表示 关闭负载均衡，1 表示随机负载均衡算法，2表示顺序负载均衡算法
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_config_model.failoversequence">
+      <summary>
+            故障转移顺序号：-1 表示关闭故障转移 0 表示当前无故障 大于0表示当前配置故障转移列表中的序号
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.Model.tb_error_model">
+      <summary>
+            tb_error Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_error_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_error_model.projectname">
+      <summary>
+            项目名称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_error_model.categoryid">
+      <summary>
+            分类id
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_error_model.info">
+      <summary>
+            日志详情
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_error_model.createtime">
+      <summary>
+            创建时间
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.Model.tb_failover_model">
+      <summary>
+            tb_failover Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_failover_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_failover_model.configid">
+      <summary>
+            故障转移配置id
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_failover_model.value">
+      <summary>
+            故障转移值
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_failover_model.sequence">
+      <summary>
+            故障转移顺序号
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.Model.tb_loadbalance_model">
+      <summary>
+            tb_loadbalance Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_loadbalance_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_loadbalance_model.configid">
+      <summary>
+            负载均衡配置id
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_loadbalance_model.value">
+      <summary>
+            负载均衡值
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_loadbalance_model.boostpercent">
+      <summary>
+            负载均衡权重(1-100之间的int)，负载均衡总值不超过100
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_loadbalance_model.sequence">
+      <summary>
+            负载均衡序号
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.Model.tb_log_model">
+      <summary>
+            tb_log Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_log_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_log_model.projectname">
+      <summary>
+            项目名称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_log_model.categoryid">
+      <summary>
+            分类id
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_log_model.info">
+      <summary>
+            日志详情
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_log_model.createtime">
+      <summary>
+            创建时间
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.Model.tb_project_model">
+      <summary>
+            tb_project Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_project_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_project_model.projectname">
+      <summary>
+            项目名称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_project_model.remark">
+      <summary>
+            项目备注
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_project_model.createtime">
+      <summary>
+            创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_project_model.categoryids">
+      <summary>
+            相关分类id，号分隔，号结尾
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_project_model.lastheartbeattime">
+      <summary>
+            项目最后心跳时间
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.ConfigManager.Model.tb_systemconfig_model">
+      <summary>
+            tb_systemconfig Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_systemconfig_model.key">
+      <summary>
+            key
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_systemconfig_model.value">
+      <summary>
+            值
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.ConfigManager.Model.tb_systemconfig_model.remark">
+      <summary>
+            备注
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.DistributedCache.DistributedCacheHelper">
+      <summary>
+            分布式缓存帮助类
+            用于兼容不同版本及简化使用
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.DistributedCacheHelper.GetOrSetValue``1(System.Collections.Generic.List{System.String},System.String,System.TimeSpan,System.Func{``0})">
+      <summary>
+            获取或设置key的缓存,并在制定时间后失效
+            </summary>
+      <typeparam name="T">数据集类型</typeparam>
+      <param name="serverconfigs">分布式缓存连接字符串配置（负载均衡需要配置多个）</param>
+      <param name="key">
+      </param>
+      <param name="expiretime">过期时间</param>
+      <param name="action">缓存的数据集回调 （当缓存失效的时候或者第一次初始化将回调此方法获取最新数据）</param>
+      <returns>返回数据集</returns>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.DistributedCacheHelper.GetValue``1(System.Collections.Generic.List{System.String},System.String)">
+      <summary>
+            获取缓存
+            </summary>
+      <typeparam name="T">数据集类型</typeparam>
+      <param name="serverconfigs">分布式缓存连接字符串配置（负载均衡需要配置多个）</param>
+      <param name="key">
+      </param>
+      <returns>返回数据集</returns>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.DistributedCacheHelper.Delete(System.Collections.Generic.List{System.String},System.String[])">
+      <summary>
+            删除Key
+            </summary>
+      <param name="serverconfigs">
+      </param>
+      <param name="keys">
+      </param>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.SystemRuntime.EnumCacheType.Redis">
+      <summary>
+            Redis 
+            数据存内存,适合内存大小范围内大量缓存。（若是频繁失效的缓存数据，大量热点数据，建议使用redis）
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.SystemRuntime.EnumCacheType.SSDB">
+      <summary>
+            SSDB
+            数据热点存内存，大量数据存磁盘。（若是命中率较低，命中热点数据，大量冷数据，建议使用ssdb）
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.SystemRuntime.EnumCacheType.Memcached">
+      <summary>
+            Memcached
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.SystemRuntime.EnumCacheType.SqlServer">
+      <summary>
+            SQLServer内存表
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.SystemRuntime.EnumCacheType.AliyunMemcached">
+      <summary>
+            阿里云的缓存服务OCS
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.AliyunMemcachedCacheConfig.ConnectionTimeout">
+      <summary>
+            超时（毫秒）
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.AliyunMemcachedCacheConfig.MinPoolSize">
+      <summary>
+            最小缓存池大小
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.AliyunMemcachedCacheConfig.MaxPoolSize">
+      <summary>
+            最大缓存池大小
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DistributedCache.Storage.AliyunMemcachedCacheConfig.NetworkAddress">
+      <summary>
+            阿里云实例ID
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDBCacheConfig.MaxActive">
+      <summary>
+            可以从缓存池中分配对象的最大数量
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDBCacheConfig.MaxIdle">
+      <summary>
+            缓存池中最大空闲对象数量
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDBCacheConfig.MinIdle">
+      <summary>
+            缓存池中最小空闲对象数量
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDBCacheConfig.ValidateOnBorrow">
+      <summary>
+            从缓存池中分配对象时是否验证对象
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDBCacheConfig.ValidateOnReturn">
+      <summary>
+            从缓存池中归还对象时是否验证对象
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientConfig">
+      <summary>
+            SSDB客户端配置
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientConfig.MaxActive">
+      <summary>
+            可以从缓存池中分配对象的最大数量
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientConfig.MaxIdle">
+      <summary>
+            缓存池中最大空闲对象数量
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientConfig.MinIdle">
+      <summary>
+            缓存池中最小空闲对象数量
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientConfig.ValidateOnBorrow">
+      <summary>
+            从缓存池中分配对象时是否验证对象
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientConfig.ValidateOnReturn">
+      <summary>
+            从缓存池中归还对象时是否验证对象
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientConfig.Host">
+      <summary>
+            服务器地址
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientConfig.Port">
+      <summary>
+            服务端口
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool">
+      <summary>
+            客户端连接池
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.resetEvent">
+      <summary>
+            同步对象
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.activedCount">
+      <summary>
+            每取走一例，表示激活对象加1，此属性可控制对象池容量
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.locker">
+      <summary>
+            同步对象锁
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.BorrowInstance">
+      <summary>
+            从对象池取出一个对象
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.ReturnInstance(BSF.BaseService.DistributedCache.Storage.SSDB.NetSdk.Client)">
+      <summary>
+            归还一个对象
+            </summary>
+      <param name="instance">
+      </param>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.CreateResetEvent">
+      <summary>
+            创建线程同步对象
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.CreateThriftPool">
+      <summary>
+            创建对象池
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.PushObject(BSF.BaseService.DistributedCache.Storage.SSDB.NetSdk.Client)">
+      <summary>
+            添加对象到对象池
+            </summary>
+      <param name="transport">
+      </param>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.CreateInstance">
+      <summary>
+            创建一个对象
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.ValidateOnBorrow(BSF.BaseService.DistributedCache.Storage.SSDB.NetSdk.Client)">
+      <summary>
+            取出对象时校验对象
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.ValidateOnReturn(BSF.BaseService.DistributedCache.Storage.SSDB.NetSdk.Client)">
+      <summary>
+            归还对象时校验对象
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.DestoryInstance(BSF.BaseService.DistributedCache.Storage.SSDB.NetSdk.Client)">
+      <summary>
+            销毁对象
+            </summary>
+      <param name="instance">
+      </param>
+    </member>
+    <member name="P:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPool.objectPool">
+      <summary>
+            对象缓存池
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.DistributedCache.Storage.SSDB.SSDBClientPoolProvider">
+      <summary>
+            客户端连接池
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.NetSdk.Client.setx(System.String,System.Byte[],System.Int32)">
+      <summary>
+            扩展sdk方法
+            </summary>
+      <param name="key">
+      </param>
+      <param name="val">
+      </param>
+      <param name="expireseconds">
+      </param>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.NetSdk.Client.get(System.Byte[],System.Byte[]@)">
+      <summary>
+      </summary>
+      <param name="key">
+      </param>
+      <param name="val">
+      </param>
+      <returns>returns true if name.key is found, otherwise returns false.</returns>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.NetSdk.Client.hget(System.Byte[],System.Byte[],System.Byte[]@)">
+      <summary>
+      </summary>
+      <param name="name">
+      </param>
+      <param name="key">
+      </param>
+      <param name="val">
+      </param>
+      <returns>returns true if name.key is found, otherwise returns false.</returns>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Storage.SSDB.NetSdk.Client.zget(System.Byte[],System.Byte[],System.Int64@)">
+      <summary>
+      </summary>
+      <param name="name">
+      </param>
+      <param name="key">
+      </param>
+      <param name="score">
+      </param>
+      <returns>returns true if name.key is found, otherwise returns false.</returns>
+    </member>
+    <member name="T:BSF.BaseService.DistributedCache.Storage.AliyunMemcached.AliyunMemcachedClientPoolProvider">
+      <summary>
+            客户端连接池
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Compress.GZipCompressProvider.CompressString(System.String)">
+      <summary>
+            Compresses the string.
+            </summary>
+      <param name="text">The text.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.DistributedCache.Compress.GZipCompressProvider.DecompressString(System.String)">
+      <summary>
+            Decompresses the string.
+            </summary>
+      <param name="compressedText">The compressed text.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.BaseService.DistributedCache.Compress.ICompressProvider">
+      <summary>
+            字符串压缩
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.Monitor.SystemRuntime.BaseCollectMonitorDll">
+      <summary>
+            基础监控采集dll任务
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.Monitor.SystemRuntime.BaseCollectMonitorDll.TryStart">
+      <summary>
+            线上环境运行入口
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.Monitor.SystemRuntime.BaseCollectMonitorDll.Start">
+      <summary>
+            与第三方约定的运行接口方面
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.Monitor.SystemRuntime.BaseCollectMonitorDll.Dispose">
+      <summary>
+            系统级稀有资源释放接口
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.Monitor.SystemRuntime.DbShardingHelper">
+      <summary>
+            数据库分表分库帮助类
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.Monitor.SystemRuntime.EnumUserRole">
+      <summary>
+            系统用户角色
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.Monitor.Model.tb_database_config_model">
+      <summary>
+            tb_database_config Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_database_config_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_database_config_model.dblocalname">
+      <summary>
+            数据库本地昵称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_database_config_model.dbserver">
+      <summary>
+            数据库服务器地址
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_database_config_model.dbname">
+      <summary>
+            数据库名称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_database_config_model.dbuser">
+      <summary>
+            数据库用户名
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_database_config_model.dbpass">
+      <summary>
+            数据库密码
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_database_config_model.dbtype">
+      <summary>
+            数据库类型
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.Monitor.Model.tb_error_log_model">
+      <summary>
+            tb_error_log Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_error_log_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_error_log_model.sqlservercreatetime">
+      <summary>
+            数据库创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_error_log_model.logcreatetime">
+      <summary>
+            日志项目中创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_error_log_model.logtype">
+      <summary>
+            日志类型:一般非正常错误,系统级严重错误
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_error_log_model.projectname">
+      <summary>
+            项目名称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_error_log_model.logtag">
+      <summary>
+            日志唯一标示(简短的方法名或者url,便于归类)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_error_log_model.msg">
+      <summary>
+            错误信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_error_log_model.tracestack">
+      <summary>
+            堆栈跟踪
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_error_log_model.remark">
+      <summary>
+            其他备注信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_error_log_model.developer">
+      <summary>
+            相关开发人员
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.Monitor.Model.tb_log_model">
+      <summary>
+            tb_log Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_log_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_log_model.sqlservercreatetime">
+      <summary>
+            数据库创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_log_model.logcreatetime">
+      <summary>
+            日志项目中创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_log_model.logtype">
+      <summary>
+            日志类型:一般非正常错误,系统级严重错误,一般业务日志,系统日志
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_log_model.projectname">
+      <summary>
+            项目名称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_log_model.logtag">
+      <summary>
+            日志唯一标示(简短的方法名或者url,便于归类)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_log_model.msg">
+      <summary>
+            日志信息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.Monitor.Model.tb_timewatchlog_api_model">
+      <summary>
+            tb_timewatchlog_api Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_api_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_api_model.sqlservercreatetime">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_api_model.logcreatetime">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_api_model.time">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_api_model.projectname">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_api_model.url">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_api_model.msg">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_api_model.fromip">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_api_model.tag">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:BSF.BaseService.Monitor.Model.tb_timewatchlog_model">
+      <summary>
+            tb_timewatchlog Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_model.sqlservercreatetime">
+      <summary>
+            数据库本地创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_model.logcreatetime">
+      <summary>
+            日志创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_model.time">
+      <summary>
+            耗时
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_model.projectname">
+      <summary>
+            项目名称
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_model.logtype">
+      <summary>
+            耗时日志类型：普通日志=0，api接口日志=1，sql日志=2
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_model.logtag">
+      <summary>
+            日志标识,sql类型则为sql哈希,api类型则为url
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_model.url">
+      <summary>
+            当前url
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_model.msg">
+      <summary>
+            当前信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_model.fromip">
+      <summary>
+            来源ip(代码执行ip)
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_model.sqlip">
+      <summary>
+            sqlip地址
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.Monitor.Model.tb_timewatchlog_model.remark">
+      <summary>
+            其他记录标记信息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Server.ServerProvider">
+      <summary>
+            服务端提供类库
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Server.ServerProvider.AllowCrossDomain">
+      <summary>
+            允许服务端跨域支持
+            备注:若web.config 里面已经配置了自定义头"Access-Control-Allow-Origin",则不要执行本方法。否则造成无法跨域.
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Server.ServerProvider.AddDownLoadProtocolModule">
+      <summary>
+            动态添加DownLoadProtocolModule
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Server.OpenApiServerStart">
+      <summary>
+            AssemblyInfo.cs 中使用PreApplicationStartMethod注册当前类
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Sdk.CsharpSDKProvider">
+      <summary>
+            ThriftSdk提供类
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Sdk.CsharpSDKProvider.GetServiceCode(BSF.BaseService.OpenApi.Protocol.ServiceProtocal)">
+      <summary>
+            获取服务生成代码
+            </summary>
+      <param name="servicenamespace">
+      </param>
+      <param name="tofiledir">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Sdk.CsharpSDKProvider.GetEntitiyCode(System.Collections.Generic.List{BSF.BaseService.OpenApi.Protocol.EntityProtocal})">
+      <summary>
+            获取实体生成代码
+            </summary>
+      <param name="servicenamespace">
+      </param>
+      <param name="tofiledir">
+      </param>
+      <param name="entityname">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Protocol.DownLoadProtocolModule">
+      <summary>
+            下载协议
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Protocol.ProtocolProvider">
+      <summary>
+            用于自定义协议相关转换及自身协议解析提供类
+            如:转thrift协议
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Protocol.ProtocolProvider.From(System.Collections.Generic.List{System.Type})">
+      <summary>
+            将类型转换为服务协议
+            </summary>
+      <param name="type">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Protocol.ProtocolProvider.GetOpenMethods(System.Type)">
+      <summary>
+            获取服务开放的方法
+            </summary>
+      <param name="type">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Protocol.ProtocolProvider.GetInputParamsProtocalsOfMethod(System.Reflection.MethodInfo)">
+      <summary>
+            获取开放方法的输入参数协议
+            </summary>
+      <param name="mehtodinfo">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Protocol.ProtocolProvider.GetReturnParamProtocalOfMethod(BSF.BaseService.OpenApi.Attributes.MethodDocAttribute)">
+      <summary>
+            获取开放方法的返回参数协议
+            </summary>
+      <param name="mehtodinfo">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Protocol.ProtocolProvider.GetCustomTypeInMethodProtocols(System.Collections.Generic.List{BSF.BaseService.OpenApi.Protocol.MethodProtocol})">
+      <summary>
+            获取所有开放方法涉及到的自定义类型
+            </summary>
+      <param name="methodprotocols">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Protocol.ProtocolProvider.TryToSetCustomTypeInType(System.Type,System.Collections.Generic.List{System.Type})">
+      <summary>
+            递归搜索所有自定义类型
+            </summary>
+      <param name="type">
+      </param>
+      <param name="customtypes">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Protocol.ProtocolProvider.GetPropertyParams(System.Type)">
+      <summary>
+            获取自定义类型的属性协议
+            </summary>
+      <param name="type">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Protocol.ProtocolProvider.GetTypeName(System.Type)">
+      <summary>
+            类型解析
+            </summary>
+      <param name="type">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Protocol.MethodProtocol">
+      <summary>
+            方法协议
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Protocol.ParamProtocal">
+      <summary>
+            参数协议
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Protocol.EntityProtocal">
+      <summary>
+            实体类协议
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Protocol.ServiceProtocal">
+      <summary>
+            服务协议
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Protocol.ServicesProtocal">
+      <summary>
+            服务协议栈
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Base.OpenApiException.Code">
+      <summary>
+            返回协议里面 服务器端定义的返回码
+            业务约定-10000为客户端错误码,1为服务端正确码,其他负数为自定义错误码
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Base.OpenApiSystemCode">
+      <summary>
+            OpenApi系统级返回码
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.OpenApi.Base.OpenApiSystemCode.ClientError">
+      <summary>
+            业务约定-10000为客户端错误码
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Client.UrlAttribute">
+      <summary>
+            自定义url特性
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Client.UrlAttribute.RelateUrl">
+      <summary>
+            自定义相对路径Url
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Attributes.DocAttribute">
+      <summary>
+            约定的开源文档特性
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Attributes.EntityDocAttribute">
+      <summary>
+            实体类描述特性
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.EntityDocAttribute.Text">
+      <summary>
+            描述
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.EntityDocAttribute.Description">
+      <summary>
+            详细描述
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.MethodDocAttribute.MethodName">
+      <summary>
+            方法名
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.MethodDocAttribute.MethodDescription">
+      <summary>
+            方法描述
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.MethodDocAttribute.ParamDescription">
+      <summary>
+            参数描述
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.MethodDocAttribute.ResultDescription">
+      <summary>
+            结果描述
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.MethodDocAttribute.ResultStateDescription">
+      <summary>
+            结果状态描述
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.MethodDocAttribute.Author">
+      <summary>
+            作者
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.MethodDocAttribute.Version">
+      <summary>
+            版本号
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.MethodDocAttribute.MinVersion">
+      <summary>
+            最低兼容的版本号
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.MethodDocAttribute.Note">
+      <summary>
+            备注
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.MethodDocAttribute.ResultTypeDescription">
+      <summary>
+            返回结果类型
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.MethodDocAttribute.ResultType">
+      <summary>
+            返回结果类型 （用于客户端协议生成）
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Attributes.OpenDocAttribute">
+      <summary>
+            开发接口文档描述
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Attributes.OpenDocAttribute.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.String)">
+      <summary>
+            开发接口文档描述
+            </summary>
+      <param name="methodname">接口方法名（简短）</param>
+      <param name="methoddescription">接口方法描述</param>
+      <param name="paramdescription">接口参数描述</param>
+      <param name="resultdescription">返回结果描述</param>
+      <param name="resultstatedescription">返回结果状态码描述</param>
+      <param name="author">作者</param>
+      <param name="version">版本号</param>
+      <param name="minversion">最小版本号（最低兼容版本号） 低于此版本将来会报错</param>
+      <param name="note">其他记录</param>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Attributes.OpenDocAttribute.#ctor(System.String,System.String,System.String,System.String,System.String,System.Type,System.String,System.Double,System.Double,System.String)">
+      <summary>
+            开发接口文档描述
+            </summary>
+      <param name="methodname">接口方法名（简短）</param>
+      <param name="methoddescription">接口方法描述</param>
+      <param name="paramdescription">接口参数描述</param>
+      <param name="resultdescription">返回结果描述</param>
+      <param name="resultstatedescription">返回结果状态码描述</param>
+      <param name="author">作者</param>
+      <param name="version">版本号</param>
+      <param name="minversion">最小版本号（最低兼容版本号） 低于此版本将来会报错</param>
+      <param name="note">其他记录</param>
+      <param name="resultType">返回结果类型 （用于客户端协议生成）</param>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Attributes.PropertyDocAttribute">
+      <summary>
+            实体类属性文档特性
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.PropertyDocAttribute.Text">
+      <summary>
+            描述
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.PropertyDocAttribute.Description">
+      <summary>
+            详细描述
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Attributes.ProtocolDocAttribute">
+      <summary>
+            协议版本注释属性 用于协议生成
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.OpenApi.Attributes.ProtocolDocAttribute.#ctor(System.String,System.String,System.String,System.String,System.String)">
+      <summary>
+            服务协议信息
+            </summary>
+      <param name="name">服务名</param>
+      <param name="namesapce">服务来源命名空间</param>
+      <param name="description">服务描述</param>
+      <param name="assemblyVersion">程序集版本号</param>
+      <param name="serviceVersion">服务版本号 默认协议生成时间</param>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.ProtocolDocAttribute.Name">
+      <summary>
+            服务名
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.ProtocolDocAttribute.Description">
+      <summary>
+            服务描述
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.ProtocolDocAttribute.NameSpace">
+      <summary>
+            服务来源命名空间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.ProtocolDocAttribute.AssemblyVersion">
+      <summary>
+            程序集版本号
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.ProtocolDocAttribute.ServiceVersion">
+      <summary>
+            服务版本号 默认协议生成时间
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.OpenApi.Attributes.ServiceDocAttribute">
+      <summary>
+            服务文档特性
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.ServiceDocAttribute.Text">
+      <summary>
+            描述
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.OpenApi.Attributes.ServiceDocAttribute.Description">
+      <summary>
+            详细描述
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.BaseDllTask">
+      <summary>
+            基础dll任务
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.TaskManager.BaseDllTask.IsTesting">
+      <summary>
+            是否运行在测试中
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.TaskManager.BaseDllTask.AppConfig">
+      <summary>
+            任务的配置信息，类似项目app.config文件配置
+            测试时需要手工代码填写配置,线上环境需要在任务发布的时候配置
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.TaskManager.BaseDllTask.SystemRuntimeInfo">
+      <summary>
+            任务底层运行时信息
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.TaskManager.BaseDllTask.SystemRuntimeOperator">
+      <summary>
+            任务底层运行时操作类
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.TaskManager.BaseDllTask.OpenOperator">
+      <summary>
+            任务公开第三方使用的操作类
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.TaskManager.BaseDllTask.SafeDisposeOperator">
+      <summary>
+            任务安全释放类
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.TaskManager.BaseDllTask.TryRun">
+      <summary>
+            线上环境运行入口
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.TaskManager.BaseDllTask.Run">
+      <summary>
+            与第三方约定的运行接口方面
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.TaskManager.BaseDllTask.TestRun">
+      <summary>
+            测试环境运行入口
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.TaskManager.BaseDllTask.Dispose">
+      <summary>
+            系统级稀有资源释放接口,及卸载回调接口
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.SystemRuntime.EnumTaskLogType">
+      <summary>
+            任务日志类型
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.SystemRuntime.TaskAppConfigInfo">
+      <summary>
+            任务配置信息，类似app.config中的配置，仅支持字典
+            正式环境在任务调度平台中配置获取
+            测试环境需要自己重新创建实例赋值
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.SystemRuntime.TaskLock">
+      <summary>
+            任务锁机制
+            双重锁保护
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.SystemRuntime.TaskSafeDisposeOperator">
+      <summary>
+            任务安全卸载类
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.TaskManager.SystemRuntime.TaskSafeDisposeOperator.WaitDisposeFinished">
+      <summary>
+            阻塞等待资源释放标识,若DisposedState=Finished,则终止等待;若超时,则报错
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.SystemRuntime.TaskDisposedState">
+      <summary>
+            任务当前资源释放状态
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.SystemRuntime.TaskSafeDisposeTimeOutException">
+      <summary>
+            任务资源安全释放超时错误
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.SystemRuntime.TaskSystemRuntimeInfo">
+      <summary>
+            任务系统运行时信息
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.SystemRuntime.TaskSystemRuntimeInfo.TaskConnectString">
+      <summary>
+            任务数据库连接字符串
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.SystemRuntime.TaskSystemRuntimeInfo.TaskModel">
+      <summary>
+            任务信息
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.SystemRuntime.TaskSystemRuntimeOperator">
+      <summary>
+            任务运行时底层操作类
+            仅平台内部使用
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.TaskManager.SystemRuntime.TaskSystemRuntimeOperator.DllTask">
+      <summary>
+            任务dll实例引用
+            </summary>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.OpenOperator.TaskOpenOperator">
+      <summary>
+            任务公开给第三方使用操作类
+            </summary>
+    </member>
+    <member name="F:BSF.BaseService.TaskManager.OpenOperator.TaskOpenOperator.DllTask">
+      <summary>
+            任务dll实例引用
+            </summary>
+    </member>
+    <member name="M:BSF.BaseService.TaskManager.OpenOperator.TaskOpenOperator.GetTaskInstallDirectory">
+      <summary>
+            获取当前任务安装目录
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.BaseService.TaskManager.OpenOperator.TaskOpenOperator.SaveLocalTempData(System.Object)">
+      <summary>
+            保存任务临时数据至本地文件 ".json.txt"
+            </summary>
+      <param name="obj">
+      </param>
+    </member>
+    <member name="M:BSF.BaseService.TaskManager.OpenOperator.TaskOpenOperator.GetLocalTempData``1">
+      <summary>
+            从本地临时文件获取任务临时数据 ".json.txt"
+            </summary>
+      <param name="obj">
+      </param>
+    </member>
+    <member name="M:BSF.BaseService.TaskManager.OpenOperator.TaskOpenOperator.SaveDataBaseTempData(System.Object)">
+      <summary>
+            保存任务临时数据至数据库(数据不能太大,也不能很频繁)
+            </summary>
+      <param name="obj">
+      </param>
+    </member>
+    <member name="M:BSF.BaseService.TaskManager.OpenOperator.TaskOpenOperator.GetDataBaseTempData``1">
+      <summary>
+            获取数据库任务临时数据
+            </summary>
+      <param name="obj">
+      </param>
+    </member>
+    <member name="M:BSF.BaseService.TaskManager.OpenOperator.TaskOpenOperator.Log(System.String)">
+      <summary>
+            写日志至线上数据库(不要频繁写日志，仅写一些便于分析的核心数据，或者非紧急的业务错误)
+            </summary>
+      <param name="msg">
+      </param>
+    </member>
+    <member name="M:BSF.BaseService.TaskManager.OpenOperator.TaskOpenOperator.Error(System.String,System.Exception)">
+      <summary>
+            写错误日志至线上数据库,这些错误会通知到开发人员，所以不要写一些正常的业务错误
+            </summary>
+      <param name="msg">
+      </param>
+      <param name="exp">
+      </param>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.Model.tb_error_model">
+      <summary>
+            tb_error Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_error_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_error_model.msg">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_error_model.errortype">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_error_model.errorcreatetime">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_error_model.taskid">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_error_model.nodeid">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.Model.tb_log_model">
+      <summary>
+            tb_log Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_log_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_log_model.msg">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_log_model.logtype">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_log_model.logcreatetime">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_log_model.taskid">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_log_model.nodeid">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:BSF.BaseService.TaskManager.Model.tb_task_model">
+      <summary>
+            tb_task Data Structure.
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.id">
+      <summary>
+      </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskname">
+      <summary>
+            任务名
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.categoryid">
+      <summary>
+            分类id
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.nodeid">
+      <summary>
+            节点id
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskcreatetime">
+      <summary>
+            任务创建时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskupdatetime">
+      <summary>
+            任务更新时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.tasklaststarttime">
+      <summary>
+            任务上一次执行时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.tasklastendtime">
+      <summary>
+            任务上一次结束时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.tasklasterrortime">
+      <summary>
+            任务出错时间
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskerrorcount">
+      <summary>
+            任务连续出错次数
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskruncount">
+      <summary>
+            任务总成功运行次数
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskcreateuserid">
+      <summary>
+            任务创建人id
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskstate">
+      <summary>
+            任务执行状态，查看代码枚举
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskversion">
+      <summary>
+            任务版本号
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskappconfigjson">
+      <summary>
+            任务app配置字典
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskcron">
+      <summary>
+            任务执行频率cron表达式
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskmainclassdllfilename">
+      <summary>
+            任务入口函数dll文件名
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskmainclassnamespace">
+      <summary>
+            任务入口执行函数的路径
+            </summary>
+    </member>
+    <member name="P:BSF.BaseService.TaskManager.Model.tb_task_model.taskremark">
+      <summary>
+            任务备注
+            </summary>
+    </member>
+    <member name="M:BSF.EntityFramework.Core.DBHelper.Run``1(System.Action{``0})">
+      <summary>
+            不支持返回参数
+            </summary>
+    </member>
+    <member name="M:BSF.EntityFramework.Core.DBHelper.Run``2(System.Func{``0,``1})">
+      <summary>
+            支持返回参数
+            </summary>
+    </member>
+    <member name="T:System.StringValueAttributeExtensions">
+      <summary>
+            字符串值属性 简化使用的扩展类库
+            </summary>
+    </member>
+    <member name="T:BSF.Tool.StringValueAttribute">
+      <summary>
+            字符串值属性
+            用于描述枚举等
+            </summary>
+    </member>
+    <member name="M:BSF.Security.DESProvider.Encrypt(System.String,System.String)">
+      <summary>  
+            DES加密字符串  
+            </summary>
+      <param name="encryptString">待加密的字符串</param>
+      <param name="encryptKey">加密密钥,要求为8位</param>
+      <returns>加密成功返回加密后的字符串，失败则报错</returns>
+    </member>
+    <member name="M:BSF.Security.DESProvider.Decrypt(System.String,System.String)">
+      <summary>  
+            DES解密字符串  
+            </summary>
+      <param name="decryptString">待解密的字符串</param>
+      <param name="decryptKey">解密密钥,要求为8位,和加密密钥相同</param>
+      <returns>解密成功返回解密后的字符串，失败则报错</returns>
+    </member>
+    <member name="M:BSF.Security.RSAProvider.Decrypt(System.String,System.String)">
+      <summary>
+            RSA数据解密
+            </summary>
+      <param name="decryptString">要解密的数据</param>
+      <param name="key">解密密钥</param>
+      <returns>解密成功返回解密后的字符串，失败则报错</returns>
+    </member>
+    <member name="M:BSF.Security.RSAProvider.Encrypt(System.String,System.String)">
+      <summary>
+            RSA数据加密
+            </summary>
+      <param name="encryptString">要加密的数据</param>
+      <param name="key">加密密钥</param>
+      <returns>加密成功返回加密后的字符串，失败则报错</returns>
+    </member>
+    <member name="T:BSF.Mapper.MapperHelper">
+      <summary>
+            映射帮助类库
+            </summary>
+    </member>
+    <member name="M:BSF.Mapper.MapperHelper.CopyProperty(System.Object,System.Object)">
+      <summary>
+            对象属性拷贝类
+            反射实现,性能不高
+            </summary>
+      <param name="from">
+      </param>
+      <param name="to">
+      </param>
+    </member>
+    <member name="M:BSF.Mapper.MapperHelper.CopyProperty``1(System.Object)">
+      <summary>
+            对象属性拷贝类
+            反射实现，性能不高
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="from">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:BSF.Mapper.MapperHelper.Copy``2(``0,``1,EmitMapper.IMappingConfigurator)">
+      <summary>
+            对象属性拷贝类
+            Emit Mapper 实现,性能接近原生实现
+            </summary>
+      <typeparam name="TFrom">
+      </typeparam>
+      <typeparam name="TTo">
+      </typeparam>
+      <param name="obj">
+      </param>
+      <param name="to">
+      </param>
+      <param name="mappingConfigurator">
+      </param>
+      <returns>
+      </returns>
+    </member>
+  </members>
+</doc>

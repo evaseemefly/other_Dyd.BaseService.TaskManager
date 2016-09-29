@@ -1,0 +1,279 @@
+2016-09-20 10:35:03:053 logtype:SqlCmd,logtag:0,msg:IF db_id(N'NLCloud') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'NLCloud',remark:[]-耗时: 0.0370262 s 
+2016-09-20 10:35:03:123 logtype:SqlCmd,logtag:0,msg:
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.BaseCareEcg','dbo.BaseCareReport','dbo.BasicMeasureResult','dbo.Configuration','dbo.Device','dbo.DeviceActivation','dbo.DeviceDepartment','dbo.DeviceMode','dbo.DeviceModelParameter','dbo.DeviceParameter','dbo.DiagnosticGroup','dbo.DiagnosticGroup_DeviceDepartment','dbo.DiagnosticGroup_User','dbo.Dic_Avm','dbo.Dic_Country','dbo.Dic_DealState','dbo.Dic_Degree','dbo.Dic_DeviceCategory','dbo.Dic_DeviceFactory','dbo.Dic_DeviceState','dbo.Dic_DiagnosticLevel','dbo.Dic_DiagnosticRegion','dbo.Dic_EventDataType','dbo.Dic_Gender','dbo.Dic_IDCardType','dbo.Dic_Lead','dbo.Dic_Med_Level','dbo.Dic_MedEvent','dbo.Dic_MedEventType','dbo.Dic_MedicareType','dbo.Dic_Nation','dbo.Dic_OrganizationLevel','dbo.Dic_OrganizationType','dbo.Dic_PatientSource','dbo.Dic_PatientType','dbo.Dic_ProcessState','dbo.Dic_Race','dbo.Dic_RelationShip','dbo.Dic_ReportStatus','dbo.Dic_ReportType','dbo.Dic_SamplePerSecond','dbo.Dic_ThreeLevelAddressLibrary','dbo.Dic_UserLevel','dbo.ECG_AcquiredData','dbo.ECG_Data','dbo.ECG_DeviceRelate','dbo.ECG_Event','dbo.ECG_Report','dbo.HolterParameter','dbo.HolterRunParameter','dbo.Map_BaseData','dbo.Map_BaseDataCategory','dbo.Map_DynamicData','dbo.Map_DynamicDataAssociation','dbo.Map_DynamicDataProcess','dbo.Map_DynamicDataSource','dbo.Map_DynamicSourceData','dbo.Map_FieldMapping','dbo.Map_ImportInfo','dbo.Map_Message','dbo.Map_Report','dbo.Map_ShowCenter','dbo.Map_SourceData','dbo.Map_ZoomLevel','dbo.Organization','dbo.Patient','dbo.PatientContact','dbo.RECG_CollectionSystem','dbo.RECG_Consultation','dbo.RECG_Patient','dbo.RECG_Report','dbo.Register','dbo.Right','dbo.Role','dbo.RoleRelateRight','dbo.RoleRelateUser','dbo.Rut','dbo.User','dbo.UserDepartment','dbo.UserDepartmentRelate')
+    OR t.TABLE_NAME = 'EdmMetadata',remark:[]-耗时: 0.0410274 s 
+2016-09-20 10:35:05:148 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1],remark:[{ParameterName:p__linq__0,DbType:String,Value:NLC.RealtimeECG.Domain.NLCloud.NLCloudContext}]-耗时: 0.2191557 s 
+2016-09-20 10:35:05:606 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1],remark:[]-耗时: 0.2081472 s 
+2016-09-20 10:35:06:208 logtype:SqlCmd,logtag:0,msg:SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ModelHash] AS [ModelHash]
+    FROM [dbo].[EdmMetadata] AS [Extent1]
+    ORDER BY [Extent1].[Id] DESC,remark:[]-耗时: 0.2181546 s 
+2016-09-20 10:35:06:642 logtype:SqlCmd,logtag:0,msg:SELECT 
+    1 AS [C1], 
+    [Extent1].[Code] AS [Code], 
+    [Extent1].[Desciption] AS [Desciption], 
+     CAST( [Extent1].[FK_Med_Level] AS int) AS [C2], 
+    [Extent1].[Name] AS [Name]
+    FROM [dbo].[Dic_MedEvent] AS [Extent1],remark:[]-耗时: 0.0160026 s 
+2016-09-20 10:50:08:669 logtype:SqlCmd,logtag:0,msg:IF db_id(N'NLCloud') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'NLCloud',remark:[]-耗时: 0.0440307 s 
+2016-09-20 10:50:08:724 logtype:SqlCmd,logtag:0,msg:
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.BaseCareEcg','dbo.BaseCareReport','dbo.BasicMeasureResult','dbo.Configuration','dbo.Device','dbo.DeviceActivation','dbo.DeviceDepartment','dbo.DeviceMode','dbo.DeviceModelParameter','dbo.DeviceParameter','dbo.DiagnosticGroup','dbo.DiagnosticGroup_DeviceDepartment','dbo.DiagnosticGroup_User','dbo.Dic_Avm','dbo.Dic_Country','dbo.Dic_DealState','dbo.Dic_Degree','dbo.Dic_DeviceCategory','dbo.Dic_DeviceFactory','dbo.Dic_DeviceState','dbo.Dic_DiagnosticLevel','dbo.Dic_DiagnosticRegion','dbo.Dic_EventDataType','dbo.Dic_Gender','dbo.Dic_IDCardType','dbo.Dic_Lead','dbo.Dic_Med_Level','dbo.Dic_MedEvent','dbo.Dic_MedEventType','dbo.Dic_MedicareType','dbo.Dic_Nation','dbo.Dic_OrganizationLevel','dbo.Dic_OrganizationType','dbo.Dic_PatientSource','dbo.Dic_PatientType','dbo.Dic_ProcessState','dbo.Dic_Race','dbo.Dic_RelationShip','dbo.Dic_ReportStatus','dbo.Dic_ReportType','dbo.Dic_SamplePerSecond','dbo.Dic_ThreeLevelAddressLibrary','dbo.Dic_UserLevel','dbo.ECG_AcquiredData','dbo.ECG_Data','dbo.ECG_DeviceRelate','dbo.ECG_Event','dbo.ECG_Report','dbo.HolterParameter','dbo.HolterRunParameter','dbo.Map_BaseData','dbo.Map_BaseDataCategory','dbo.Map_DynamicData','dbo.Map_DynamicDataAssociation','dbo.Map_DynamicDataProcess','dbo.Map_DynamicDataSource','dbo.Map_DynamicSourceData','dbo.Map_FieldMapping','dbo.Map_ImportInfo','dbo.Map_Message','dbo.Map_Report','dbo.Map_ShowCenter','dbo.Map_SourceData','dbo.Map_ZoomLevel','dbo.Organization','dbo.Patient','dbo.PatientContact','dbo.RECG_CollectionSystem','dbo.RECG_Consultation','dbo.RECG_Patient','dbo.RECG_Report','dbo.Register','dbo.Right','dbo.Role','dbo.RoleRelateRight','dbo.RoleRelateUser','dbo.Rut','dbo.User','dbo.UserDepartment','dbo.UserDepartmentRelate')
+    OR t.TABLE_NAME = 'EdmMetadata',remark:[]-耗时: 0.0290201 s 
+2016-09-20 10:50:10:517 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1],remark:[{ParameterName:p__linq__0,DbType:String,Value:NLC.RealtimeECG.Domain.NLCloud.NLCloudContext}]-耗时: 0.2311516 s 
+2016-09-20 10:50:10:946 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1],remark:[]-耗时: 0.1991502 s 
+2016-09-20 10:50:11:503 logtype:SqlCmd,logtag:0,msg:SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ModelHash] AS [ModelHash]
+    FROM [dbo].[EdmMetadata] AS [Extent1]
+    ORDER BY [Extent1].[Id] DESC,remark:[]-耗时: 0.1861178 s 
+2016-09-20 10:50:11:910 logtype:SqlCmd,logtag:0,msg:SELECT 
+    1 AS [C1], 
+    [Extent1].[Code] AS [Code], 
+    [Extent1].[Desciption] AS [Desciption], 
+     CAST( [Extent1].[FK_Med_Level] AS int) AS [C2], 
+    [Extent1].[Name] AS [Name]
+    FROM [dbo].[Dic_MedEvent] AS [Extent1],remark:[]-耗时: 0.0180135 s 
+2016-09-20 10:51:45:048 logtype:SqlCmd,logtag:0,msg:IF db_id(N'NLCloud') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'NLCloud',remark:[]-耗时: 0.0330229 s 
+2016-09-20 10:51:45:102 logtype:SqlCmd,logtag:0,msg:
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.BaseCareEcg','dbo.BaseCareReport','dbo.BasicMeasureResult','dbo.Configuration','dbo.Device','dbo.DeviceActivation','dbo.DeviceDepartment','dbo.DeviceMode','dbo.DeviceModelParameter','dbo.DeviceParameter','dbo.DiagnosticGroup','dbo.DiagnosticGroup_DeviceDepartment','dbo.DiagnosticGroup_User','dbo.Dic_Avm','dbo.Dic_Country','dbo.Dic_DealState','dbo.Dic_Degree','dbo.Dic_DeviceCategory','dbo.Dic_DeviceFactory','dbo.Dic_DeviceState','dbo.Dic_DiagnosticLevel','dbo.Dic_DiagnosticRegion','dbo.Dic_EventDataType','dbo.Dic_Gender','dbo.Dic_IDCardType','dbo.Dic_Lead','dbo.Dic_Med_Level','dbo.Dic_MedEvent','dbo.Dic_MedEventType','dbo.Dic_MedicareType','dbo.Dic_Nation','dbo.Dic_OrganizationLevel','dbo.Dic_OrganizationType','dbo.Dic_PatientSource','dbo.Dic_PatientType','dbo.Dic_ProcessState','dbo.Dic_Race','dbo.Dic_RelationShip','dbo.Dic_ReportStatus','dbo.Dic_ReportType','dbo.Dic_SamplePerSecond','dbo.Dic_ThreeLevelAddressLibrary','dbo.Dic_UserLevel','dbo.ECG_AcquiredData','dbo.ECG_Data','dbo.ECG_DeviceRelate','dbo.ECG_Event','dbo.ECG_Report','dbo.HolterParameter','dbo.HolterRunParameter','dbo.Map_BaseData','dbo.Map_BaseDataCategory','dbo.Map_DynamicData','dbo.Map_DynamicDataAssociation','dbo.Map_DynamicDataProcess','dbo.Map_DynamicDataSource','dbo.Map_DynamicSourceData','dbo.Map_FieldMapping','dbo.Map_ImportInfo','dbo.Map_Message','dbo.Map_Report','dbo.Map_ShowCenter','dbo.Map_SourceData','dbo.Map_ZoomLevel','dbo.Organization','dbo.Patient','dbo.PatientContact','dbo.RECG_CollectionSystem','dbo.RECG_Consultation','dbo.RECG_Patient','dbo.RECG_Report','dbo.Register','dbo.Right','dbo.Role','dbo.RoleRelateRight','dbo.RoleRelateUser','dbo.Rut','dbo.User','dbo.UserDepartment','dbo.UserDepartmentRelate')
+    OR t.TABLE_NAME = 'EdmMetadata',remark:[]-耗时: 0.030007 s 
+2016-09-20 10:51:46:888 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1],remark:[{ParameterName:p__linq__0,DbType:String,Value:NLC.RealtimeECG.Domain.NLCloud.NLCloudContext}]-耗时: 0.2451733 s 
+2016-09-20 10:51:47:356 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1],remark:[]-耗时: 0.2201556 s 
+2016-09-20 10:51:48:001 logtype:SqlCmd,logtag:0,msg:SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ModelHash] AS [ModelHash]
+    FROM [dbo].[EdmMetadata] AS [Extent1]
+    ORDER BY [Extent1].[Id] DESC,remark:[]-耗时: 0.2291494 s 
+2016-09-20 10:51:48:463 logtype:SqlCmd,logtag:0,msg:SELECT 
+    1 AS [C1], 
+    [Extent1].[Code] AS [Code], 
+    [Extent1].[Desciption] AS [Desciption], 
+     CAST( [Extent1].[FK_Med_Level] AS int) AS [C2], 
+    [Extent1].[Name] AS [Name]
+    FROM [dbo].[Dic_MedEvent] AS [Extent1],remark:[]-耗时: 0.0200137 s 
+2016-09-20 10:52:38:797 logtype:SqlCmd,logtag:0,msg:IF db_id(N'NLCloud') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'NLCloud',remark:[]-耗时: 0.0310231 s 
+2016-09-20 10:52:38:849 logtype:SqlCmd,logtag:0,msg:
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.BaseCareEcg','dbo.BaseCareReport','dbo.BasicMeasureResult','dbo.Configuration','dbo.Device','dbo.DeviceActivation','dbo.DeviceDepartment','dbo.DeviceMode','dbo.DeviceModelParameter','dbo.DeviceParameter','dbo.DiagnosticGroup','dbo.DiagnosticGroup_DeviceDepartment','dbo.DiagnosticGroup_User','dbo.Dic_Avm','dbo.Dic_Country','dbo.Dic_DealState','dbo.Dic_Degree','dbo.Dic_DeviceCategory','dbo.Dic_DeviceFactory','dbo.Dic_DeviceState','dbo.Dic_DiagnosticLevel','dbo.Dic_DiagnosticRegion','dbo.Dic_EventDataType','dbo.Dic_Gender','dbo.Dic_IDCardType','dbo.Dic_Lead','dbo.Dic_Med_Level','dbo.Dic_MedEvent','dbo.Dic_MedEventType','dbo.Dic_MedicareType','dbo.Dic_Nation','dbo.Dic_OrganizationLevel','dbo.Dic_OrganizationType','dbo.Dic_PatientSource','dbo.Dic_PatientType','dbo.Dic_ProcessState','dbo.Dic_Race','dbo.Dic_RelationShip','dbo.Dic_ReportStatus','dbo.Dic_ReportType','dbo.Dic_SamplePerSecond','dbo.Dic_ThreeLevelAddressLibrary','dbo.Dic_UserLevel','dbo.ECG_AcquiredData','dbo.ECG_Data','dbo.ECG_DeviceRelate','dbo.ECG_Event','dbo.ECG_Report','dbo.HolterParameter','dbo.HolterRunParameter','dbo.Map_BaseData','dbo.Map_BaseDataCategory','dbo.Map_DynamicData','dbo.Map_DynamicDataAssociation','dbo.Map_DynamicDataProcess','dbo.Map_DynamicDataSource','dbo.Map_DynamicSourceData','dbo.Map_FieldMapping','dbo.Map_ImportInfo','dbo.Map_Message','dbo.Map_Report','dbo.Map_ShowCenter','dbo.Map_SourceData','dbo.Map_ZoomLevel','dbo.Organization','dbo.Patient','dbo.PatientContact','dbo.RECG_CollectionSystem','dbo.RECG_Consultation','dbo.RECG_Patient','dbo.RECG_Report','dbo.Register','dbo.Right','dbo.Role','dbo.RoleRelateRight','dbo.RoleRelateUser','dbo.Rut','dbo.User','dbo.UserDepartment','dbo.UserDepartmentRelate')
+    OR t.TABLE_NAME = 'EdmMetadata',remark:[]-耗时: 0.0280324 s 
+2016-09-20 10:52:40:569 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1],remark:[{ParameterName:p__linq__0,DbType:String,Value:NLC.RealtimeECG.Domain.NLCloud.NLCloudContext}]-耗时: 0.23115 s 
+2016-09-20 10:52:41:076 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1],remark:[]-耗时: 0.285202 s 
+2016-09-20 10:52:41:717 logtype:SqlCmd,logtag:0,msg:SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ModelHash] AS [ModelHash]
+    FROM [dbo].[EdmMetadata] AS [Extent1]
+    ORDER BY [Extent1].[Id] DESC,remark:[]-耗时: 0.2091482 s 
+2016-09-20 10:52:42:157 logtype:SqlCmd,logtag:0,msg:SELECT 
+    1 AS [C1], 
+    [Extent1].[Code] AS [Code], 
+    [Extent1].[Desciption] AS [Desciption], 
+     CAST( [Extent1].[FK_Med_Level] AS int) AS [C2], 
+    [Extent1].[Name] AS [Name]
+    FROM [dbo].[Dic_MedEvent] AS [Extent1],remark:[]-耗时: 0.0169997 s 
+2016-09-20 10:53:23:043 logtype:SqlCmd,logtag:0,msg:IF db_id(N'NLCloud') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'NLCloud',remark:[]-耗时: 0.0360262 s 
+2016-09-20 10:53:23:100 logtype:SqlCmd,logtag:0,msg:
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.BaseCareEcg','dbo.BaseCareReport','dbo.BasicMeasureResult','dbo.Configuration','dbo.Device','dbo.DeviceActivation','dbo.DeviceDepartment','dbo.DeviceMode','dbo.DeviceModelParameter','dbo.DeviceParameter','dbo.DiagnosticGroup','dbo.DiagnosticGroup_DeviceDepartment','dbo.DiagnosticGroup_User','dbo.Dic_Avm','dbo.Dic_Country','dbo.Dic_DealState','dbo.Dic_Degree','dbo.Dic_DeviceCategory','dbo.Dic_DeviceFactory','dbo.Dic_DeviceState','dbo.Dic_DiagnosticLevel','dbo.Dic_DiagnosticRegion','dbo.Dic_EventDataType','dbo.Dic_Gender','dbo.Dic_IDCardType','dbo.Dic_Lead','dbo.Dic_Med_Level','dbo.Dic_MedEvent','dbo.Dic_MedEventType','dbo.Dic_MedicareType','dbo.Dic_Nation','dbo.Dic_OrganizationLevel','dbo.Dic_OrganizationType','dbo.Dic_PatientSource','dbo.Dic_PatientType','dbo.Dic_ProcessState','dbo.Dic_Race','dbo.Dic_RelationShip','dbo.Dic_ReportStatus','dbo.Dic_ReportType','dbo.Dic_SamplePerSecond','dbo.Dic_ThreeLevelAddressLibrary','dbo.Dic_UserLevel','dbo.ECG_AcquiredData','dbo.ECG_Data','dbo.ECG_DeviceRelate','dbo.ECG_Event','dbo.ECG_Report','dbo.HolterParameter','dbo.HolterRunParameter','dbo.Map_BaseData','dbo.Map_BaseDataCategory','dbo.Map_DynamicData','dbo.Map_DynamicDataAssociation','dbo.Map_DynamicDataProcess','dbo.Map_DynamicDataSource','dbo.Map_DynamicSourceData','dbo.Map_FieldMapping','dbo.Map_ImportInfo','dbo.Map_Message','dbo.Map_Report','dbo.Map_ShowCenter','dbo.Map_SourceData','dbo.Map_ZoomLevel','dbo.Organization','dbo.Patient','dbo.PatientContact','dbo.RECG_CollectionSystem','dbo.RECG_Consultation','dbo.RECG_Patient','dbo.RECG_Report','dbo.Register','dbo.Right','dbo.Role','dbo.RoleRelateRight','dbo.RoleRelateUser','dbo.Rut','dbo.User','dbo.UserDepartment','dbo.UserDepartmentRelate')
+    OR t.TABLE_NAME = 'EdmMetadata',remark:[]-耗时: 0.033023 s 
+2016-09-20 10:53:24:896 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1],remark:[{ParameterName:p__linq__0,DbType:String,Value:NLC.RealtimeECG.Domain.NLCloud.NLCloudContext}]-耗时: 0.2221578 s 
+2016-09-20 10:53:25:348 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1],remark:[]-耗时: 0.2091479 s 
+2016-09-20 10:53:25:904 logtype:SqlCmd,logtag:0,msg:SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ModelHash] AS [ModelHash]
+    FROM [dbo].[EdmMetadata] AS [Extent1]
+    ORDER BY [Extent1].[Id] DESC,remark:[]-耗时: 0.181128 s 
+2016-09-20 10:53:26:325 logtype:SqlCmd,logtag:0,msg:SELECT 
+    1 AS [C1], 
+    [Extent1].[Code] AS [Code], 
+    [Extent1].[Desciption] AS [Desciption], 
+     CAST( [Extent1].[FK_Med_Level] AS int) AS [C2], 
+    [Extent1].[Name] AS [Name]
+    FROM [dbo].[Dic_MedEvent] AS [Extent1],remark:[]-耗时: 0.0150102 s 
+2016-09-20 10:55:02:197 logtype:SqlCmd,logtag:0,msg:IF db_id(N'NLCloud') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'NLCloud',remark:[]-耗时: 0.0410302 s 
+2016-09-20 10:55:02:256 logtype:SqlCmd,logtag:0,msg:
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.BaseCareEcg','dbo.BaseCareReport','dbo.BasicMeasureResult','dbo.Configuration','dbo.Device','dbo.DeviceActivation','dbo.DeviceDepartment','dbo.DeviceMode','dbo.DeviceModelParameter','dbo.DeviceParameter','dbo.DiagnosticGroup','dbo.DiagnosticGroup_DeviceDepartment','dbo.DiagnosticGroup_User','dbo.Dic_Avm','dbo.Dic_Country','dbo.Dic_DealState','dbo.Dic_Degree','dbo.Dic_DeviceCategory','dbo.Dic_DeviceFactory','dbo.Dic_DeviceState','dbo.Dic_DiagnosticLevel','dbo.Dic_DiagnosticRegion','dbo.Dic_EventDataType','dbo.Dic_Gender','dbo.Dic_IDCardType','dbo.Dic_Lead','dbo.Dic_Med_Level','dbo.Dic_MedEvent','dbo.Dic_MedEventType','dbo.Dic_MedicareType','dbo.Dic_Nation','dbo.Dic_OrganizationLevel','dbo.Dic_OrganizationType','dbo.Dic_PatientSource','dbo.Dic_PatientType','dbo.Dic_ProcessState','dbo.Dic_Race','dbo.Dic_RelationShip','dbo.Dic_ReportStatus','dbo.Dic_ReportType','dbo.Dic_SamplePerSecond','dbo.Dic_ThreeLevelAddressLibrary','dbo.Dic_UserLevel','dbo.ECG_AcquiredData','dbo.ECG_Data','dbo.ECG_DeviceRelate','dbo.ECG_Event','dbo.ECG_Report','dbo.HolterParameter','dbo.HolterRunParameter','dbo.Map_BaseData','dbo.Map_BaseDataCategory','dbo.Map_DynamicData','dbo.Map_DynamicDataAssociation','dbo.Map_DynamicDataProcess','dbo.Map_DynamicDataSource','dbo.Map_DynamicSourceData','dbo.Map_FieldMapping','dbo.Map_ImportInfo','dbo.Map_Message','dbo.Map_Report','dbo.Map_ShowCenter','dbo.Map_SourceData','dbo.Map_ZoomLevel','dbo.Organization','dbo.Patient','dbo.PatientContact','dbo.RECG_CollectionSystem','dbo.RECG_Consultation','dbo.RECG_Patient','dbo.RECG_Report','dbo.Register','dbo.Right','dbo.Role','dbo.RoleRelateRight','dbo.RoleRelateUser','dbo.Rut','dbo.User','dbo.UserDepartment','dbo.UserDepartmentRelate')
+    OR t.TABLE_NAME = 'EdmMetadata',remark:[]-耗时: 0.0300209 s 
+2016-09-20 10:55:03:939 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1],remark:[{ParameterName:p__linq__0,DbType:String,Value:NLC.RealtimeECG.Domain.NLCloud.NLCloudContext}]-耗时: 0.2231569 s 
+2016-09-20 10:55:04:391 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1],remark:[]-耗时: 0.2141506 s 
+2016-09-20 10:55:04:999 logtype:SqlCmd,logtag:0,msg:SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ModelHash] AS [ModelHash]
+    FROM [dbo].[EdmMetadata] AS [Extent1]
+    ORDER BY [Extent1].[Id] DESC,remark:[]-耗时: 0.2211572 s 
+2016-09-20 10:55:05:458 logtype:SqlCmd,logtag:0,msg:SELECT 
+    1 AS [C1], 
+    [Extent1].[Code] AS [Code], 
+    [Extent1].[Desciption] AS [Desciption], 
+     CAST( [Extent1].[FK_Med_Level] AS int) AS [C2], 
+    [Extent1].[Name] AS [Name]
+    FROM [dbo].[Dic_MedEvent] AS [Extent1],remark:[]-耗时: 0.0310216 s 
+2016-09-20 10:58:28:866 logtype:SqlCmd,logtag:0,msg:IF db_id(N'NLCloud') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'NLCloud',remark:[]-耗时: 0.0360255 s 
+2016-09-20 10:58:28:935 logtype:SqlCmd,logtag:0,msg:
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.BaseCareEcg','dbo.BaseCareReport','dbo.BasicMeasureResult','dbo.Configuration','dbo.Device','dbo.DeviceActivation','dbo.DeviceDepartment','dbo.DeviceMode','dbo.DeviceModelParameter','dbo.DeviceParameter','dbo.DiagnosticGroup','dbo.DiagnosticGroup_DeviceDepartment','dbo.DiagnosticGroup_User','dbo.Dic_Avm','dbo.Dic_Country','dbo.Dic_DealState','dbo.Dic_Degree','dbo.Dic_DeviceCategory','dbo.Dic_DeviceFactory','dbo.Dic_DeviceState','dbo.Dic_DiagnosticLevel','dbo.Dic_DiagnosticRegion','dbo.Dic_EventDataType','dbo.Dic_Gender','dbo.Dic_IDCardType','dbo.Dic_Lead','dbo.Dic_Med_Level','dbo.Dic_MedEvent','dbo.Dic_MedEventType','dbo.Dic_MedicareType','dbo.Dic_Nation','dbo.Dic_OrganizationLevel','dbo.Dic_OrganizationType','dbo.Dic_PatientSource','dbo.Dic_PatientType','dbo.Dic_ProcessState','dbo.Dic_Race','dbo.Dic_RelationShip','dbo.Dic_ReportStatus','dbo.Dic_ReportType','dbo.Dic_SamplePerSecond','dbo.Dic_ThreeLevelAddressLibrary','dbo.Dic_UserLevel','dbo.ECG_AcquiredData','dbo.ECG_Data','dbo.ECG_DeviceRelate','dbo.ECG_Event','dbo.ECG_Report','dbo.HolterParameter','dbo.HolterRunParameter','dbo.Map_BaseData','dbo.Map_BaseDataCategory','dbo.Map_DynamicData','dbo.Map_DynamicDataAssociation','dbo.Map_DynamicDataProcess','dbo.Map_DynamicDataSource','dbo.Map_DynamicSourceData','dbo.Map_FieldMapping','dbo.Map_ImportInfo','dbo.Map_Message','dbo.Map_Report','dbo.Map_ShowCenter','dbo.Map_SourceData','dbo.Map_ZoomLevel','dbo.Organization','dbo.Patient','dbo.PatientContact','dbo.RECG_CollectionSystem','dbo.RECG_Consultation','dbo.RECG_Patient','dbo.RECG_Report','dbo.Register','dbo.Right','dbo.Role','dbo.RoleRelateRight','dbo.RoleRelateUser','dbo.Rut','dbo.User','dbo.UserDepartment','dbo.UserDepartmentRelate')
+    OR t.TABLE_NAME = 'EdmMetadata',remark:[]-耗时: 0.0300208 s 
+2016-09-20 10:58:30:813 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1],remark:[{ParameterName:p__linq__0,DbType:String,Value:NLC.RealtimeECG.Domain.NLCloud.NLCloudContext}]-耗时: 0.2151513 s 
+2016-09-20 10:58:31:323 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1],remark:[]-耗时: 0.2161528 s 
+2016-09-20 10:58:31:954 logtype:SqlCmd,logtag:0,msg:SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ModelHash] AS [ModelHash]
+    FROM [dbo].[EdmMetadata] AS [Extent1]
+    ORDER BY [Extent1].[Id] DESC,remark:[]-耗时: 0.2201548 s 
+2016-09-20 10:58:32:407 logtype:SqlCmd,logtag:0,msg:SELECT 
+    1 AS [C1], 
+    [Extent1].[Code] AS [Code], 
+    [Extent1].[Desciption] AS [Desciption], 
+     CAST( [Extent1].[FK_Med_Level] AS int) AS [C2], 
+    [Extent1].[Name] AS [Name]
+    FROM [dbo].[Dic_MedEvent] AS [Extent1],remark:[]-耗时: 0.0160105 s 
+2016-09-20 11:00:28:605 logtype:SqlCmd,logtag:0,msg:IF db_id(N'NLCloud') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'NLCloud',remark:[]-耗时: 0.0330225 s 
+2016-09-20 11:00:28:649 logtype:SqlCmd,logtag:0,msg:
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.BaseCareEcg','dbo.BaseCareReport','dbo.BasicMeasureResult','dbo.Configuration','dbo.Device','dbo.DeviceActivation','dbo.DeviceDepartment','dbo.DeviceMode','dbo.DeviceModelParameter','dbo.DeviceParameter','dbo.DiagnosticGroup','dbo.DiagnosticGroup_DeviceDepartment','dbo.DiagnosticGroup_User','dbo.Dic_Avm','dbo.Dic_Country','dbo.Dic_DealState','dbo.Dic_Degree','dbo.Dic_DeviceCategory','dbo.Dic_DeviceFactory','dbo.Dic_DeviceState','dbo.Dic_DiagnosticLevel','dbo.Dic_DiagnosticRegion','dbo.Dic_EventDataType','dbo.Dic_Gender','dbo.Dic_IDCardType','dbo.Dic_Lead','dbo.Dic_Med_Level','dbo.Dic_MedEvent','dbo.Dic_MedEventType','dbo.Dic_MedicareType','dbo.Dic_Nation','dbo.Dic_OrganizationLevel','dbo.Dic_OrganizationType','dbo.Dic_PatientSource','dbo.Dic_PatientType','dbo.Dic_ProcessState','dbo.Dic_Race','dbo.Dic_RelationShip','dbo.Dic_ReportStatus','dbo.Dic_ReportType','dbo.Dic_SamplePerSecond','dbo.Dic_ThreeLevelAddressLibrary','dbo.Dic_UserLevel','dbo.ECG_AcquiredData','dbo.ECG_Data','dbo.ECG_DeviceRelate','dbo.ECG_Event','dbo.ECG_Report','dbo.HolterParameter','dbo.HolterRunParameter','dbo.Map_BaseData','dbo.Map_BaseDataCategory','dbo.Map_DynamicData','dbo.Map_DynamicDataAssociation','dbo.Map_DynamicDataProcess','dbo.Map_DynamicDataSource','dbo.Map_DynamicSourceData','dbo.Map_FieldMapping','dbo.Map_ImportInfo','dbo.Map_Message','dbo.Map_Report','dbo.Map_ShowCenter','dbo.Map_SourceData','dbo.Map_ZoomLevel','dbo.Organization','dbo.Patient','dbo.PatientContact','dbo.RECG_CollectionSystem','dbo.RECG_Consultation','dbo.RECG_Patient','dbo.RECG_Report','dbo.Register','dbo.Right','dbo.Role','dbo.RoleRelateRight','dbo.RoleRelateUser','dbo.Rut','dbo.User','dbo.UserDepartment','dbo.UserDepartmentRelate')
+    OR t.TABLE_NAME = 'EdmMetadata',remark:[]-耗时: 0.0180253 s 
+2016-09-20 11:00:30:427 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1],remark:[{ParameterName:p__linq__0,DbType:String,Value:NLC.RealtimeECG.Domain.NLCloud.NLCloudContext}]-耗时: 0.2601824 s 
+2016-09-20 11:00:30:896 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1],remark:[]-耗时: 0.2101477 s 
+2016-09-20 11:00:31:536 logtype:SqlCmd,logtag:0,msg:SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ModelHash] AS [ModelHash]
+    FROM [dbo].[EdmMetadata] AS [Extent1]
+    ORDER BY [Extent1].[Id] DESC,remark:[]-耗时: 0.2211568 s 
+2016-09-20 11:00:31:931 logtype:SqlCmd,logtag:0,msg:SELECT 
+    1 AS [C1], 
+    [Extent1].[Code] AS [Code], 
+    [Extent1].[Desciption] AS [Desciption], 
+     CAST( [Extent1].[FK_Med_Level] AS int) AS [C2], 
+    [Extent1].[Name] AS [Name]
+    FROM [dbo].[Dic_MedEvent] AS [Extent1],remark:[]-耗时: 0.0159983 s 
+2016-09-20 11:05:04:340 logtype:SqlCmd,logtag:0,msg:IF db_id(N'NLCloud') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'NLCloud',remark:[]-耗时: 0.031022 s 
+2016-09-20 11:05:04:407 logtype:SqlCmd,logtag:0,msg:
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.BaseCareEcg','dbo.BaseCareReport','dbo.BasicMeasureResult','dbo.Configuration','dbo.Device','dbo.DeviceActivation','dbo.DeviceDepartment','dbo.DeviceMode','dbo.DeviceModelParameter','dbo.DeviceParameter','dbo.DiagnosticGroup','dbo.DiagnosticGroup_DeviceDepartment','dbo.DiagnosticGroup_User','dbo.Dic_Avm','dbo.Dic_Country','dbo.Dic_DealState','dbo.Dic_Degree','dbo.Dic_DeviceCategory','dbo.Dic_DeviceFactory','dbo.Dic_DeviceState','dbo.Dic_DiagnosticLevel','dbo.Dic_DiagnosticRegion','dbo.Dic_EventDataType','dbo.Dic_Gender','dbo.Dic_IDCardType','dbo.Dic_Lead','dbo.Dic_Med_Level','dbo.Dic_MedEvent','dbo.Dic_MedEventType','dbo.Dic_MedicareType','dbo.Dic_Nation','dbo.Dic_OrganizationLevel','dbo.Dic_OrganizationType','dbo.Dic_PatientSource','dbo.Dic_PatientType','dbo.Dic_ProcessState','dbo.Dic_Race','dbo.Dic_RelationShip','dbo.Dic_ReportStatus','dbo.Dic_ReportType','dbo.Dic_SamplePerSecond','dbo.Dic_ThreeLevelAddressLibrary','dbo.Dic_UserLevel','dbo.ECG_AcquiredData','dbo.ECG_Data','dbo.ECG_DeviceRelate','dbo.ECG_Event','dbo.ECG_Report','dbo.HolterParameter','dbo.HolterRunParameter','dbo.Map_BaseData','dbo.Map_BaseDataCategory','dbo.Map_DynamicData','dbo.Map_DynamicDataAssociation','dbo.Map_DynamicDataProcess','dbo.Map_DynamicDataSource','dbo.Map_DynamicSourceData','dbo.Map_FieldMapping','dbo.Map_ImportInfo','dbo.Map_Message','dbo.Map_Report','dbo.Map_ShowCenter','dbo.Map_SourceData','dbo.Map_ZoomLevel','dbo.Organization','dbo.Patient','dbo.PatientContact','dbo.RECG_CollectionSystem','dbo.RECG_Consultation','dbo.RECG_Patient','dbo.RECG_Report','dbo.Register','dbo.Right','dbo.Role','dbo.RoleRelateRight','dbo.RoleRelateUser','dbo.Rut','dbo.User','dbo.UserDepartment','dbo.UserDepartmentRelate')
+    OR t.TABLE_NAME = 'EdmMetadata',remark:[]-耗时: 0.0340244 s 
+2016-09-20 11:05:06:162 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1],remark:[{ParameterName:p__linq__0,DbType:String,Value:NLC.RealtimeECG.Domain.NLCloud.NLCloudContext}]-耗时: 0.2021556 s 
+2016-09-20 11:05:06:587 logtype:SqlCmd,logtag:0,msg:SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1],remark:[]-耗时: 0.1991404 s 
+2016-09-20 11:05:07:142 logtype:SqlCmd,logtag:0,msg:SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[ModelHash] AS [ModelHash]
+    FROM [dbo].[EdmMetadata] AS [Extent1]
+    ORDER BY [Extent1].[Id] DESC,remark:[]-耗时: 0.1951245 s 
+2016-09-20 11:05:07:518 logtype:SqlCmd,logtag:0,msg:SELECT 
+    1 AS [C1], 
+    [Extent1].[Code] AS [Code], 
+    [Extent1].[Desciption] AS [Desciption], 
+     CAST( [Extent1].[FK_Med_Level] AS int) AS [C2], 
+    [Extent1].[Name] AS [Name]
+    FROM [dbo].[Dic_MedEvent] AS [Extent1],remark:[]-耗时: 0.0149991 s 

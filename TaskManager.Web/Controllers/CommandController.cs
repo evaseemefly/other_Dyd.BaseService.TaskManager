@@ -9,6 +9,7 @@ using BSF.Db;
 using TaskManager.Web.Models;
 using Webdiyer.WebControls.Mvc;
 using TaskManager.Core;
+using TaskManager.Web.Tools;
 
 namespace TaskManager.Web.Controllers
 {
@@ -67,6 +68,7 @@ namespace TaskManager.Web.Controllers
                     PubConn.Open();
                     model.commandcreatetime = DateTime.Now;
                     dal.Add(PubConn, model);
+                    RedisHelper.SendMessage(new Core.Redis.RedisCommondInfo() { CommondType = Core.Redis.EnumCommondType.TaskCommand, NodeId = model.nodeid });
                 }
                 return RedirectToAction("index");
             });

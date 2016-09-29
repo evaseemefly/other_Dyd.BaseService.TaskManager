@@ -32,10 +32,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BSF, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\引用\BSF.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\引用\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Quartz">
       <HintPath>..\引用\Quartz.dll</HintPath>
@@ -76,11 +83,13 @@
     <Compile Include="SystemMonitor\TaskRecoverMonitor.cs" />
     <Compile Include="SystemMonitor\TaskStopMonitor.cs" />
     <Compile Include="SystemRuntime\NodeTaskRuntimeInfo.cs" />
+    <Compile Include="SystemRuntime\TaskAssemblyRedirect.cs" />
     <Compile Include="SystemRuntime\TaskJob.cs" />
     <Compile Include="SystemRuntime\TaskPoolManager.cs" />
     <Compile Include="SystemRuntime\TaskProvider.cs" />
     <Compile Include="Tools\AppDomainLoader.cs" />
     <Compile Include="Tools\LogHelper.cs" />
+    <Compile Include="Tools\RedisHelper.cs" />
     <EmbeddedResource Include="NodeMain.resx">
       <DependentUpon>NodeMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,7 +114,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BSF.BaseService.TaskManager\BSF.BaseService.TaskManager.csproj">

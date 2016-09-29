@@ -45,19 +45,26 @@ namespace TaskManager.Node.SystemMonitor
                     {
                         if (taskruntimeinfo.Domain != null)
                         {
-                            SqlHelper.ExcuteSql(GlobalConfig.TaskDataBaseConnectString, (c) =>
+                            try
                             {
-                                tb_performance_dal nodedal = new tb_performance_dal();
-                                nodedal.AddOrUpdate(c, new Domain.Model.tb_performance_model()
+                                double cpu = taskruntimeinfo.Domain.MonitoringTotalProcessorTime.TotalSeconds;
+                                var memory = taskruntimeinfo.Domain.MonitoringSurvivedMemorySize;
+                                SqlHelper.ExcuteSql(GlobalConfig.TaskDataBaseConnectString, (c) =>
                                 {
-                                    cpu = taskruntimeinfo.Domain.MonitoringTotalProcessorTime.TotalSeconds,
-                                    memory = (double)taskruntimeinfo.Domain.MonitoringSurvivedMemorySize / 1024 / 1024,
-                                    installdirsize = dirsizeM,
-                                    taskid = taskruntimeinfo.TaskModel.id,
-                                    lastupdatetime = DateTime.Now,
-                                    nodeid = GlobalConfig.NodeID
+                                    tb_performance_dal nodedal = new tb_performance_dal();
+                                    nodedal.AddOrUpdate(c, new Domain.Model.tb_performance_model()
+                                    {
+                                        cpu = cpu,
+                                        memory = (double)memory / 1024 / 1024,
+                                        installdirsize = dirsizeM,
+                                        taskid = taskruntimeinfo.TaskModel.id,
+                                        lastupdatetime = DateTime.Now,
+                                        nodeid = GlobalConfig.NodeID
+                                    });
                                 });
-                            });
+                            }
+                            catch (AppDomainUnloadedException)
+                            { }
                         }
                     }
                     catch (Exception ex)

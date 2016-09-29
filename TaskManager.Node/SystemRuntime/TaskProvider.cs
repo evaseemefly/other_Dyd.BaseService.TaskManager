@@ -59,6 +59,7 @@ namespace TaskManager.Node.SystemRuntime
             BSF.Tool.IOHelper.CopyDirectory(taskshareddlldir, fileinstallpath);
             try
             {
+                new TaskAssemblyRedirect().TryRebulidDll(fileinstallmainclassdllpath, taskruntimeinfo.TaskModel.taskmainclassnamespace);
                 var dlltask = new AppDomainLoader<BaseDllTask>().Load(fileinstallmainclassdllpath, taskruntimeinfo.TaskModel.taskmainclassnamespace, out taskruntimeinfo.Domain);
                 var sdktaskmodel = new BSF.BaseService.TaskManager.Model.tb_task_model();
                 PropertyHelper.Copy(taskruntimeinfo.TaskModel, sdktaskmodel);
@@ -67,12 +68,24 @@ namespace TaskManager.Node.SystemRuntime
                     TaskConnectString = GlobalConfig.TaskDataBaseConnectString,
                     TaskModel = sdktaskmodel
                 };
-
-                dlltask.AppConfig = new TaskAppConfigInfo();
+                //加载AppConfig配置
+                var appconfig  = new TaskAppConfigInfo();
                 if (!string.IsNullOrEmpty(taskruntimeinfo.TaskModel.taskappconfigjson))
                 {
-                    dlltask.AppConfig = new BSF.Serialization.JsonProvider().Deserialize<TaskAppConfigInfo>(taskruntimeinfo.TaskModel.taskappconfigjson);
+                    appconfig = new BSF.Serialization.JsonProvider().Deserialize<TaskAppConfigInfo>(taskruntimeinfo.TaskModel.taskappconfigjson);
                 }
+                SqlHelper.ExcuteSql(GlobalConfig.TaskDataBaseConnectString, (c) =>
+                {
+                    tb_config_dal configdal = new tb_config_dal();
+                    var cs = configdal.GetList(c);
+                    foreach (var o in cs)
+                    {
+                        if (!appconfig.ContainsKey(o.configkey))
+                            appconfig.Add(o.configkey,o.configvalue); 
+                    }
+                });
+
+                dlltask.AppConfig = appconfig;
                 taskruntimeinfo.DllTask = dlltask;
                 bool r = TaskPoolManager.CreateInstance().Add(taskid.ToString(), taskruntimeinfo);
                 SqlHelper.ExcuteSql(GlobalConfig.TaskDataBaseConnectString, (c) =>

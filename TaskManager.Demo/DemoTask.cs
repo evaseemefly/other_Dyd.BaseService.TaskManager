@@ -58,8 +58,9 @@ namespace TaskManager.Demo
             this.OpenOperator.SaveLocalTempData(localtempinfo);
 
             {
-                string msg = "执行业务中...."+ this.AppConfig["sendmailhost"];
+                string msg = "执行业务中...."+ this.AppConfig["RedisServer"];
                 Debug.WriteLine(msg);
+                this.OpenOperator.Log(msg);
                 System.IO.File.AppendAllText(this.OpenOperator.GetTaskInstallDirectory()+"业务.txt", msg);
             }
 

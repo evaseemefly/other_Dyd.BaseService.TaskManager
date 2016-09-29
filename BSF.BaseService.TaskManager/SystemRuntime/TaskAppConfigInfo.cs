@@ -27,5 +27,21 @@ namespace BSF.BaseService.TaskManager.SystemRuntime
         {
             base.GetObjectData(info, context);
         }
+
+        //重载一个下标运算符号
+        public string this[string key]
+        {
+            get
+            {
+                if (this.ContainsKey(key))
+                    return base[key];
+                else
+                    throw new BSF.Base.BSFException(string.Format("AppConfig中未能获取配置信息{0},请在'任务配置json'配置", key));
+            }
+            set
+            {
+                base[key] = value;
+            }
+        }
     }
 }

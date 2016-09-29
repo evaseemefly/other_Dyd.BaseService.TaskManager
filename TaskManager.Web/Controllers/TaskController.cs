@@ -13,6 +13,7 @@ using System.IO;
 using TaskManager.Core;
 using BSF.Extensions;
 using TaskManager.Core;
+using TaskManager.Web.Tools;
 
 namespace TaskManager.Web.Controllers
 {
@@ -22,10 +23,36 @@ namespace TaskManager.Web.Controllers
         //
         // GET: /Task/
 
-        public ActionResult Index(string taskid, string keyword, string CStime,string CEtime, int categoryid = -1, int nodeid = -1, int userid = -1, int state = -999, int pagesize = 10, int pageindex = 1)
+        public ActionResult Index(string taskid, string keyword, string CStime, string CEtime, int categoryid = -1, int nodeid = -1, int userid = -1, int state = -999, int pagesize = 10, int pageindex = 1)
         {
             return this.Visit(EnumUserRole.None, () =>
             {
+                #region 保存查询信息,优化操作体验
+                var ps = Request.RequestParams();
+                ps.Remove("userid");
+                var sessionkey = "/task/index/";
+                if (ps.Count == 0)
+                {
+                    if (Session[sessionkey] != null)
+                    {
+                        var ks = new BSF.Serialization.JsonProvider( BSF.Serialization.JsonAdapter.EnumJsonMode.Newtonsoft).Deserialize<List<KeyValuePair<string,object>>>(Session[sessionkey] as string);
+                        foreach (var k in ks)
+                        {
+                            if(!ViewData.ContainsKey(k.Key))
+                                ViewData.Add(k);
+                        }
+                        taskid = (string)ViewBag.taskid;
+                        keyword =(string) ViewBag.keyword;
+                        CStime = (string)ViewBag.CStime;
+                        CEtime = (string) ViewBag.CEtime;
+                        categoryid = (int)ViewBag.categoryid;
+                        nodeid = (int)ViewBag.nodeid;
+                        userid = (int)ViewBag.userid;
+                        state = (int)ViewBag.state;
+                        pagesize = (int)ViewBag.pagesize;
+                        pageindex = (int)ViewBag.pageindex;
+                    }
+                }
                 ViewBag.taskid = taskid;
                 ViewBag.keyword = keyword;
                 ViewBag.CStime = CStime;
@@ -37,13 +64,16 @@ namespace TaskManager.Web.Controllers
                 ViewBag.pagesize = pagesize;
                 ViewBag.pageindex = pageindex;
 
+                Session[sessionkey] = new BSF.Serialization.JsonProvider().Serializer(ViewData);
+                #endregion
+
                 tb_task_dal dal = new tb_task_dal();
                 PagedList<tb_tasklist_model> pageList = null;
                 int count = 0;
                 using (DbConn PubConn = DbConn.CreateConn(Config.TaskConnectString))
                 {
                     PubConn.Open();
-                    List<tb_tasklist_model> List = dal.GetList(PubConn,taskid, keyword, CStime,CEtime, categoryid, nodeid, userid, state, pagesize, pageindex, out count);
+                    List<tb_tasklist_model> List = dal.GetList(PubConn, taskid, keyword, CStime, CEtime, categoryid, nodeid, userid, state, pagesize, pageindex, out count);
                     pageList = new PagedList<tb_tasklist_model>(List, pageindex, pagesize, count);
                     List<tb_node_model> Node = new tb_node_dal().GetListAll(PubConn);
                     List<tb_category_model> Category = new tb_category_dal().GetList(PubConn, "");
@@ -230,9 +260,11 @@ namespace TaskManager.Web.Controllers
                             commandstate = (int)EnumTaskCommandState.None
                         };
                         dal.Add(PubConn, m);
+                        RedisHelper.SendMessage(new Core.Redis.RedisCommondInfo() { CommondType = Core.Redis.EnumCommondType.TaskCommand, NodeId = m.nodeid });
                     }
                     return Json(new { code = 1, msg = "Success" });
                 }
+
             });
         }
 
@@ -268,10 +300,12 @@ namespace TaskManager.Web.Controllers
                                 commandstate = (int)EnumTaskCommandState.None
                             };
                             dal.Add(PubConn, c);
+                            RedisHelper.SendMessage(new Core.Redis.RedisCommondInfo() { CommondType = Core.Redis.EnumCommondType.TaskCommand, NodeId = m.nodeid });
                         }
                     }
                     return Json(new { code = 1, data = post });
                 }
+
             });
         }
 
@@ -329,18 +363,19 @@ namespace TaskManager.Web.Controllers
                     {
                         PubConn.Open();
                         var taskmodel = dal.Get(PubConn, id);
-                        dal.UpdateTaskState(PubConn, id,(int)EnumTaskState.Stop);
+                        dal.UpdateTaskState(PubConn, id, (int)EnumTaskState.Stop);
 
                         tb_command_model m = new tb_command_model()
                         {
                             command = "",
                             commandcreatetime = DateTime.Now,
-                            commandname =  EnumTaskCommandName.UninstallTask.ToString(),
+                            commandname = EnumTaskCommandName.UninstallTask.ToString(),
                             taskid = id,
                             nodeid = taskmodel.nodeid,
                             commandstate = (int)EnumTaskCommandState.None
                         };
                         commanddal.Add(PubConn, m);
+                        RedisHelper.SendMessage(new Core.Redis.RedisCommondInfo() { CommondType = Core.Redis.EnumCommondType.TaskCommand, NodeId = m.nodeid });
 
                         return Json(new { code = 1 });
                     }
