@@ -136,6 +136,14 @@
             客户端返回的文本内容
             </summary>
         </member>
+        <member name="M:BSF.Api.ClientResult`1.Parse(System.String,System.Type)">
+            <summary>
+            Json解析（支持泛型基类型解析）
+            </summary>
+            <param name="json"></param>
+            <param name="type">真实的类型，必须为ClientResult[Type]类型</param>
+            <returns>返回真实类型或者真实类型泛型参数的基类型</returns>
+        </member>
         <member name="T:BSF.Api.HttpProvider">
             <summary>
             Http操作类库
@@ -437,6 +445,24 @@
             其他记录标记信息
             </summary>
         </member>
+        <member name="T:BSF.Cache.SimpleLRUCache`2">
+            <summary>
+            最近最久未使用算法（自己实现）
+            算法:超过缓存长度时，根据读次数，最少读的缓存回收之（未清理的缓存，则清零读的次数）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="D"></typeparam>
+        </member>
+        <member name="P:BSF.Cache.SimpleLRUCache`2.LRUData`1.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:BSF.Cache.SimpleLRUCache`2.LRUData`1.ReadCount">
+            <summary>
+            访问读次数
+            </summary>
+        </member>
         <member name="T:BSF.Config.BSFConfig">
             <summary>
             项目全局配置
@@ -541,6 +567,26 @@
             <summary>
             业务消息推送平台连接
             </summary>
+        </member>
+        <member name="P:BSF.Config.BSFConfig.FileStorageConnectString">
+            <summary>
+            文件存储系统连接
+            </summary>
+        </member>
+        <member name="T:BSF.Config.ConfigStringParser`1">
+            <summary>
+            配置字符串解析
+            备注:使用时建议使用静态字典或者全局单例模式,便于使用缓存效果。
+            </summary>
+        </member>
+        <member name="M:BSF.Config.ConfigStringParser`1.Parse(System.String)">
+            <summary>
+            根据字符串信息解析配置信息
+            配置规范:属性=值;属性=值
+            备注:属性可以忽略大小写,值不得包含=或;这类敏感字符,
+            </summary>
+            <param name="stringinfo"></param>
+            <returns></returns>
         </member>
         <member name="M:BSF.Db.ConnAdapter.DbConnSqlServer.ParameterTransform(BSF.Db.ProcedureParameter)">
             <summary>参数类型转化</summary>
@@ -1090,6 +1136,23 @@
             <param name="source">源数据</param>
             <returns></returns>
         </member>
+        <member name="M:BSF.Db.LibConvert.ChangeType(System.Object,System.Type)">
+            <summary>
+            通用类型转换
+            </summary>
+            <param name="obj"></param>
+            <param name="conversionType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BSF.Db.LibConvert.ChangeType(System.Object,System.Type,System.IFormatProvider)">
+            <summary>
+            通用类型转换
+            </summary>
+            <param name="obj"></param>
+            <param name="conversionType"></param>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
         <member name="T:BSF.Db.SimpleProcedureParameter">
             <summary>
             简易参数写法 车毅
@@ -1239,6 +1302,22 @@
             <summary>
             移除字符串
             </summary>
+        </member>
+        <member name="M:BSF.Extensions.StringMehtodHelper.Contains(System.String,System.String,System.StringComparison)">
+            <summary>
+            字符串是否包含某个字符串 忽略大小写
+            </summary>
+            <param name="source"></param>
+            <param name="toCheck"></param>
+            <param name="comp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BSF.Extensions.StringMehtodHelper.FirstLower(System.String)">
+            <summary>
+            首字母小写
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
         </member>
         <member name="P:BSF.Log.CommonLogInfo.logtype">
             <summary>
